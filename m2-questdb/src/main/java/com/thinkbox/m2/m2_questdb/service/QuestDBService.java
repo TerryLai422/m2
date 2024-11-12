@@ -19,7 +19,7 @@ public class QuestDBService {
     @PostConstruct
     public void init() {
         System.out.println("BEFORE TEST");
-        main();
+//        main();
         System.out.println("AFTER TEST");
     }
 
@@ -69,21 +69,15 @@ public class QuestDBService {
 
     private static void importCsvToQuestDB(String csvFilePath, String questDBUrl, String tableName) throws IOException {
         // Read the CSV file
-        byte[] fileBytes = Files.readAllBytes(Paths.get(csvFilePath));
-        Resource fileResource = new ByteArrayResource(fileBytes) {
-            @Override
-            public String getFilename() {
-                return "file.csv";
-            }
-        };
+        String csvContent = new String(Files.readAllBytes(Paths.get(csvFilePath)));
 
         // Set up the headers
         HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.setContentType(MediaType.TEXT_PLAIN);
         headers.set("table", tableName);
 
         // Create the HTTP entity
-        HttpEntity<Resource> entity = new HttpEntity<>(fileResource, headers);
+        HttpEntity<String> entity = new HttpEntity<>(csvContent, headers);
 
         // Create RestTemplate instance
         RestTemplate restTemplate = new RestTemplate();
@@ -94,6 +88,7 @@ public class QuestDBService {
         // Check the response
         if (response.getStatusCode().is2xxSuccessful()) {
             System.out.println("CSV file imported successfully to QuestDB table: " + tableName);
+			System.out.println(response.getBody());
         } else {
             System.out.println("Error: HTTP response code " + response.getStatusCode());
         }
