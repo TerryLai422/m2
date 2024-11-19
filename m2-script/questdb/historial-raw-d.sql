@@ -1,4 +1,4 @@
-CREATE TABLE 'historial-raw-d' (
+CREATE TABLE 'historial_raw_d' (
   TICKER SYMBOL capacity 10000 CACHE,
   PER SYMBOL capacity 256 CACHE,
   DATE VARCHAR,
