@@ -1,6 +1,6 @@
 INSERT INTO historial_d
 SELECT 
-    TICKER, 
+    replace(TICKER, '.US', ''), 
     PER, 
     to_timestamp(concat(DATE, ' ', TIME), 'yyyyMMdd HHmmss') AS DATE, 
     OPEN, 
