@@ -7,6 +7,6 @@ CREATE TABLE 'historial_raw_d' (
   HIGH DOUBLE,
   LOW DOUBLE,
   CLOSE DOUBLE,
-  VOL LONG,
+  VOL DOUBLE,
   OPENINT INT
 );
