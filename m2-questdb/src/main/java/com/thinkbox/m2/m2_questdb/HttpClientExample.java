@@ -12,9 +12,14 @@ import java.io.File;
 
 public class HttpClientExample {
     public static void main(String[] args) {
-        String url = "http://127.0.0.1:9000/imp?fmt=json&name=test";
-        File file = new File("/Users/admin/d1.txt");
+        String url = "http://192.168.51.230:9000/imp?fmt=json&forceHeader=true&name=historial_raw_d";
+        String fileName ="/Users/admin/aapl.us.txt";
+        String tableName = "historial_raw_d";
+        importFile(url, tableName, fileName);
+    }
 
+    public static void importFile(String url, String tableName, String fileName) {
+        File file = new File(fileName);
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost uploadFile = new HttpPost(url);
 
