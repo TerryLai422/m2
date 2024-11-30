@@ -4,7 +4,7 @@ SELECT
     'MA_5', 
     DATE, 
     CLOSE, 
-    sum(CLOSE) 
+    count() 
         OVER 
         (PARTITION BY TICKER, PER ORDER BY DATE 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 4 PRECEDING) 
@@ -27,7 +27,7 @@ SELECT
     'MA_20', 
     DATE, 
     CLOSE, 
-    sum(CLOSE) 
+    count() 
         OVER 
         (PARTITION BY TICKER, PER ORDER BY DATE 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 19 PRECEDING) 
@@ -50,7 +50,7 @@ SELECT
     'MA_50', 
     DATE, 
     CLOSE, 
-    sum(CLOSE) 
+    count() 
         OVER 
         (PARTITION BY TICKER, PER ORDER BY DATE 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 49 PRECEDING) 
@@ -73,7 +73,7 @@ SELECT
     'MA_150', 
     DATE, 
     CLOSE, 
-    sum(CLOSE) 
+    count() 
         OVER 
         (PARTITION BY TICKER, PER ORDER BY DATE 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 149 PRECEDING) 
@@ -96,7 +96,7 @@ SELECT
     'MA_200', 
     DATE, 
     CLOSE, 
-    sum(CLOSE) 
+    count() 
         OVER 
         (PARTITION BY TICKER, PER ORDER BY DATE 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 199 PRECEDING) 
