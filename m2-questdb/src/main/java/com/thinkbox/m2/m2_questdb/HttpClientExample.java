@@ -4,7 +4,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.closeableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
@@ -23,7 +23,7 @@ import java.io.File;
 
 public class HttpClientExample {
     public static void main(String[] args) {
-        Path startPath = Paths.get("/Users/admin/nasdaq_stocks");
+        Path startPath = Paths.get("/Users/admin/historial_data");
         String urlTemplate = "http://%s/imp?fmt=json&forceHeader=true&name=%s";
         String hostName = "127.0.0.1:9000";
         String tableName = "historial_raw_d";
@@ -44,7 +44,7 @@ public class HttpClientExample {
     public static void importFile(String url, String fileName) {
         System.out.println(fileName);
         File file = new File(fileName);
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+        try (closeableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost uploadFile = new HttpPost(url);
 
             MultipartEntityBuilder builder = MultipartEntityBuilder.create();
@@ -61,7 +61,27 @@ public class HttpClientExample {
                 System.out.println("Response: " + responseString);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("ERROR:" + fileName);
+           // e.printStackTrace();
+            copyToErrorDirectory(file);
+        }
+    }
+
+    public static void copyToErrorDirectory(File file) {
+        try {
+            String parentPath = file.getParent();
+            String writePath = parentPath.replace("/Users/admin/historial_data/",
+                    "/Users/admin/historial_error/");
+            Path writeDir = Paths.get(writePath);
+            if (!Files.exists(writeDir)) {
+                Files.createDirectories(writeDir);
+            }
+            Path targetPath = writeDir.resolve(file.getName());
+            Files.copy(file.toPath(), targetPath);
+            System.out.println("File copied to /error/ directory: " + targetPath.toString());
+        } catch (IOException ioException) {
+            System.err.println("Failed to copy file to /error/ directory: " + ioException.getMessage());
+            ioException.printStackTrace();
         }
     }
     public static List<String> listFiles(Path startPath) throws IOException {

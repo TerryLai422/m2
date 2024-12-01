@@ -1,19 +1,19 @@
 SELECT 
-    i1.TICKER, 
-    i1.DATE,
-    i1.CLOSE, 
-    i1.TYPE AS 'type1', 
-    i2.TYPE AS 'type2',
-    i1.VALUE AS 'value1',
-    i2.VALUE AS 'value2',
-    i1.VALUE > i2.VALUE AS 'cross'
+    i1.ticker, 
+    i1.date,
+    i1.close, 
+    i1.type AS 'type1', 
+    i2.type AS 'type2',
+    i1.value AS 'value1',
+    i2.value AS 'value2',
+    i1.value > i2.value AS 'cross'
 FROM 
     indicators i1, 
     indicators i2
 WHERE 
-    i1.TICKER = i2.TICKER 
-    AND i1.DATE = i2.DATE
-    AND i1.TYPE = 'MA_50' 
-    AND i2.TYPE = 'MA_200'
-    AND i1.VALID IS NOT NULL 
-    AND i2.VALID IS NOT NULL
+    i1.ticker = i2.ticker 
+    AND i1.date = i2.date
+    AND i1.type = 'MA_50' 
+    AND i2.type = 'MA_200'
+    AND i1.total > 0
+    AND i2.total > 0

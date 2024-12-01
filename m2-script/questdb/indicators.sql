@@ -1,9 +1,9 @@
-CREATE TABLE 'indicators' (
-  TICKER SYMBOL capacity 10000 CACHE,
-  TYPE SYMBOL capacity 256 CACHE,
-  DATE TIMESTAMP,
-  CLOSE DOUBLE,
-  VALID DOUBLE,
-  FIRST DOUBLE,
-  VALUE DOUBLE
-);
+CREATE TABLE indicators (
+  ticker SYMBOL,
+  type SYMBOL capacity 32 CACHE,
+  date TIMESTAMP,
+  close DOUBLE,
+  total SHORT,
+  first DOUBLE,
+  value DOUBLE
+), INDEX(ticker CAPACITY 9000) TIMESTAMP(date);
