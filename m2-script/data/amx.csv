@@ -1,0 +1,238 @@
+number,ticker,cap,name,industry,sector
+1,IMO,38.33B,Imperial Oil Limited,Oil & Gas Integrated,Energy
+2,SIM,4.13B,"Grupo Simec, S.A.B. de C.V.",Steel,Materials
+3,BTG,3.82B,B2Gold Corp.,Gold,Materials
+4,GSAT,3.69B,"Globalstar, Inc.",Telecom Services,Communication Services
+5,UEC,3.42B,Uranium Energy Corp.,Uranium,Energy
+6,PRK,3.08B,Park National Corporation,Banks - Regional,Financials
+7,EQX,2.59B,Equinox Gold Corp.,Gold,Materials
+8,SEB,2.54B,Seaboard Corporation,Conglomerates,Industrials
+9,NGD,2.20B,New Gold Inc.,Gold,Materials
+10,DNN,2.15B,Denison Mines Corp.,Uranium,Energy
+11,NHC,1.93B,National HealthCare Corporation,Medical Care Facilities,Healthcare
+12,MAG,1.61B,MAG Silver Corp.,Silver,Materials
+13,ORLA,1.56B,Orla Mining Ltd.,Gold,Materials
+14,SILV,1.53B,SilverCrest Metals Inc.,Other Precious Metals & Mining,Materials
+15,LEU,1.49B,Centrus Energy Corp.,Uranium,Energy
+16,UUUU,1.43B,Energy Fuels Inc.,Uranium,Energy
+17,CET,1.33B,Central Securities Corporation,Asset Management,Financials
+18,NG,1.23B,NovaGold Resources Inc.,Gold,Materials
+19,IE,1.15B,Ivanhoe Electric Inc.,Copper,Materials
+20,TMP,1.10B,Tompkins Financial Corporation,Banks - Regional,Financials
+21,SKYH,837.49M,Sky Harbour Group Corporation,Aerospace & Defense,Industrials
+22,REPX,754.05M,"Riley Exploration Permian, Inc.",Oil & Gas Exploration & Production,Energy
+23,SVM,714.33M,Silvercorp Metals Inc.,Silver,Materials
+24,STRW,662.08M,"Strawberry Fields REIT, Inc.",REIT - Healthcare Facilities,Real Estate
+25,ARMN,657.49M,Aris Mining Corporation,Gold,Materials
+26,HYLN,641.08M,Hyliion Holdings Corp.,Auto Parts,Consumer Discretionary
+27,TGB,621.64M,Taseko Mines Limited,Copper,Materials
+28,BHB,549.49M,Bar Harbor Bankshares,Banks - Regional,Financials
+29,SLSR,520.63M,Solaris Resources Inc.,Other Precious Metals & Mining,Materials
+30,GRO,502.23M,Brazil Potash Corp.,Agricultural Inputs,Materials
+31,VZLA,501.39M,Vizsla Silver Corp.,Other Industrial Metals & Mining,Materials
+32,URG,475.59M,Ur-Energy Inc.,Uranium,Energy
+33,SEG,430.07M,Seaport Entertainment Group Inc.,Real Estate Services,Real Estate
+34,OBE,425.37M,Obsidian Energy Ltd.,Oil & Gas Exploration & Production,Energy
+35,VENU,406.69M,Venu Holding Corporation,Entertainment,Communication Services
+36,NFGC,367.71M,New Found Gold Corp.,Gold,Materials
+37,GAU,363.32M,Galiano Gold Inc.,Gold,Materials
+38,RLGT,350.39M,"Radiant Logistics, Inc.",Integrated Freight & Logistics,Industrials
+39,NEWP,346.29M,New Pacific Metals Corp.,Other Precious Metals & Mining,Materials
+40,SLI,340.92M,Standard Lithium Ltd.,Other Industrial Metals & Mining,Materials
+41,CIX,340.12M,CompX International Inc.,Security & Protection Services,Industrials
+42,GENC,325.25M,"Gencor Industries, Inc.",Farm & Heavy Construction Machinery,Industrials
+43,REI,303.24M,"Ring Energy, Inc.",Oil & Gas Exploration & Production,Energy
+44,BRBS,298.09M,"Blue Ridge Bankshares, Inc.",Banks - Regional,Financials
+45,AMBI,296.00M,Ambipar Emergency Response,Waste Management,Industrials
+46,CATX,294.01M,"Perspective Therapeutics, Inc.",Medical Devices,Healthcare
+47,NEN,288.75M,New England Realty Associates Limited Partnership,Real Estate Services,Real Estate
+48,GRAF,288.36M,Graf Global Corp.,Shell Companies,Financials
+49,EVI,279.51M,"EVI Industries, Inc.",Industrial Distribution,Industrials
+50,MTA,279.30M,Metalla Royalty & Streaming Ltd.,Other Precious Metals & Mining,Materials
+51,CNL,274.18M,Collective Mining Ltd.,Gold,Materials
+52,OZ,268.89M,"Belpointe PREP, LLC",Real Estate - Development,Real Estate
+53,ELMD,260.34M,"Electromed, Inc.",Medical Devices,Healthcare
+54,IAUX,251.36M,i-80 Gold Corp.,Gold,Materials
+55,GTE,249.48M,Gran Tierra Energy Inc.,Oil & Gas Exploration & Production,Energy
+56,KULR,248.35M,"KULR Technology Group, Inc.",Electronic Components,Technology
+57,EVBN,243.23M,"Evans Bancorp, Inc.",Banks - Regional,Financials
+58,NAK,241.81M,Northern Dynasty Minerals Ltd.,Other Industrial Metals & Mining,Materials
+59,LPA,235.00M,Logistic Properties of the Americas,Real Estate - Development,Real Estate
+60,WRN,222.14M,Western Copper and Gold Corporation,Other Industrial Metals & Mining,Materials
+61,GROY,218.42M,Gold Royalty Corp.,Gold,Materials
+62,EP,212.89M,Empire Petroleum Corporation,Oil & Gas Exploration & Production,Energy
+63,DC,212.47M,Dakota Gold Corp.,Gold,Materials
+64,ELLO,207.65M,Ellomay Capital Ltd.,Utilities - Renewable,Utilities
+65,CYBN,207.61M,Cybin Inc.,Biotechnology,Healthcare
+66,CMCL,202.52M,Caledonia Mining Corporation Plc,Gold,Materials
+67,STXS,202.50M,"Stereotaxis, Inc.",Medical Instruments & Supplies,Healthcare
+68,MRT,200.42M,"Marti Technologies, Inc.",Software - Application,Technology
+69,FSP,197.81M,Franklin Street Properties Corp.,REIT - Office,Real Estate
+70,EPM,191.80M,Evolution Petroleum Corporation,Oil & Gas Exploration & Production,Energy
+71,INFU,189.25M,"InfuSystem Holdings, Inc.",Medical Instruments & Supplies,Healthcare
+72,EMX,189.14M,EMX Royalty Corporation,Other Industrial Metals & Mining,Materials
+73,MPTI,187.89M,"M-tron Industries, Inc.",Electronic Components,Technology
+74,SENS,185.38M,"Senseonics Holdings, Inc.",Medical Devices,Healthcare
+75,TMQ,183.80M,Trilogy Metals Inc.,Other Industrial Metals & Mining,Materials
+76,BHM,182.95M,"Bluerock Homes Trust, Inc.",REIT - Residential,Real Estate
+77,MHH,180.27M,"Mastech Digital, Inc.",Staffing & Employment Services,Industrials
+78,PLG,175.17M,Platinum Group Metals Ltd.,Other Precious Metals & Mining,Materials
+79,ELA,174.17M,Envela Corporation,Luxury Goods,Consumer Discretionary
+80,CTGO,172.18M,"Contango Ore, Inc.",Gold,Materials
+81,FLYX,171.89M,"flyExclusive, Inc.",Airlines,Industrials
+82,GLDG,170.91M,GoldMining Inc.,Gold,Materials
+83,MYO,169.98M,"Myomo, Inc.",Medical Devices,Healthcare
+84,IDR,167.35M,"Idaho Strategic Resources, Inc.",Gold,Materials
+85,ACU,166.53M,Acme United Corporation,Household & Personal Products,Consumer Staples
+86,EVE,163.10M,EVe Mobility Acquisition Corp,Shell Companies,Financials
+87,ITRG,158.82M,Integra Resources Corp.,Other Precious Metals & Mining,Materials
+88,ASM,158.46M,Avino Silver & Gold Mines Ltd.,Other Precious Metals & Mining,Materials
+89,SLND,157.79M,"Southland Holdings, Inc.",Engineering & Construction,Industrials
+90,UMAC,155.47M,"Unusual Machines, Inc.",Shell Companies,Financials
+91,CMT,143.08M,"Core Molding Technologies, Inc.",Specialty Chemicals,Materials
+92,MYND,133.29M,"Mynd.ai, Inc.",Education & Training Services,Consumer Staples
+93,ATEK,132.58M,Athena Technology Acquisition Corp. II,Shell Companies,Financials
+94,PLX,126.65M,"Protalix BioTherapeutics, Inc.",Biotechnology,Healthcare
+95,LCTX,126.06M,"Lineage Cell Therapeutics, Inc.",Biotechnology,Healthcare
+96,ZOM,125.43M,Zomedica Corp.,Medical Devices,Healthcare
+97,USAS,123.52M,Americas Gold and Silver Corporation,Other Industrial Metals & Mining,Materials
+98,BRIA,120.66M,BrilliA Inc,Textile Manufacturing,Consumer Discretionary
+99,CHEB,118.69M,Chenghe Acquisition II Co.,Shell Companies,Financials
+100,BKTI,118.23M,BK Technologies Corporation,Communication Equipment,Technology
+101,BEEP,107.04M,Mobile Infrastructure Corporation,Infrastructure Operations,Industrials
+102,FRD,106.10M,"Friedman Industries, Incorporated",Steel,Materials
+103,LGCY,100.52M,Legacy Education Inc.,Education & Training Services,Consumer Staples
+104,TRX,97.78M,TRX Gold Corporation,Gold,Materials
+105,AE,95.81M,"Adams Resources & Energy, Inc.",Oil & Gas Refining & Marketing,Energy
+106,INTT,93.80M,inTEST Corporation,Semiconductor Equipment & Materials,Technology
+107,LSF,93.20M,"Laird Superfood, Inc.",Packaged Foods,Consumer Staples
+108,THM,91.22M,International Tower Hill Mines Ltd.,Gold,Materials
+109,DIT,86.54M,AMCON Distributing Company,Food Distribution,Consumer Staples
+110,ESP,84.23M,Espey Mfg. & Electronics Corp.,Electrical Equipment & Parts,Industrials
+111,ARMP,83.22M,"Armata Pharmaceuticals, Inc.",Biotechnology,Healthcare
+112,UAMY,82.91M,United States Antimony Corporation,Other Industrial Metals & Mining,Materials
+113,LODE,77.26M,Comstock Inc.,Other Precious Metals & Mining,Materials
+114,MLSS,77.11M,Milestone Scientific Inc.,Medical Instruments & Supplies,Healthcare
+115,SATX,76.52M,Satixfy Communications Ltd.,Communication Equipment,Technology
+116,VGZ,75.12M,Vista Gold Corp.,Gold,Materials
+117,PED,74.88M,PEDEVCO Corp.,Oil & Gas Exploration & Production,Energy
+118,COE,74.80M,51Talk Online Education Group,Education & Training Services,Consumer Staples
+119,SACH,74.21M,Sachem Capital Corp.,REIT - Mortgage,Real Estate
+120,MPU,72.75M,Mega Matrix Inc.,Entertainment,Communication Services
+121,AREN,71.20M,"The Arena Group Holdings, Inc.",Internet Content & Information,Communication Services
+122,CCEL,69.88M,"Cryo-Cell International, Inc.",Medical Care Facilities,Healthcare
+123,IOR,65.10M,"Income Opportunity Realty Investors, Inc.",Mortgage Finance,Financials
+124,FURY,64.88M,Fury Gold Mines Limited,Other Industrial Metals & Mining,Materials
+125,VNRX,64.39M,VolitionRx Limited,Diagnostics & Research,Healthcare
+126,OPTT,63.12M,"Ocean Power Technologies, Inc.",Specialty Industrial Machinery,Industrials
+127,INLX,61.69M,"Intellinetics, Inc.",Software - Application,Technology
+128,MGLD,60.89M,"The Marygold Companies, Inc.",Asset Management,Financials
+129,APT,58.29M,"Alpha Pro Tech, Ltd.",Building Products & Equipment,Industrials
+130,BMTX,57.78M,"BM Technologies, Inc.",Software - Application,Technology
+131,COHN,57.02M,Cohen & Company Inc.,Capital Markets,Financials
+132,BATL,56.94M,Battalion Oil Corporation,Oil & Gas Exploration & Production,Energy
+133,MAIA,55.98M,"MAIA Biotechnology, Inc.",Biotechnology,Healthcare
+134,XTNT,55.60M,"Xtant Medical Holdings, Inc.",Medical Devices,Healthcare
+135,FSI,51.69M,"Flexible Solutions International, Inc.",Specialty Chemicals,Materials
+136,XPL,49.68M,Solitario Resources Corp.,Other Industrial Metals & Mining,Materials
+137,CVU,49.53M,"CPI Aerostructures, Inc.",Aerospace & Defense,Industrials
+138,ROLR,49.35M,"High Roller Technologies, Inc.",Gambling,Consumer Discretionary
+139,SER,46.68M,"Serina Therapeutics, Inc.",Biotechnology,Healthcare
+140,WYY,46.66M,WidePoint Corporation,Information Technology Services,Technology
+141,BDL,46.00M,"Flanigan's Enterprises, Inc.",Restaurants,Consumer Discretionary
+142,OSTX,45.45M,OS Therapies Incorporated,Biotechnology,Healthcare
+143,ATNM,44.92M,"Actinium Pharmaceuticals, Inc.",Biotechnology,Healthcare
+144,INUV,42.01M,"Inuvo, Inc.",Software - Application,Technology
+145,DMYY,41.73M,"dMY Squared Technology Group, Inc.",Shell Companies,Financials
+146,UAVS,41.05M,"AgEagle Aerial Systems, Inc.",Computer Hardware,Technology
+147,CLDI,40.95M,"Calidi Biotherapeutics, Inc.",Biotechnology,Healthcare
+148,CVM,40.50M,CEL-SCI Corporation,Biotechnology,Healthcare
+149,ISDR,38.34M,Issuer Direct Corporation,Software - Application,Technology
+150,ZDGE,37.90M,"Zedge, Inc.",Internet Content & Information,Communication Services
+151,WWR,36.78M,"Westwater Resources, Inc.",Other Industrial Metals & Mining,Materials
+152,TOPS,35.11M,Top Ships Inc.,Oil & Gas Midstream,Energy
+153,IBO,33.59M,Impact BioMedical Inc.,Biotechnology,Healthcare
+154,NTIP,31.56M,"Network-1 Technologies, Inc.",Specialty Business Services,Industrials
+155,INDO,31.15M,Indonesia Energy Corporation Limited,Oil & Gas Exploration & Production,Energy
+156,LGL,31.05M,"The LGL Group, Inc.",Electronic Components,Technology
+157,BGI,31.01M,Birks Group Inc.,Luxury Goods,Consumer Discretionary
+158,TRT,29.33M,Trio-Tech International,Semiconductor Equipment & Materials,Technology
+159,IGC,28.89M,"IGC Pharma, Inc.",Biotechnology,Healthcare
+160,SVT,28.25M,"Servotronics, Inc.",Aerospace & Defense,Industrials
+161,JOB,27.43M,GEE Group Inc.,Staffing & Employment Services,Industrials
+162,AXIL,27.41M,"AXIL Brands, Inc.",Consumer Electronics,Technology
+163,IHT,27.15M,InnSuites Hospitality Trust,REIT - Hotel & Motel,Real Estate
+164,NRXS,27.00M,"NeurAxis, Inc.",Biotechnology,Healthcare
+165,PZG,26.97M,Paramount Gold Nevada Corp.,Gold,Materials
+166,IBIO,26.90M,"iBio, Inc.",Biotechnology,Healthcare
+167,TOON,26.61M,Kartoon Studios Inc.,Entertainment,Communication Services
+168,KNW,26.19M,"Know Labs, Inc.",Scientific & Technical Instruments,Technology
+169,AUST,25.88M,Austin Gold Corp.,Gold,Materials
+170,CKX,24.73M,"CKX Lands, Inc.",Oil & Gas Exploration & Production,Energy
+171,MXC,24.16M,Mexco Energy Corporation,Oil & Gas Exploration & Production,Energy
+172,SIF,23.17M,"SIFCO Industries, Inc.",Aerospace & Defense,Industrials
+173,DTCK,22.66M,Davis Commodities Limited,Farm Products,Consumer Staples
+174,PTN,22.28M,"Palatin Technologies, Inc.",Biotechnology,Healthcare
+175,AEON,21.74M,"AEON Biopharma, Inc.",Biotechnology,Healthcare
+176,AMS,20.67M,American Shared Hospital Services,Medical Care Facilities,Healthcare
+177,KAPA,19.78M,"Kairos Pharma, Ltd.",Biotechnology,Healthcare
+178,NNVC,19.51M,"NanoViricides, Inc.",Biotechnology,Healthcare
+179,PLAG,19.01M,Planet Green Holdings Corp.,Conglomerates,Industrials
+180,MMA,18.80M,Alta Global Group Limited,Leisure,Consumer Discretionary
+181,RVP,18.56M,"Retractable Technologies, Inc.",Medical Instruments & Supplies,Healthcare
+182,BRN,18.35M,"Barnwell Industries, Inc.",Oil & Gas Exploration & Production,Energy
+183,HUSA,18.19M,Houston American Energy Corp.,Oil & Gas Exploration & Production,Energy
+184,MI,17.31M,NFT Limited,Internet Retail,Consumer Discretionary
+185,CVR,16.46M,Chicago Rivet & Machine Co.,Tools & Accessories,Industrials
+186,GORO,16.45M,Gold Resource Corporation,Gold,Materials
+187,AIRI,15.62M,Air Industries Group,Aerospace & Defense,Industrials
+188,CANF,15.17M,Can-Fite BioPharma Ltd.,Biotechnology,Healthcare
+189,AIM,14.66M,AIM ImmunoTech Inc.,Biotechnology,Healthcare
+190,PMNT,14.61M,Perfect Moment Ltd.,Apparel Manufacturing,Consumer Discretionary
+191,GNS,14.55M,Genius Group Limited,Education & Training Services,Consumer Staples
+192,SYNX,14.27M,Silynxcom Ltd.,Communication Equipment,Technology
+193,PHGE,12.91M,BiomX Inc.,Biotechnology,Healthcare
+194,AWX,12.69M,Avalon Holdings Corporation,Waste Management,Industrials
+195,ZONE,12.61M,"CleanCore Solutions, Inc.",Pollution & Treatment Controls,Industrials
+196,SBEV,12.00M,"Splash Beverage Group, Inc.",Beverages - Wineries & Distilleries,Consumer Staples
+197,CTM,11.23M,"Castellum, Inc.",Information Technology Services,Technology
+198,VINE,10.99M,"Fresh Vine Wine, Inc.",Beverages - Wineries & Distilleries,Consumer Staples
+199,RYDE,10.81M,Ryde Group Ltd,Software - Application,Technology
+200,FOXO,9.01M,FOXO Technologies Inc.,Health Information Services,Healthcare
+201,MWG,8.78M,Multi Ways Holdings Limited,Rental & Leasing Services,Industrials
+202,BURU,8.74M,"Nuburu, Inc.",Specialty Industrial Machinery,Industrials
+203,NCL,8.69M,Northann Corp.,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+204,MSN,8.54M,Emerson Radio Corp.,Consumer Electronics,Technology
+205,EONR,7.81M,EON Resources Inc.,Oil & Gas Exploration & Production,Energy
+206,SOAR,7.76M,"Volato Group, Inc.",Airports & Air Services,Industrials
+207,DSS,7.21M,"DSS, Inc.",Packaging & Containers,Consumer Discretionary
+208,GRFX,7.09M,Graphex Group Limited,Other Industrial Metals & Mining,Materials
+209,GPUS,6.61M,"Hyperscale Data, Inc.",Aerospace & Defense,Industrials
+210,MITQ,6.55M,"Moving iMage Technologies, Inc.",Communication Equipment,Technology
+211,EFSH,6.24M,1847 Holdings LLC,Conglomerates,Industrials
+212,GBR,6.11M,"New Concept Energy, Inc.",Real Estate Services,Real Estate
+213,SSY,6.06M,"SunLink Health Systems, Inc.",Pharmaceutical Retailers,Healthcare
+214,DDC,5.55M,DDC Enterprise Limited,Packaged Foods,Consumer Staples
+215,AMBO,5.11M,Ambow Education Holding Ltd.,Education & Training Services,Consumer Staples
+216,UUU,5.07M,"Universal Security Instruments, Inc.",Security & Protection Services,Industrials
+217,SGN,4.96M,"Signing Day Sports, Inc.",Software - Application,Technology
+218,PAPL,4.21M,Pineapple Financial Inc.,Mortgage Finance,Financials
+219,PW,4.10M,Power REIT,REIT - Specialty,Real Estate
+220,AUMN,4.07M,Golden Minerals Company,Other Precious Metals & Mining,Materials
+221,TOVX,4.01M,"Theriva Biologics, Inc.",Biotechnology,Healthcare
+222,AZTR,4.00M,"Azitra, Inc.",Biotechnology,Healthcare
+223,OGEN,3.88M,"Oragenics, Inc.",Biotechnology,Healthcare
+224,CPHI,3.86M,"China Pharma Holdings, Inc.",Drug Manufacturers - Specialty & Generic,Healthcare
+225,BTTR,3.83M,Better Choice Company Inc.,Packaged Foods,Consumer Staples
+226,CHRO,3.68M,Channel Therapeutics Corporation,Biotechnology,Healthcare
+227,LEGT,3.61M,Legato Merger Corp. III,Shell Companies,Financials
+228,VTAK,3.44M,"Catheter Precision, Inc.",Medical Devices,Healthcare
+229,MTNB,3.27M,"Matinas BioPharma Holdings, Inc.",Biotechnology,Healthcare
+230,RHE,3.11M,"Regional Health Properties, Inc.",Medical Care Facilities,Healthcare
+231,NBY,2.95M,"NovaBay Pharmaceuticals, Inc.",Biotechnology,Healthcare
+232,TPET,2.91M,Trio Petroleum Corp.,Oil & Gas Exploration & Production,Energy
+233,ATCH,2.80M,"AtlasClear Holdings, Inc.",Software - Infrastructure,Technology
+234,SCPX,2.64M,"Scorpius Holdings, Inc.",Biotechnology,Healthcare
+235,ITP,2.37M,"IT Tech Packaging, Inc.",Paper & Paper Products,Materials
+236,YCBD,2.20M,"cbdMD, Inc.",Drug Manufacturers - Specialty & Generic,Healthcare
+237,BQ,1.83M,Boqii Holding Limited,Specialty Retail,Consumer Discretionary

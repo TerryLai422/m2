@@ -6,4 +6,6 @@ CREATE TABLE indicators (
   total SHORT,
   first DOUBLE,
   value DOUBLE
-), INDEX(ticker CAPACITY 9000) TIMESTAMP(date);
+), 
+INDEX(ticker CAPACITY 9000) 
+TIMESTAMP(date) PARTITION BY YEAR WAL;

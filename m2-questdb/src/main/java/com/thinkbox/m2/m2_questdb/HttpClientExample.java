@@ -4,7 +4,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.impl.client.closeableHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
@@ -40,11 +40,10 @@ public class HttpClientExample {
         }
     }
 
-
     public static void importFile(String url, String fileName) {
         System.out.println(fileName);
         File file = new File(fileName);
-        try (closeableHttpClient httpClient = HttpClients.createDefault()) {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost uploadFile = new HttpPost(url);
 
             MultipartEntityBuilder builder = MultipartEntityBuilder.create();
@@ -78,7 +77,7 @@ public class HttpClientExample {
             }
             Path targetPath = writeDir.resolve(file.getName());
             Files.copy(file.toPath(), targetPath);
-            System.out.println("File copied to /error/ directory: " + targetPath.toString());
+            System.out.println("File copied to /error/ directory: " + targetPath);
         } catch (IOException ioException) {
             System.err.println("Failed to copy file to /error/ directory: " + ioException.getMessage());
             ioException.printStackTrace();
@@ -86,9 +85,9 @@ public class HttpClientExample {
     }
     public static List<String> listFiles(Path startPath) throws IOException {
         List<String> fileNames = new ArrayList<>();
-        Files.walkFileTree(startPath, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisitor<Path>() {
+        Files.walkFileTree(startPath, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisitor<>() {
             @Override
-            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+            public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
                 if (!file.getFileName().startsWith(".DS_Store")) {
                     fileNames.add(file.toString());
                 }
@@ -96,7 +95,7 @@ public class HttpClientExample {
             }
 
             @Override
-            public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+            public FileVisitResult visitFileFailed(Path file, IOException exc) {
                 System.err.println("Failed to visit file: " + file.toString() + " (" + exc.getMessage() + ")");
                 return FileVisitResult.CONTINUE;
             }

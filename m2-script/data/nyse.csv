@@ -1,0 +1,1953 @@
+number,ticker,cap,name,industry,sector
+1,BRK.A,"1,030.22B",Berkshire Hathaway Inc.,Insurance - Diversified,Financials
+2,BRK.B,"1,027.36B",Berkshire Hathaway Inc.,Insurance - Diversified,Financials
+3,TSM,822.63B,Taiwan Semiconductor Manufacturing Company Limited,Semiconductors,Technology
+4,WMT,719.42B,Walmart Inc.,Discount Stores,Consumer Staples
+5,JPM,704.65B,JPMorgan Chase & Co.,Banks - Diversified,Financials
+6,LLY,679.83B,Eli Lilly and Company,Drug Manufacturers - General,Healthcare
+7,V,613.77B,Visa Inc.,Credit Services,Financials
+8,UNH,557.54B,UnitedHealth Group Incorporated,Healthcare Plans,Healthcare
+9,XOM,527.28B,Exxon Mobil Corporation,Oil & Gas Integrated,Energy
+10,ORCL,520.93B,Oracle Corporation,Software - Infrastructure,Technology
+11,MA,483.33B,Mastercard Incorporated,Credit Services,Financials
+12,NVO,463.62B,Novo Nordisk A/S,Drug Manufacturers - General,Healthcare
+13,HD,425.82B,"The Home Depot, Inc.",Home Improvement Retail,Consumer Discretionary
+14,PG,417.76B,The Procter & Gamble Company,Household & Personal Products,Consumer Staples
+15,JNJ,375.06B,Johnson & Johnson,Drug Manufacturers - General,Healthcare
+16,BAC,364.46B,Bank of America Corporation,Banks - Diversified,Financials
+17,CRM,324.19B,"Salesforce, Inc.",Software - Application,Technology
+18,ABBV,312.89B,AbbVie Inc.,Drug Manufacturers - General,Healthcare
+19,CVX,288.18B,Chevron Corporation,Oil & Gas Integrated,Energy
+20,KO,277.34B,The Coca-Cola Company,Beverages - Non-Alcoholic,Consumer Staples
+21,SAP,272.58B,SAP SE,Software - Application,Technology
+22,WFC,256.04B,Wells Fargo & Company,Banks - Diversified,Financials
+23,MRK,255.90B,"Merck & Co., Inc.",Drug Manufacturers - General,Healthcare
+24,BX,235.91B,Blackstone Inc.,Asset Management,Financials
+25,TM,229.16B,Toyota Motor Corporation,Auto Manufacturers,Consumer Discretionary
+26,ACN,225.75B,Accenture plc,Information Technology Services,Technology
+27,NOW,217.19B,"ServiceNow, Inc.",Software - Application,Technology
+28,MS,215.33B,Morgan Stanley,Capital Markets,Financials
+29,AXP,215.00B,American Express Company,Credit Services,Financials
+30,MCD,212.26B,McDonald's Corporation,Restaurants,Consumer Discretionary
+31,DIS,210.07B,The Walt Disney Company,Entertainment,Communication Services
+32,IBM,209.09B,International Business Machines Corporation,Information Technology Services,Technology
+33,NVS,207.12B,Novartis AG,Drug Manufacturers - General,Healthcare
+34,ABT,204.89B,Abbott Laboratories,Medical Devices,Healthcare
+35,PM,203.23B,Philip Morris International Inc.,Tobacco,Consumer Staples
+36,SHEL,200.91B,Shell plc,Oil & Gas Integrated,Energy
+37,GS,198.53B,"The Goldman Sachs Group, Inc.",Capital Markets,Financials
+38,TMO,196.68B,Thermo Fisher Scientific Inc.,Diagnostics & Research,Healthcare
+39,CAT,195.85B,Caterpillar Inc.,Farm & Heavy Construction Machinery,Industrials
+40,GE,195.04B,General Electric Company,Aerospace & Defense,Industrials
+41,BABA,194.58B,Alibaba Group Holding Limited,Internet Retail,Consumer Discretionary
+42,VZ,185.14B,Verizon Communications Inc.,Telecom Services,Communication Services
+43,RY,175.59B,Royal Bank of Canada,Banks - Diversified,Financials
+44,DHR,171.67B,Danaher Corporation,Diagnostics & Research,Healthcare
+45,T,165.75B,AT&T Inc.,Telecom Services,Communication Services
+46,HSBC,163.55B,HSBC Holdings plc,Banks - Diversified,Financials
+47,HDB,161.96B,HDFC Bank Limited,Banks - Regional,Financials
+48,SPGI,161.34B,S&P Global Inc.,Financial Data & Stock Exchanges,Financials
+49,BLK,159.76B,"BlackRock, Inc.",Asset Management,Financials
+50,RTX,157.93B,RTX Corporation,Aerospace & Defense,Industrials
+51,NEE,157.60B,"NextEra Energy, Inc.",Utilities - Regulated Electric,Utilities
+52,PGR,155.76B,The Progressive Corporation,Insurance - Property & Casualty,Financials
+53,LOW,155.56B,"Lowe's Companies, Inc.",Home Improvement Retail,Consumer Discretionary
+54,UBER,154.60B,"Uber Technologies, Inc.",Software - Application,Technology
+55,UNP,151.15B,Union Pacific Corporation,Railroads,Industrials
+56,SCHW,149.68B,The Charles Schwab Corporation,Capital Markets,Financials
+57,ETN,148.86B,Eaton Corporation plc,Specialty Industrial Machinery,Industrials
+58,PFE,148.31B,Pfizer Inc.,Drug Manufacturers - General,Healthcare
+59,PLTR,147.27B,Palantir Technologies Inc.,Software - Infrastructure,Technology
+60,SYK,146.73B,Stryker Corporation,Medical Devices,Healthcare
+61,UL,145.64B,Unilever PLC,Household & Personal Products,Consumer Staples
+62,SHOP,143.42B,Shopify Inc.,Software - Application,Technology
+63,KKR,141.18B,KKR & Co. Inc.,Asset Management,Financials
+64,TJX,140.75B,"The TJX Companies, Inc.",Apparel Retail,Consumer Discretionary
+65,MUFG,137.89B,"Mitsubishi UFJ Financial Group, Inc.",Banks - Diversified,Financials
+66,COP,137.25B,ConocoPhillips,Oil & Gas Exploration & Production,Energy
+67,C,134.98B,Citigroup Inc.,Banks - Diversified,Financials
+68,TTE,133.60B,TotalEnergies SE,Oil & Gas Integrated,Energy
+69,BHP,132.41B,BHP Group Limited,Other Industrial Metals & Mining,Materials
+70,BSX,131.54B,Boston Scientific Corporation,Medical Devices,Healthcare
+71,DE,126.59B,Deere & Company,Farm & Heavy Construction Machinery,Industrials
+72,FI,126.16B,"Fiserv, Inc.",Information Technology Services,Technology
+73,ANET,125.89B,"Arista Networks, Inc.",Computer Hardware,Technology
+74,LMT,123.71B,Lockheed Martin Corporation,Aerospace & Defense,Industrials
+75,BMY,119.22B,Bristol-Myers Squibb Company,Drug Manufacturers - General,Healthcare
+76,NKE,117.98B,"NIKE, Inc.",Footwear & Accessories,Consumer Discretionary
+77,UPS,117.37B,"United Parcel Service, Inc.",Integrated Freight & Logistics,Industrials
+78,SONY,116.11B,Sony Group Corporation,Consumer Electronics,Technology
+79,CB,115.46B,Chubb Limited,Insurance - Property & Casualty,Financials
+80,BA,114.39B,The Boeing Company,Aerospace & Defense,Industrials
+81,MMC,113.31B,"Marsh & McLennan Companies, Inc.",Insurance Brokers,Financials
+82,PLD,111.22B,"Prologis, Inc.",REIT - Industrial,Real Estate
+83,MDT,109.98B,Medtronic plc,Medical Devices,Healthcare
+84,IBN,108.95B,ICICI Bank Limited,Banks - Regional,Financials
+85,BUD,108.86B,Anheuser-Busch InBev SA/NV,Beverages - Brewers,Consumer Staples
+86,RIO,106.98B,Rio Tinto Group,Other Industrial Metals & Mining,Materials
+87,UBS,101.78B,UBS Group AG,Banks - Diversified,Financials
+88,DELL,101.20B,Dell Technologies Inc.,Computer Hardware,Technology
+89,SHW,100.32B,The Sherwin-Williams Company,Specialty Chemicals,Materials
+90,APO,98.85B,"Apollo Global Management, Inc.",Asset Management,Financials
+91,TD,98.05B,The Toronto-Dominion Bank,Banks - Diversified,Financials
+92,SPOT,97.28B,Spotify Technology S.A.,Internet Content & Information,Communication Services
+93,AMT,96.99B,American Tower Corporation,REIT - Specialty,Real Estate
+94,SO,96.88B,The Southern Company,Utilities - Regulated Electric,Utilities
+95,MO,96.18B,"Altria Group, Inc.",Tobacco,Consumer Staples
+96,ELV,94.53B,"Elevance Health, Inc.",Healthcare Plans,Healthcare
+97,ENB,94.16B,Enbridge Inc.,Oil & Gas Midstream,Energy
+98,SMFG,94.02B,"Sumitomo Mitsui Financial Group, Inc.",Banks - Diversified,Financials
+99,TT,93.01B,Trane Technologies plc,Building Products & Equipment,Industrials
+100,INFY,92.89B,Infosys Limited,Information Technology Services,Technology
+101,CI,92.63B,The Cigna Group,Healthcare Plans,Healthcare
+102,PBR,91.91B,Petróleo Brasileiro S.A. - Petrobras,Oil & Gas Integrated,Energy
+103,ICE,91.66B,"Intercontinental Exchange, Inc.",Financial Data & Stock Exchanges,Financials
+104,PBR.A,91.55B,Petróleo Brasileiro S.A. - Petrobras,Oil & Gas Integrated,Energy
+105,GEV,90.68B,GE Vernova Inc.,Utilities - Renewable,Utilities
+106,PH,90.67B,Parker-Hannifin Corporation,Specialty Industrial Machinery,Industrials
+107,WM,90.57B,"Waste Management, Inc.",Waste Management,Industrials
+108,MCO,89.53B,Moody's Corporation,Financial Data & Stock Exchanges,Financials
+109,DUK,88.84B,Duke Energy Corporation,Utilities - Regulated Electric,Utilities
+110,APH,88.36B,Amphenol Corporation,Electronic Components,Technology
+111,BN,87.84B,Brookfield Corporation,Asset Management,Financials
+112,RELX,86.30B,RELX PLC,Specialty Business Services,Industrials
+113,CMG,84.55B,"Chipotle Mexican Grill, Inc.",Restaurants,Consumer Discretionary
+114,WELL,84.53B,Welltower Inc.,REIT - Healthcare Facilities,Real Estate
+115,PNC,84.30B,"The PNC Financial Services Group, Inc.",Banks - Regional,Financials
+116,AON,84.28B,Aon plc,Insurance Brokers,Financials
+117,USB,83.66B,U.S. Bancorp,Banks - Regional,Financials
+118,HCA,82.48B,"HCA Healthcare, Inc.",Medical Care Facilities,Healthcare
+119,BTI,82.30B,British American Tobacco p.l.c.,Tobacco,Consumer Staples
+120,MSI,81.62B,"Motorola Solutions, Inc.",Communication Equipment,Technology
+121,ITW,81.61B,Illinois Tool Works Inc.,Specialty Industrial Machinery,Industrials
+122,SCCO,80.63B,Southern Copper Corporation,Copper,Materials
+123,ZTS,80.63B,Zoetis Inc.,Drug Manufacturers - Specialty & Generic,Healthcare
+124,MCK,78.29B,McKesson Corporation,Medical Distribution,Healthcare
+125,RACE,77.98B,Ferrari N.V.,Auto Manufacturers,Consumer Discretionary
+126,CL,77.89B,Colgate-Palmolive Company,Household & Personal Products,Consumer Staples
+127,GD,77.24B,General Dynamics Corporation,Aerospace & Defense,Industrials
+128,BP,76.44B,BP p.l.c.,Oil & Gas Integrated,Energy
+129,EMR,76.03B,Emerson Electric Co.,Specialty Industrial Machinery,Industrials
+130,CVS,75.61B,CVS Health Corporation,Healthcare Plans,Healthcare
+131,FDX,74.56B,FedEx Corporation,Integrated Freight & Logistics,Industrials
+132,APD,74.27B,"Air Products and Chemicals, Inc.",Specialty Chemicals,Materials
+133,EOG,74.23B,"EOG Resources, Inc.",Oil & Gas Exploration & Production,Energy
+134,CNQ,73.49B,Canadian Natural Resources Limited,Oil & Gas Exploration & Production,Energy
+135,COF,73.21B,Capital One Financial Corporation,Credit Services,Financials
+136,TRI,72.11B,Thomson Reuters Corporation,Specialty Business Services,Industrials
+137,CP,71.49B,Canadian Pacific Kansas City Limited,Railroads,Industrials
+138,MMM,70.97B,3M Company,Conglomerates,Industrials
+139,WMB,70.93B,"The Williams Companies, Inc.",Oil & Gas Midstream,Energy
+140,TDG,70.91B,TransDigm Group Incorporated,Aerospace & Defense,Industrials
+141,CARR,70.76B,Carrier Global Corporation,Building Products & Equipment,Industrials
+142,SAN,70.74B,"Banco Santander, S.A.",Banks - Diversified,Financials
+143,NOC,70.70B,Northrop Grumman Corporation,Aerospace & Defense,Industrials
+144,CNI,70.21B,Canadian National Railway Company,Railroads,Industrials
+145,EPD,70.10B,Enterprise Products Partners L.P.,Oil & Gas Midstream,Energy
+146,ECL,69.92B,Ecolab Inc.,Specialty Chemicals,Materials
+147,CRH,69.78B,CRH plc,Building Materials,Materials
+148,BNS,69.77B,The Bank of Nova Scotia,Banks - Diversified,Financials
+149,BMO,69.20B,Bank of Montreal,Banks - Diversified,Financials
+150,GSK,69.01B,GSK plc,Drug Manufacturers - General,Healthcare
+151,NU,68.40B,Nu Holdings Ltd.,Banks - Regional,Financials
+152,RSG,68.22B,"Republic Services, Inc.",Waste Management,Industrials
+153,SPG,67.63B,"Simon Property Group, Inc.",REIT - Retail,Real Estate
+154,AJG,67.24B,Arthur J. Gallagher & Co.,Insurance Brokers,Financials
+155,DEO,67.05B,Diageo plc,Beverages - Wineries & Distilleries,Consumer Staples
+156,EQNR,66.90B,Equinor ASA,Oil & Gas Integrated,Energy
+157,GM,66.20B,General Motors Company,Auto Manufacturers,Consumer Discretionary
+158,SE,65.47B,Sea Limited,Internet Retail,Consumer Discretionary
+159,DLR,65.19B,"Digital Realty Trust, Inc.",REIT - Specialty,Real Estate
+160,BDX,65.17B,"Becton, Dickinson and Company",Medical Instruments & Supplies,Healthcare
+161,OKE,65.15B,"ONEOK, Inc.",Oil & Gas Midstream,Energy
+162,ET,64.95B,Energy Transfer LP,Oil & Gas Midstream,Energy
+163,RCL,64.63B,Royal Caribbean Cruises Ltd.,Travel Services,Consumer Discretionary
+164,TFC,63.85B,Truist Financial Corporation,Banks - Regional,Financials
+165,FCX,63.77B,Freeport-McMoRan Inc.,Copper,Materials
+166,AFL,62.89B,Aflac Incorporated,Insurance - Life,Financials
+167,MFG,62.71B,"Mizuho Financial Group, Inc.",Banks - Regional,Financials
+168,NSC,62.43B,Norfolk Southern Corporation,Railroads,Industrials
+169,KMI,61.87B,"Kinder Morgan, Inc.",Oil & Gas Midstream,Energy
+170,HLT,61.83B,Hilton Worldwide Holdings Inc.,Lodging,Consumer Discretionary
+171,SLB,61.78B,Schlumberger Limited,Oil & Gas Equipment & Services,Energy
+172,CM,61.69B,Canadian Imperial Bank of Commerce,Banks - Diversified,Financials
+173,PSA,61.08B,Public Storage,REIT - Industrial,Real Estate
+174,NGG,60.66B,National Grid plc,Utilities - Regulated Electric,Utilities
+175,MET,60.48B,"MetLife, Inc.",Insurance - Life,Financials
+176,SRE,60.03B,Sempra,Utilities - Diversified,Utilities
+177,TGT,59.95B,Target Corporation,Discount Stores,Consumer Staples
+178,TRV,59.30B,"The Travelers Companies, Inc.",Insurance - Property & Casualty,Financials
+179,GWW,59.21B,"W.W. Grainger, Inc.",Industrial Distribution,Industrials
+180,BK,59.05B,The Bank of New York Mellon Corporation,Banks - Diversified,Financials
+181,FICO,57.47B,Fair Isaac Corporation,Software - Application,Technology
+182,SNOW,57.46B,Snowflake Inc.,Software - Application,Technology
+183,MFC,56.82B,Manulife Financial Corporation,Insurance - Life,Financials
+184,URI,56.72B,"United Rentals, Inc.",Rental & Leasing Services,Industrials
+185,SQ,56.25B,"Block, Inc.",Software - Infrastructure,Technology
+186,BBVA,55.90B,"Banco Bilbao Vizcaya Argentaria, S.A.",Banks - Diversified,Financials
+187,DHI,55.54B,"D.R. Horton, Inc.",Residential Construction,Consumer Discretionary
+188,AMP,55.32B,"Ameriprise Financial, Inc.",Asset Management,Financials
+189,JCI,55.19B,Johnson Controls International plc,Building Products & Equipment,Industrials
+190,ARES,55.11B,Ares Management Corporation,Asset Management,Financials
+191,CVNA,55.08B,Carvana Co.,Auto & Truck Dealerships,Consumer Discretionary
+192,PSX,55.04B,Phillips 66,Oil & Gas Refining & Marketing,Energy
+193,ITUB,53.58B,Itaú Unibanco Holding S.A.,Banks - Regional,Financials
+194,ALL,53.50B,The Allstate Corporation,Insurance - Property & Casualty,Financials
+195,AZO,52.56B,"AutoZone, Inc.",Specialty Retail,Consumer Discretionary
+196,VST,52.44B,Vistra Corp.,Utilities - Independent Power Producers,Utilities
+197,SU,52.19B,Suncor Energy Inc.,Oil & Gas Integrated,Energy
+198,TRP,51.64B,TC Energy Corporation,Oil & Gas Midstream,Energy
+199,CMI,51.48B,Cummins Inc.,Specialty Industrial Machinery,Industrials
+200,PWR,50.62B,"Quanta Services, Inc.",Engineering & Construction,Industrials
+201,O,50.43B,Realty Income Corporation,REIT - Retail,Real Estate
+202,MPC,50.30B,Marathon Petroleum Corporation,Oil & Gas Refining & Marketing,Energy
+203,MPLX,50.04B,MPLX LP,Oil & Gas Midstream,Energy
+204,WCN,49.76B,"Waste Connections, Inc.",Waste Management,Industrials
+205,FLUT,49.56B,Flutter Entertainment plc,Gambling,Consumer Discretionary
+206,VRT,49.56B,Vertiv Holdings Co,Electrical Equipment & Parts,Industrials
+207,D,49.17B,"Dominion Energy, Inc.",Utilities - Regulated Electric,Utilities
+208,LNG,48.96B,"Cheniere Energy, Inc.",Oil & Gas Midstream,Energy
+209,LEN,48.46B,Lennar Corporation,Residential Construction,Consumer Discretionary
+210,ING,48.28B,ING Groep N.V.,Banks - Diversified,Financials
+211,NEM,48.13B,Newmont Corporation,Gold,Materials
+212,LEN.B,48.12B,Lennar Corporation,Residential Construction,Consumer Discretionary
+213,COR,47.87B,"Cencora, Inc.",Medical Distribution,Healthcare
+214,BCS,47.77B,Barclays PLC,Banks - Diversified,Financials
+215,AIG,47.38B,"American International Group, Inc.",Insurance - Diversified,Financials
+216,OXY,47.33B,Occidental Petroleum Corporation,Oil & Gas Exploration & Production,Energy
+217,HWM,47.06B,Howmet Aerospace Inc.,Aerospace & Defense,Industrials
+218,KVUE,46.47B,Kenvue Inc.,Household & Personal Products,Consumer Staples
+219,MSCI,46.45B,MSCI Inc.,Financial Data & Stock Exchanges,Financials
+220,KMB,46.40B,Kimberly-Clark Corporation,Household & Personal Products,Consumer Staples
+221,PEG,46.34B,Public Service Enterprise Group Incorporated,Utilities - Regulated Electric,Utilities
+222,CCI,46.10B,Crown Castle Inc.,REIT - Specialty,Real Estate
+223,AMX,45.98B,"América Móvil, S.A.B. de C.V.",Telecom Services,Communication Services
+224,DFS,45.86B,Discover Financial Services,Credit Services,Financials
+225,PRU,45.82B,"Prudential Financial, Inc.",Insurance - Life,Financials
+226,TEL,45.69B,TE Connectivity plc,Electronic Components,Technology
+227,LHX,45.63B,"L3Harris Technologies, Inc.",Aerospace & Defense,Industrials
+228,AME,45.60B,"AMETEK, Inc.",Specialty Industrial Machinery,Industrials
+229,FIS,45.44B,"Fidelity National Information Services, Inc.",Information Technology Services,Technology
+230,F,45.31B,Ford Motor Company,Auto Manufacturers,Consumer Discretionary
+231,PCG,45.29B,PG&E Corporation,Utilities - Regulated Electric,Utilities
+232,E,45.22B,Eni S.p.A.,Oil & Gas Integrated,Energy
+233,CPNG,44.97B,"Coupang, Inc.",Internet Retail,Consumer Discretionary
+234,HES,44.65B,Hess Corporation,Oil & Gas Exploration & Production,Energy
+235,VLO,44.26B,Valero Energy Corporation,Oil & Gas Refining & Marketing,Energy
+236,CTVA,44.08B,"Corteva, Inc.",Agricultural Inputs,Materials
+237,STZ,43.87B,"Constellation Brands, Inc.",Beverages - Brewers,Consumer Staples
+238,TRGP,43.84B,Targa Resources Corp.,Oil & Gas Midstream,Energy
+239,KR,43.47B,The Kroger Co.,Grocery Stores,Consumer Staples
+240,FERG,43.36B,Ferguson Enterprises Inc.,Industrial Distribution,Industrials
+241,HLN,42.87B,Haleon plc,Drug Manufacturers - Specialty & Generic,Healthcare
+242,VALE,42.73B,Vale S.A.,Other Industrial Metals & Mining,Materials
+243,TAK,42.66B,Takeda Pharmaceutical Company Limited,Drug Manufacturers - Specialty & Generic,Healthcare
+244,ALC,42.49B,Alcon Inc.,Medical Instruments & Supplies,Healthcare
+245,IR,42.46B,Ingersoll Rand Inc.,Specialty Industrial Machinery,Industrials
+246,EW,42.04B,Edwards Lifesciences Corporation,Medical Devices,Healthcare
+247,CBRE,41.72B,"CBRE Group, Inc.",Real Estate Services,Real Estate
+248,LYG,41.56B,Lloyds Banking Group plc,Banks - Regional,Financials
+249,DAL,41.35B,"Delta Air Lines, Inc.",Airlines,Industrials
+250,GLW,41.32B,Corning Incorporated,Electronic Components,Technology
+251,GRMN,41.19B,Garmin Ltd.,Scientific & Technical Instruments,Technology
+252,OTIS,40.93B,Otis Worldwide Corporation,Specialty Industrial Machinery,Industrials
+253,AEM,40.88B,Agnico Eagle Mines Limited,Gold,Materials
+254,HMC,40.83B,"Honda Motor Co., Ltd.",Auto Manufacturers,Consumer Discretionary
+255,IT,40.03B,"Gartner, Inc.",Information Technology Services,Technology
+256,NWG,39.81B,NatWest Group plc,Banks - Regional,Financials
+257,A,38.64B,"Agilent Technologies, Inc.",Diagnostics & Research,Healthcare
+258,STLA,38.54B,Stellantis N.V.,Auto Manufacturers,Consumer Discretionary
+259,VMC,38.35B,Vulcan Materials Company,Building Materials,Materials
+260,HEI,38.30B,HEICO Corporation,Aerospace & Defense,Industrials
+261,YUM,38.25B,"Yum! Brands, Inc.",Restaurants,Consumer Discretionary
+262,HPQ,37.87B,HP Inc.,Computer Hardware,Technology
+263,HUBS,37.78B,"HubSpot, Inc.",Software - Application,Technology
+264,SYY,37.77B,Sysco Corporation,Food Distribution,Consumer Staples
+265,EXR,37.59B,Extra Space Storage Inc.,REIT - Industrial,Real Estate
+266,LVS,37.27B,Las Vegas Sands Corp.,Resorts & Casinos,Consumer Discretionary
+267,TPL,37.08B,Texas Pacific Land Corporation,Oil & Gas Exploration & Production,Energy
+268,IQV,37.03B,IQVIA Holdings Inc.,Diagnostics & Research,Healthcare
+269,MLM,36.92B,"Martin Marietta Materials, Inc.",Building Materials,Materials
+270,MTB,36.83B,M&T Bank Corporation,Banks - Regional,Financials
+271,VEEV,36.75B,Veeva Systems Inc.,Health Information Services,Healthcare
+272,HUM,36.63B,Humana Inc.,Healthcare Plans,Healthcare
+273,RMD,36.62B,ResMed Inc.,Medical Instruments & Supplies,Healthcare
+274,OWL,36.43B,Blue Owl Capital Inc.,Asset Management,Financials
+275,GIS,36.38B,"General Mills, Inc.",Packaged Foods,Consumer Staples
+276,WIT,36.14B,Wipro Limited,Information Technology Services,Technology
+277,NUE,36.03B,Nucor Corporation,Steel,Materials
+278,NET,35.60B,"Cloudflare, Inc.",Software - Infrastructure,Technology
+279,HSY,35.52B,The Hershey Company,Confectioners,Consumer Staples
+280,IRM,35.44B,Iron Mountain Incorporated,REIT - Specialty,Real Estate
+281,DD,35.29B,"DuPont de Nemours, Inc.",Specialty Chemicals,Materials
+282,HIG,35.23B,"The Hartford Financial Services Group, Inc.",Insurance - Property & Casualty,Financials
+283,SLF,35.20B,Sun Life Financial Inc.,Insurance - Diversified,Financials
+284,WAB,34.91B,Westinghouse Air Brake Technologies Corporation,Railroads,Industrials
+285,ED,34.46B,"Consolidated Edison, Inc.",Utilities - Regulated Electric,Utilities
+286,VICI,34.29B,VICI Properties Inc.,REIT - Diversified,Real Estate
+287,RJF,33.96B,"Raymond James Financial, Inc.",Asset Management,Financials
+288,ABEV,33.94B,Ambev S.A.,Beverages - Brewers,Consumer Staples
+289,EIX,33.92B,Edison International,Utilities - Regulated Electric,Utilities
+290,ROK,33.72B,"Rockwell Automation, Inc.",Specialty Industrial Machinery,Industrials
+291,HEI.A,33.36B,HEICO Corporation,Aerospace & Defense,Industrials
+292,AVB,33.08B,"AvalonBay Communities, Inc.",REIT - Residential,Real Estate
+293,CCL,32.72B,Carnival Corporation & plc,Travel Services,Consumer Discretionary
+294,EFX,32.71B,Equifax Inc.,Consulting Services,Industrials
+295,ETR,32.70B,Entergy Corporation,Utilities - Regulated Electric,Utilities
+296,LYV,32.41B,"Live Nation Entertainment, Inc.",Entertainment,Communication Services
+297,CUK,32.34B,Carnival Corporation & plc,Leisure,Consumer Discretionary
+298,RBLX,32.26B,Roblox Corporation,Electronic Gaming & Multimedia,Communication Services
+299,DOW,32.22B,Dow Inc.,Chemicals,Materials
+300,WEC,32.06B,"WEC Energy Group, Inc.",Utilities - Regulated Electric,Utilities
+301,DB,32.01B,Deutsche Bank Aktiengesellschaft,Banks - Regional,Financials
+302,BRO,31.95B,"Brown & Brown, Inc.",Insurance Brokers,Financials
+303,GOLD,31.85B,Barrick Gold Corporation,Gold,Materials
+304,QSR,31.47B,Restaurant Brands International Inc.,Restaurants,Consumer Discretionary
+305,XYL,31.33B,Xylem Inc.,Specialty Industrial Machinery,Industrials
+306,WDS,31.27B,Woodside Energy Group Ltd,Oil & Gas Exploration & Production,Energy
+307,CNC,31.01B,Centene Corporation,Healthcare Plans,Healthcare
+308,IOT,30.88B,Samsara Inc.,Software - Infrastructure,Technology
+309,GPN,30.18B,Global Payments Inc.,Specialty Business Services,Industrials
+310,EQR,29.87B,Equity Residential,REIT - Residential,Real Estate
+311,DECK,29.85B,Deckers Outdoor Corporation,Footwear & Accessories,Consumer Discretionary
+312,KEYS,29.63B,"Keysight Technologies, Inc.",Scientific & Technical Instruments,Technology
+313,FMX,29.52B,"Fomento Económico Mexicano, S.A.B. de C.V.",Beverages - Brewers,Consumer Staples
+314,CVE,29.52B,Cenovus Energy Inc.,Oil & Gas Integrated,Energy
+315,CHT,29.51B,"Chunghwa Telecom Co., Ltd.",Telecom Services,Communication Services
+316,CAH,29.47B,"Cardinal Health, Inc.",Medical Distribution,Healthcare
+317,PPG,29.15B,"PPG Industries, Inc.",Specialty Chemicals,Materials
+318,SW,29.14B,Smurfit Westrock Plc,Packaging & Containers,Consumer Discretionary
+319,RKT,29.06B,"Rocket Companies, Inc.",Mortgage Finance,Financials
+320,STT,28.96B,State Street Corporation,Asset Management,Financials
+321,WPM,28.91B,Wheaton Precious Metals Corp.,Gold,Materials
+322,HPE,28.84B,Hewlett Packard Enterprise Company,Communication Equipment,Technology
+323,NVR,28.47B,"NVR, Inc.",Residential Construction,Consumer Discretionary
+324,PHM,28.23B,"PulteGroup, Inc.",Residential Construction,Consumer Discretionary
+325,DOV,28.20B,Dover Corporation,Specialty Industrial Machinery,Industrials
+326,HAL,28.10B,Halliburton Company,Oil & Gas Equipment & Services,Energy
+327,K,27.96B,Kellanova,Packaged Foods,Consumer Staples
+328,GDDY,27.72B,GoDaddy Inc.,Software - Infrastructure,Technology
+329,FTV,27.64B,Fortive Corporation,Scientific & Technical Instruments,Technology
+330,EQT,27.44B,EQT Corporation,Oil & Gas Exploration & Production,Energy
+331,LYB,27.30B,LyondellBasell Industries N.V.,Specialty Chemicals,Materials
+332,BR,27.26B,"Broadridge Financial Solutions, Inc.",Information Technology Services,Technology
+333,CHD,27.05B,"Church & Dwight Co., Inc.",Household & Personal Products,Consumer Staples
+334,VLTO,26.83B,Veralto Corporation,Pollution & Treatment Controls,Industrials
+335,VTR,26.73B,"Ventas, Inc.",REIT - Healthcare Facilities,Real Estate
+336,TYL,26.71B,"Tyler Technologies, Inc.",Software - Application,Technology
+337,AWK,26.65B,"American Water Works Company, Inc.",Utilities - Regulated Water,Utilities
+338,CPAY,26.60B,"Corpay, Inc.",Software - Infrastructure,Technology
+339,CQP,26.29B,"Cheniere Energy Partners, L.P.",Oil & Gas Midstream,Energy
+340,KB,26.22B,KB Financial Group Inc.,Banks - Regional,Financials
+341,EL,26.19B,The Estée Lauder Companies Inc.,Household & Personal Products,Consumer Staples
+342,CCJ,26.12B,Cameco Corporation,Uranium,Energy
+343,SYF,26.10B,Synchrony Financial,Credit Services,Financials
+344,DTE,25.92B,DTE Energy Company,Utilities - Regulated Electric,Utilities
+345,MTD,25.84B,Mettler-Toledo International Inc.,Diagnostics & Research,Healthcare
+346,TEF,25.45B,"Telefónica, S.A.",Telecom Services,Communication Services
+347,PPL,25.39B,PPL Corporation,Utilities - Regulated Electric,Utilities
+348,ADM,25.37B,Archer-Daniels-Midland Company,Farm Products,Consumer Staples
+349,PHG,25.33B,Koninklijke Philips N.V.,Medical Devices,Healthcare
+350,GIB,25.15B,CGI Inc.,Information Technology Services,Technology
+351,DVN,25.14B,Devon Energy Corporation,Oil & Gas Exploration & Production,Energy
+352,RF,24.97B,Regions Financial Corporation,Banks - Regional,Financials
+353,AEE,24.97B,Ameren Corporation,Utilities - Regulated Electric,Utilities
+354,RDDT,24.91B,"Reddit, Inc.",Internet Content & Information,Communication Services
+355,PBA,24.91B,Pembina Pipeline Corporation,Oil & Gas Midstream,Energy
+356,HUBB,24.90B,Hubbell Incorporated,Electrical Equipment & Parts,Industrials
+357,ROL,24.81B,"Rollins, Inc.",Personal Services,Consumer Discretionary
+358,IX,24.58B,ORIX Corporation,Financial Conglomerates,Financials
+359,TOST,24.42B,"Toast, Inc.",Software - Infrastructure,Technology
+360,BCE,24.39B,BCE Inc.,Telecom Services,Communication Services
+361,FE,24.23B,FirstEnergy Corp.,Utilities - Regulated Electric,Utilities
+362,LII,24.17B,Lennox International Inc.,Building Products & Equipment,Industrials
+363,WRB,24.03B,W. R. Berkley Corporation,Insurance - Property & Casualty,Financials
+364,TECK,23.89B,Teck Resources Limited,Other Industrial Metals & Mining,Materials
+365,FNV,23.79B,Franco-Nevada Corporation,Gold,Materials
+366,BBD,23.69B,Banco Bradesco S.A.,Banks - Regional,Financials
+367,EME,23.51B,"EMCOR Group, Inc.",Engineering & Construction,Industrials
+368,ES,23.44B,Eversource Energy,Utilities - Regulated Electric,Utilities
+369,WY,23.42B,Weyerhaeuser Company,REIT - Specialty,Real Estate
+370,TKO,23.36B,"TKO Group Holdings, Inc.",Entertainment,Communication Services
+371,ATO,23.34B,Atmos Energy Corporation,Utilities - Regulated Gas,Utilities
+372,BBDO,23.32B,Banco Bradesco S.A.,Banks - Regional,Financials
+373,BAM,23.32B,Brookfield Asset Management Ltd.,Asset Management,Financials
+374,IFF,23.24B,International Flavors & Fragrances Inc.,Specialty Chemicals,Materials
+375,NTR,23.17B,Nutrien Ltd.,Agricultural Inputs,Materials
+376,WST,23.16B,"West Pharmaceutical Services, Inc.",Medical Instruments & Supplies,Healthcare
+377,STM,23.03B,STMicroelectronics N.V.,Semiconductors,Technology
+378,TU,22.79B,TELUS Corporation,Telecom Services,Communication Services
+379,NOK,22.78B,Nokia Oyj,Communication Equipment,Technology
+380,TSN,22.70B,"Tyson Foods, Inc.",Farm Products,Consumer Staples
+381,MKL,22.66B,Markel Group Inc.,Insurance - Property & Casualty,Financials
+382,WAT,22.45B,Waters Corporation,Diagnostics & Research,Healthcare
+383,FTS,22.43B,Fortis Inc.,Utilities - Regulated Electric,Utilities
+384,TDY,22.26B,Teledyne Technologies Incorporated,Scientific & Technical Instruments,Technology
+385,BEKE,22.10B,KE Holdings Inc.,Real Estate Services,Real Estate
+386,ZBH,22.09B,"Zimmer Biomet Holdings, Inc.",Medical Devices,Healthcare
+387,PKG,22.05B,Packaging Corporation of America,Packaging & Containers,Consumer Discretionary
+388,PUK,21.95B,Prudential plc,Insurance - Life,Financials
+389,UI,21.93B,Ubiquiti Inc.,Communication Equipment,Technology
+390,WSM,21.89B,"Williams-Sonoma, Inc.",Specialty Retail,Consumer Discretionary
+391,LDOS,21.83B,"Leidos Holdings, Inc.",Information Technology Services,Technology
+392,BLDR,21.75B,"Builders FirstSource, Inc.",Building Products & Equipment,Industrials
+393,WSO,21.41B,"Watsco, Inc.",Industrial Distribution,Industrials
+394,CFG,21.36B,"Citizens Financial Group, Inc.",Banks - Regional,Financials
+395,STE,21.33B,STERIS plc,Medical Devices,Healthcare
+396,CSL,21.23B,Carlisle Companies Incorporated,Building Products & Equipment,Industrials
+397,CNP,21.17B,"CenterPoint Energy, Inc.",Utilities - Regulated Electric,Utilities
+398,ASX,20.85B,"ASE Technology Holding Co., Ltd.",Semiconductors,Technology
+399,CMS,20.82B,CMS Energy Corporation,Utilities - Regulated Electric,Utilities
+400,MKC.V,20.82B,"McCormick & Company, Incorporated",Packaged Foods,Consumer Staples
+401,INVH,20.80B,Invitation Homes Inc.,REIT - Residential,Real Estate
+402,WSO.B,20.78B,"Watsco, Inc.",Industrial Distribution,Industrials
+403,MKC,20.74B,"McCormick & Company, Incorporated",Packaged Foods,Consumer Staples
+404,IP,20.70B,International Paper Company,Packaging & Containers,Consumer Discretionary
+405,TS,20.68B,Tenaris S.A.,Oil & Gas Equipment & Services,Energy
+406,PINS,20.62B,"Pinterest, Inc.",Internet Content & Information,Communication Services
+407,ESS,20.62B,"Essex Property Trust, Inc.",REIT - Residential,Real Estate
+408,DRI,20.59B,"Darden Restaurants, Inc.",Restaurants,Consumer Discretionary
+409,CLX,20.59B,The Clorox Company,Household & Personal Products,Consumer Staples
+410,OMC,20.41B,Omnicom Group Inc.,Advertising Agencies,Communication Services
+411,SHG,20.25B,"Shinhan Financial Group Co., Ltd.",Banks - Regional,Financials
+412,LH,20.18B,Labcorp Holdings Inc.,Diagnostics & Research,Healthcare
+413,BF.B,20.12B,Brown-Forman Corporation,Beverages - Wineries & Distilleries,Consumer Staples
+414,BBY,19.98B,"Best Buy Co., Inc.",Specialty Retail,Consumer Discretionary
+415,TRU,19.95B,TransUnion,Financial Data & Stock Exchanges,Financials
+416,CTRA,19.88B,Coterra Energy Inc.,Oil & Gas Exploration & Production,Energy
+417,VIK,19.76B,Viking Holdings Ltd,Travel Services,Consumer Discretionary
+418,MT,19.67B,ArcelorMittal S.A.,Steel,Materials
+419,KEY,19.64B,KeyCorp,Banks - Regional,Financials
+420,ARE,19.58B,"Alexandria Real Estate Equities, Inc.",REIT - Office,Real Estate
+421,RYAN,19.53B,"Ryan Specialty Holdings, Inc.",Insurance - Specialty,Financials
+422,BF.A,19.50B,Brown-Forman Corporation,Beverages - Wineries & Distilleries,Consumer Staples
+423,SNA,19.46B,Snap-on Incorporated,Tools & Accessories,Industrials
+424,IHG,19.46B,InterContinental Hotels Group PLC,Lodging,Consumer Discretionary
+425,SNAP,19.46B,Snap Inc.,Internet Content & Information,Communication Services
+426,LUV,19.45B,Southwest Airlines Co.,Airlines,Industrials
+427,MAA,19.43B,"Mid-America Apartment Communities, Inc.",REIT - Residential,Real Estate
+428,RCI,19.25B,Rogers Communications Inc.,Telecom Services,Communication Services
+429,TEVA,18.91B,Teva Pharmaceutical Industries Limited,Drug Manufacturers - Specialty & Generic,Healthcare
+430,BAH,18.84B,Booz Allen Hamilton Holding Corporation,Consulting Services,Industrials
+431,ONON,18.72B,On Holding AG,Footwear & Accessories,Consumer Discretionary
+432,L,18.69B,Loews Corporation,Insurance - Property & Casualty,Financials
+433,FDS,18.65B,FactSet Research Systems Inc.,Financial Data & Stock Exchanges,Financials
+434,BALL,18.64B,Ball Corporation,Packaging & Containers,Consumer Discretionary
+435,NRG,18.61B,"NRG Energy, Inc.",Utilities - Independent Power Producers,Utilities
+436,AER,18.42B,AerCap Holdings N.V.,Rental & Leasing Services,Industrials
+437,BURL,18.37B,"Burlington Stores, Inc.",Apparel Retail,Consumer Discretionary
+438,RBA,18.16B,"RB Global, Inc.",Specialty Business Services,Industrials
+439,DGX,18.13B,Quest Diagnostics Incorporated,Diagnostics & Research,Healthcare
+440,CRBG,18.12B,"Corebridge Financial, Inc.",Asset Management,Financials
+441,OC,18.08B,Owens Corning,Building Products & Equipment,Industrials
+442,YUMC,18.06B,"Yum China Holdings, Inc.",Restaurants,Consumer Discretionary
+443,RPM,18.05B,RPM International Inc.,Specialty Chemicals,Materials
+444,GFL,18.03B,GFL Environmental Inc.,Waste Management,Industrials
+445,GPC,18.00B,Genuine Parts Company,Auto Parts,Consumer Discretionary
+446,IEX,17.88B,IDEX Corporation,Specialty Industrial Machinery,Industrials
+447,NMR,17.87B,"Nomura Holdings, Inc.",Capital Markets,Financials
+448,PNR,17.84B,Pentair plc,Specialty Industrial Machinery,Industrials
+449,MAS,17.73B,Masco Corporation,Building Products & Equipment,Industrials
+450,NI,17.71B,NiSource Inc.,Utilities - Regulated Gas,Utilities
+451,TME,17.71B,Tencent Music Entertainment Group,Internet Content & Information,Communication Services
+452,XPO,17.65B,"XPO, Inc.",Trucking,Industrials
+453,PSTG,17.61B,"Pure Storage, Inc.",Computer Hardware,Technology
+454,FIX,17.57B,"Comfort Systems USA, Inc.",Engineering & Construction,Industrials
+455,DKS,17.52B,"DICK'S Sporting Goods, Inc.",Specialty Retail,Consumer Discretionary
+456,RS,17.49B,"Reliance, Inc.",Steel,Materials
+457,FNF,17.47B,"Fidelity National Financial, Inc.",Insurance - Specialty,Financials
+458,UMC,17.32B,United Microelectronics Corporation,Semiconductors,Technology
+459,J,17.31B,Jacobs Solutions Inc.,Engineering & Construction,Industrials
+460,KIM,17.24B,Kimco Realty Corporation,REIT - Retail,Real Estate
+461,HRL,17.24B,Hormel Foods Corporation,Packaged Foods,Consumer Staples
+462,EXPD,17.13B,"Expeditors International of Washington, Inc.",Integrated Freight & Logistics,Industrials
+463,TLK,17.10B,Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk,Telecom Services,Communication Services
+464,YPF,17.08B,YPF Sociedad Anónima,Oil & Gas Integrated,Energy
+465,BAX,17.06B,Baxter International Inc.,Medical Instruments & Supplies,Healthcare
+466,MOH,17.04B,"Molina Healthcare, Inc.",Healthcare Plans,Healthcare
+467,UDR,16.99B,"UDR, Inc.",REIT - Residential,Real Estate
+468,WLK,16.98B,Westlake Corporation,Specialty Chemicals,Materials
+469,GWRE,16.96B,"Guidewire Software, Inc.",Software - Application,Technology
+470,TOL,16.94B,"Toll Brothers, Inc.",Residential Construction,Consumer Discretionary
+471,DG,16.84B,Dollar General Corporation,Discount Stores,Consumer Staples
+472,BSBR,16.82B,Banco Santander (Brasil) S.A.,Banks - Regional,Financials
+473,KOF,16.82B,"Coca-Cola FEMSA, S.A.B. de C.V.",Beverages - Non-Alcoholic,Consumer Staples
+474,SUI,16.79B,"Sun Communities, Inc.",REIT - Residential,Real Estate
+475,EG,16.77B,"Everest Group, Ltd.",Insurance - Reinsurance,Financials
+476,AVY,16.71B,Avery Dennison Corporation,Packaging & Containers,Consumer Discretionary
+477,EC,16.58B,Ecopetrol S.A.,Oil & Gas Integrated,Energy
+478,DT,16.52B,"Dynatrace, Inc.",Software - Application,Technology
+479,BIP,16.49B,Brookfield Infrastructure Partners L.P.,Utilities - Diversified,Utilities
+480,JEF,16.33B,Jefferies Financial Group Inc.,Capital Markets,Financials
+481,CAVA,16.33B,"CAVA Group, Inc.",Restaurants,Consumer Discretionary
+482,USFD,16.28B,US Foods Holding Corp.,Food Distribution,Consumer Staples
+483,DPZ,16.20B,"Domino's Pizza, Inc.",Restaurants,Consumer Discretionary
+484,PKX,16.18B,POSCO Holdings Inc.,Steel,Materials
+485,TWLO,16.17B,Twilio Inc.,Software - Infrastructure,Technology
+486,AMH,16.01B,American Homes 4 Rent,REIT - Residential,Real Estate
+487,TXT,15.91B,Textron Inc.,Aerospace & Defense,Industrials
+488,CNH,15.80B,CNH Industrial N.V.,Farm & Heavy Construction Machinery,Industrials
+489,JHX,15.73B,James Hardie Industries plc,Building Materials,Materials
+490,DOC,15.68B,"Healthpeak Properties, Inc.",REIT - Healthcare Facilities,Real Estate
+491,GGG,15.58B,Graco Inc.,Specialty Industrial Machinery,Industrials
+492,ACM,15.48B,AECOM,Engineering & Construction,Industrials
+493,COHR,15.44B,Coherent Corp.,Scientific & Technical Instruments,Technology
+494,H,15.40B,Hyatt Hotels Corporation,Lodging,Consumer Discretionary
+495,EQH,15.36B,"Equitable Holdings, Inc.",Insurance - Diversified,Financials
+496,ZTO,15.27B,ZTO Express (Cayman) Inc.,Integrated Freight & Logistics,Industrials
+497,RGA,15.24B,"Reinsurance Group of America, Incorporated",Insurance - Reinsurance,Financials
+498,BAP,15.24B,Credicorp Ltd.,Banks - Regional,Financials
+499,CF,15.21B,"CF Industries Holdings, Inc.",Agricultural Inputs,Materials
+500,JBL,15.12B,Jabil Inc.,Electronic Components,Technology
+501,AMCR,15.09B,Amcor plc,Packaging & Containers,Consumer Discretionary
+502,WES,14.58B,"Western Midstream Partners, LP",Oil & Gas Midstream,Energy
+503,RNR,14.53B,RenaissanceRe Holdings Ltd.,Insurance - Reinsurance,Financials
+504,BXP,14.48B,"BXP, Inc.",REIT - Office,Real Estate
+505,CHWY,14.47B,"Chewy, Inc.",Internet Retail,Consumer Discretionary
+506,SN,14.40B,"SharkNinja, Inc.","Furnishings, Fixtures & Appliances",Consumer Discretionary
+507,AVTR,14.36B,"Avantor, Inc.",Medical Instruments & Supplies,Healthcare
+508,VIV,14.34B,Telefônica Brasil S.A.,Telecom Services,Communication Services
+509,SWK,14.26B,"Stanley Black & Decker, Inc.",Tools & Accessories,Industrials
+510,ELS,14.23B,"Equity LifeStyle Properties, Inc.",REIT - Residential,Real Estate
+511,TPR,14.18B,"Tapestry, Inc.",Luxury Goods,Consumer Discretionary
+512,UHAL,14.15B,U-Haul Holding Company,Rental & Leasing Services,Industrials
+513,EPAM,14.13B,"EPAM Systems, Inc.",Information Technology Services,Technology
+514,CW,14.09B,Curtiss-Wright Corporation,Aerospace & Defense,Industrials
+515,EBR,14.07B,Centrais Elétricas Brasileiras S.A. - Eletrobrás,Utilities - Renewable,Utilities
+516,EDR,14.03B,"Endeavor Group Holdings, Inc.",Entertainment,Communication Services
+517,AGR,13.99B,"Avangrid, Inc.",Utilities - Regulated Electric,Utilities
+518,CLH,13.96B,"Clean Harbors, Inc.",Waste Management,Industrials
+519,RVTY,13.95B,"Revvity, Inc.",Diagnostics & Research,Healthcare
+520,UNM,13.92B,Unum Group,Insurance - Life,Financials
+521,PFGC,13.83B,Performance Food Group Company,Food Distribution,Consumer Staples
+522,DVA,13.69B,DaVita Inc.,Medical Care Facilities,Healthcare
+523,RL,13.66B,Ralph Lauren Corporation,Apparel Manufacturing,Consumer Discretionary
+524,THC,13.63B,Tenet Healthcare Corporation,Medical Care Facilities,Healthcare
+525,CNA,13.47B,CNA Financial Corporation,Insurance - Property & Casualty,Financials
+526,JLL,13.46B,Jones Lang LaSalle Incorporated,Real Estate Services,Real Estate
+527,APTV,13.43B,Aptiv PLC,Auto Parts,Consumer Discretionary
+528,CPT,13.42B,Camden Property Trust,REIT - Residential,Real Estate
+529,GFI,13.26B,Gold Fields Limited,Gold,Materials
+530,GME,13.25B,GameStop Corp.,Specialty Retail,Consumer Discretionary
+531,HLI,13.24B,"Houlihan Lokey, Inc.",Capital Markets,Financials
+532,FMS,13.23B,Fresenius Medical Care AG,Medical Care Facilities,Healthcare
+533,KMX,13.19B,"CarMax, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+534,UHS,13.14B,"Universal Health Services, Inc.",Medical Care Facilities,Healthcare
+535,PAYC,13.11B,"Paycom Software, Inc.",Software - Application,Technology
+536,CAG,13.10B,"Conagra Brands, Inc.",Packaged Foods,Consumer Staples
+537,BJ,13.05B,"BJ's Wholesale Club Holdings, Inc.",Discount Stores,Consumer Staples
+538,FTI,13.03B,TechnipFMC plc,Oil & Gas Equipment & Services,Energy
+539,RTO,13.03B,Rentokil Initial plc,Specialty Business Services,Industrials
+540,ITT,13.01B,ITT Inc.,Specialty Industrial Machinery,Industrials
+541,MGA,12.95B,Magna International Inc.,Auto Parts,Consumer Discretionary
+542,ALB,12.93B,Albemarle Corporation,Specialty Chemicals,Materials
+543,NVT,12.91B,nVent Electric plc,Electrical Equipment & Parts,Industrials
+544,DAY,12.90B,Dayforce Inc.,Software - Application,Technology
+545,AS,12.90B,"Amer Sports, Inc.",Leisure,Consumer Discretionary
+546,SCI,12.81B,Service Corporation International,Personal Services,Consumer Discretionary
+547,FND,12.78B,"Floor & Decor Holdings, Inc.",Home Improvement Retail,Consumer Discretionary
+548,SUZ,12.77B,Suzano S.A.,Paper & Paper Products,Materials
+549,EVR,12.68B,Evercore Inc.,Capital Markets,Financials
+550,UHAL.B,12.62B,U-Haul Holding Company,Rental & Leasing Services,Industrials
+551,PR,12.60B,Permian Resources Corporation,Oil & Gas Exploration & Production,Energy
+552,WPC,12.59B,W. P. Carey Inc.,REIT - Diversified,Real Estate
+553,TFII,12.55B,TFI International Inc.,Trucking,Industrials
+554,KGC,12.54B,Kinross Gold Corporation,Gold,Materials
+555,AFG,12.51B,"American Financial Group, Inc.",Insurance - Property & Casualty,Financials
+556,TAP,12.50B,Molson Coors Beverage Company,Beverages - Brewers,Consumer Staples
+557,TAP.A,12.50B,Molson Coors Beverage Company,Beverages - Brewers,Consumer Staples
+558,ALLE,12.40B,Allegion plc,Security & Protection Services,Industrials
+559,SOLV,12.37B,Solventum Corporation,Health Information Services,Healthcare
+560,BG,12.35B,Bunge Global SA,Farm Products,Consumer Staples
+561,EMN,12.26B,Eastman Chemical Company,Specialty Chemicals,Materials
+562,AA,12.20B,Alcoa Corporation,Aluminum,Materials
+563,BEP,12.17B,Brookfield Renewable Partners L.P.,Utilities - Renewable,Utilities
+564,SJM,12.09B,The J. M. Smucker Company,Packaged Foods,Consumer Staples
+565,RRX,12.07B,Regal Rexnord Corporation,Specialty Industrial Machinery,Industrials
+566,SF,12.05B,Stifel Financial Corp.,Capital Markets,Financials
+567,JNPR,11.99B,"Juniper Networks, Inc.",Communication Equipment,Technology
+568,RDY,11.95B,Dr. Reddy's Laboratories Limited,Drug Manufacturers - Specialty & Generic,Healthcare
+569,NCLH,11.94B,Norwegian Cruise Line Holdings Ltd.,Travel Services,Consumer Discretionary
+570,PCOR,11.92B,"Procore Technologies, Inc.",Software - Application,Technology
+571,BLD,11.92B,TopBuild Corp.,Engineering & Construction,Industrials
+572,BWXT,11.92B,"BWX Technologies, Inc.",Aerospace & Defense,Industrials
+573,OVV,11.91B,Ovintiv Inc.,Oil & Gas Exploration & Production,Energy
+574,BEN,11.90B,"Franklin Resources, Inc.",Asset Management,Financials
+575,ALLY,11.88B,Ally Financial Inc.,Credit Services,Financials
+576,KNSL,11.79B,"Kinsale Capital Group, Inc.",Insurance - Property & Casualty,Financials
+577,AIZ,11.66B,"Assurant, Inc.",Insurance - Property & Casualty,Financials
+578,BCH,11.60B,Banco de Chile,Banks - Regional,Financials
+579,ESTC,11.55B,Elastic N.V.,Software - Application,Technology
+580,SBS,11.54B,Companhia de Saneamento Básico do Estado de São Paulo - SABESP,Utilities - Regulated Water,Utilities
+581,GMED,11.50B,"Globus Medical, Inc.",Medical Devices,Healthcare
+582,BEPC,11.48B,Brookfield Renewable Corporation,Utilities - Renewable,Utilities
+583,ATR,11.48B,"AptarGroup, Inc.",Medical Instruments & Supplies,Healthcare
+584,IPG,11.43B,"The Interpublic Group of Companies, Inc.",Advertising Agencies,Communication Services
+585,MGM,11.41B,MGM Resorts International,Resorts & Casinos,Consumer Discretionary
+586,GNRC,11.40B,Generac Holdings Inc.,Specialty Industrial Machinery,Industrials
+587,PAG,11.38B,"Penske Automotive Group, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+588,FHN,11.36B,First Horizon Corporation,Banks - Regional,Financials
+589,WPP,11.35B,WPP plc,Advertising Agencies,Communication Services
+590,CUBE,11.34B,CubeSmart,REIT - Industrial,Real Estate
+591,ACI,11.23B,"Albertsons Companies, Inc.",Grocery Stores,Consumer Staples
+592,MUSA,11.16B,Murphy USA Inc.,Specialty Retail,Consumer Discretionary
+593,MTZ,11.15B,"MasTec, Inc.",Engineering & Construction,Industrials
+594,NLY,11.15B,"Annaly Capital Management, Inc.",REIT - Mortgage,Real Estate
+595,OHI,11.13B,"Omega Healthcare Investors, Inc.",REIT - Healthcare Facilities,Real Estate
+596,CTLT,11.12B,"Catalent, Inc.",Drug Manufacturers - Specialty & Generic,Healthcare
+597,SQM,11.09B,Sociedad Química y Minera de Chile S.A.,Specialty Chemicals,Materials
+598,ULS,11.07B,UL Solutions Inc.,Specialty Business Services,Industrials
+599,ARMK,11.05B,Aramark,Specialty Business Services,Industrials
+600,XPEV,11.02B,XPeng Inc.,Auto Manufacturers,Consumer Discretionary
+601,WTRG,11.01B,"Essential Utilities, Inc.",Utilities - Regulated Water,Utilities
+602,LW,10.95B,"Lamb Weston Holdings, Inc.",Packaged Foods,Consumer Staples
+603,CCK,10.95B,"Crown Holdings, Inc.",Packaging & Containers,Consumer Discretionary
+604,AOS,10.94B,A. O. Smith Corporation,Specialty Industrial Machinery,Industrials
+605,KEP,10.88B,Korea Electric Power Corporation,Utilities - Regulated Electric,Utilities
+606,SNN,10.77B,Smith & Nephew plc,Medical Devices,Healthcare
+607,WBS,10.77B,Webster Financial Corporation,Banks - Regional,Financials
+608,DTM,10.71B,"DT Midstream, Inc.",Oil & Gas Midstream,Energy
+609,AIT,10.71B,"Applied Industrial Technologies, Inc.",Industrial Distribution,Industrials
+610,PRMB,10.66B,Primo Brands Corporation,Beverages - Non-Alcoholic,Consumer Staples
+611,AU,10.60B,AngloGold Ashanti plc,Gold,Materials
+612,RBC,10.58B,RBC Bearings Incorporated,Tools & Accessories,Industrials
+613,CR,10.58B,Crane Company,Specialty Industrial Machinery,Industrials
+614,EXP,10.58B,Eagle Materials Inc.,Building Materials,Materials
+615,PNW,10.56B,Pinnacle West Capital Corporation,Utilities - Regulated Electric,Utilities
+616,APG,10.51B,APi Group Corporation,Engineering & Construction,Industrials
+617,LAD,10.50B,"Lithia Motors, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+618,WCC,10.45B,"WESCO International, Inc.",Industrial Distribution,Industrials
+619,WAL,10.43B,Western Alliance Bancorporation,Banks - Regional,Financials
+620,WMS,10.42B,"Advanced Drainage Systems, Inc.",Building Products & Equipment,Industrials
+621,CACI,10.41B,CACI International Inc,Information Technology Services,Technology
+622,AR,10.34B,Antero Resources Corporation,Oil & Gas Exploration & Production,Energy
+623,ALSN,10.33B,"Allison Transmission Holdings, Inc.",Auto Parts,Consumer Discretionary
+624,PSO,10.30B,Pearson plc,Publishing,Communication Services
+625,CRL,10.29B,"Charles River Laboratories International, Inc.",Diagnostics & Research,Healthcare
+626,SNX,10.29B,TD SYNNEX Corporation,Electronics & Computer Distribution,Technology
+627,BNT,10.28B,Brookfield Wealth Solutions Ltd.,Insurance - Diversified,Financials
+628,EHC,10.28B,Encompass Health Corporation,Medical Care Facilities,Healthcare
+629,PSN,10.27B,Parsons Corporation,Information Technology Services,Technology
+630,UWMC,10.26B,UWM Holdings Corporation,Mortgage Finance,Financials
+631,AEG,10.16B,Aegon Ltd.,Insurance - Diversified,Financials
+632,CIEN,10.14B,Ciena Corporation,Communication Equipment,Technology
+633,PRI,10.12B,"Primerica, Inc.",Insurance - Life,Financials
+634,AYI,10.08B,"Acuity Brands, Inc.",Electrical Equipment & Parts,Industrials
+635,FBIN,10.06B,"Fortune Brands Innovations, Inc.",Building Products & Equipment,Industrials
+636,TPX,10.05B,"Tempur Sealy International, Inc.","Furnishings, Fixtures & Appliances",Consumer Discretionary
+637,KVYO,10.04B,"Klaviyo, Inc.",Software - Infrastructure,Technology
+638,FOUR,10.03B,"Shift4 Payments, Inc.",Software - Infrastructure,Technology
+639,GLOB,9.96B,Globant S.A.,Information Technology Services,Technology
+640,CLS,9.95B,Celestica Inc.,Electronic Components,Technology
+641,FRT,9.93B,Federal Realty Investment Trust,REIT - Retail,Real Estate
+642,YMM,9.92B,Full Truck Alliance Co. Ltd.,Software - Application,Technology
+643,BRBR,9.92B,"BellRing Brands, Inc.",Packaged Foods,Consumer Staples
+644,REXR,9.87B,"Rexford Industrial Realty, Inc.",REIT - Industrial,Real Estate
+645,NIO,9.82B,NIO Inc.,Auto Manufacturers,Consumer Discretionary
+646,STN,9.79B,Stantec Inc.,Engineering & Construction,Industrials
+647,SARO,9.78B,"StandardAero, Inc.",Aerospace & Defense,Industrials
+648,ORI,9.77B,Old Republic International Corporation,Insurance - Property & Casualty,Financials
+649,CRS,9.72B,Carpenter Technology Corporation,Metal Fabrication,Industrials
+650,BILL,9.70B,"BILL Holdings, Inc.",Software - Application,Technology
+651,U,9.68B,Unity Software Inc.,Software - Application,Technology
+652,INGR,9.66B,Ingredion Incorporated,Packaged Foods,Consumer Staples
+653,EDU,9.61B,New Oriental Education & Technology Group Inc.,Education & Training Services,Consumer Staples
+654,QGEN,9.61B,Qiagen N.V.,Diagnostics & Research,Healthcare
+655,FLR,9.61B,Fluor Corporation,Engineering & Construction,Industrials
+656,SKX,9.58B,"Skechers U.S.A., Inc.",Footwear & Accessories,Consumer Discretionary
+657,CMA,9.57B,Comerica Incorporated,Banks - Regional,Financials
+658,CNM,9.56B,"Core & Main, Inc.",Industrial Distribution,Industrials
+659,BIRK,9.55B,Birkenstock Holding plc,Footwear & Accessories,Consumer Discretionary
+660,KNX,9.51B,Knight-Swift Transportation Holdings Inc.,Trucking,Industrials
+661,BIO,9.41B,"Bio-Rad Laboratories, Inc.",Medical Devices,Healthcare
+662,PEN,9.39B,"Penumbra, Inc.",Medical Devices,Healthcare
+663,DCI,9.37B,"Donaldson Company, Inc.",Specialty Industrial Machinery,Industrials
+664,AES,9.36B,The AES Corporation,Utilities - Diversified,Utilities
+665,GL,9.35B,Globe Life Inc.,Insurance - Life,Financials
+666,GAP,9.34B,"The Gap, Inc.",Apparel Retail,Consumer Discretionary
+667,MLI,9.34B,"Mueller Industries, Inc.",Metal Fabrication,Industrials
+668,PAC,9.34B,"Grupo Aeroportuario del Pacífico, S.A.B. de C.V.",Airports & Air Services,Industrials
+669,BIO.B,9.33B,"Bio-Rad Laboratories, Inc.",Medical Devices,Healthcare
+670,KNTK,9.32B,Kinetik Holdings Inc.,Oil & Gas Midstream,Energy
+671,CFR,9.23B,"Cullen/Frost Bankers, Inc.",Banks - Regional,Financials
+672,BROS,9.20B,Dutch Bros Inc.,Restaurants,Consumer Discretionary
+673,MHK,9.15B,"Mohawk Industries, Inc.","Furnishings, Fixtures & Appliances",Consumer Discretionary
+674,RBRK,9.15B,"Rubrik, Inc.",Software - Infrastructure,Technology
+675,DOCS,9.10B,"Doximity, Inc.",Health Information Services,Healthcare
+676,BRX,9.07B,Brixmor Property Group Inc.,REIT - Retail,Real Estate
+677,TFX,9.04B,Teleflex Incorporated,Medical Instruments & Supplies,Healthcare
+678,NYT,9.03B,The New York Times Company,Publishing,Communication Services
+679,BSAC,9.00B,Banco Santander-Chile,Banks - Regional,Financials
+680,AXTA,9.00B,Axalta Coating Systems Ltd.,Specialty Chemicals,Materials
+681,TTC,8.95B,The Toro Company,Tools & Accessories,Industrials
+682,VNO,8.94B,Vornado Realty Trust,REIT - Office,Real Estate
+683,WF,8.92B,Woori Financial Group Inc.,Banks - Regional,Financials
+684,SUM,8.91B,"Summit Materials, Inc.",Building Materials,Materials
+685,GPK,8.88B,Graphic Packaging Holding Company,Packaging & Containers,Consumer Discretionary
+686,S,8.84B,"SentinelOne, Inc.",Software - Infrastructure,Technology
+687,OGE,8.81B,OGE Energy Corp.,Utilities - Regulated Electric,Utilities
+688,X,8.69B,United States Steel Corporation,Steel,Materials
+689,RRC,8.64B,Range Resources Corporation,Oil & Gas Exploration & Production,Energy
+690,SKM,8.62B,"SK Telecom Co., Ltd.",Telecom Services,Communication Services
+691,ATI,8.58B,ATI Inc.,Metal Fabrication,Industrials
+692,EGP,8.57B,"EastGroup Properties, Inc.",REIT - Industrial,Real Estate
+693,CHE,8.54B,Chemed Corporation,Medical Care Facilities,Healthcare
+694,PLNT,8.54B,"Planet Fitness, Inc.",Leisure,Consumer Discretionary
+695,SSB,8.54B,SouthState Corporation,Banks - Regional,Financials
+696,LPX,8.44B,Louisiana-Pacific Corporation,Building Products & Equipment,Industrials
+697,SPXC,8.42B,"SPX Technologies, Inc.",Building Products & Equipment,Industrials
+698,CIB,8.38B,Bancolombia S.A.,Banks - Regional,Financials
+699,CE,8.36B,Celanese Corporation,Chemicals,Materials
+700,MOS,8.33B,The Mosaic Company,Agricultural Inputs,Materials
+701,SNV,8.31B,Synovus Financial Corp.,Banks - Regional,Financials
+702,SSD,8.30B,"Simpson Manufacturing Co., Inc.",Lumber & Wood Production,Materials
+703,FN,8.29B,Fabrinet,Electronic Components,Technology
+704,TREX,8.26B,"Trex Company, Inc.",Building Products & Equipment,Industrials
+705,RLI,8.24B,RLI Corp.,Insurance - Property & Casualty,Financials
+706,BERY,8.24B,"Berry Global Group, Inc.",Packaging & Containers,Consumer Discretionary
+707,G,8.23B,Genpact Limited,Information Technology Services,Technology
+708,NNN,8.20B,"NNN REIT, Inc.",REIT - Retail,Real Estate
+709,PAAS,8.19B,Pan American Silver Corp.,Gold,Materials
+710,KBR,8.19B,"KBR, Inc.",Engineering & Construction,Industrials
+711,ONTO,8.16B,Onto Innovation Inc.,Semiconductor Equipment & Materials,Technology
+712,HRB,8.16B,"H&R Block, Inc.",Personal Services,Consumer Discretionary
+713,IVZ,8.16B,Invesco Ltd.,Asset Management,Financials
+714,FLS,8.13B,Flowserve Corporation,Specialty Industrial Machinery,Industrials
+715,PB,8.10B,"Prosperity Bancshares, Inc.",Banks - Regional,Financials
+716,INFA,8.05B,Informatica Inc.,Software - Infrastructure,Technology
+717,CX,8.01B,"CEMEX, S.A.B. de C.V.",Building Materials,Materials
+718,CWAN,8.01B,"Clearwater Analytics Holdings, Inc.",Software - Application,Technology
+719,ALV,8.00B,"Autoliv, Inc.",Auto Parts,Consumer Discretionary
+720,LTM,8.00B,LATAM Airlines Group S.A.,Airlines,Industrials
+721,LOAR,7.99B,Loar Holdings Inc.,Aerospace & Defense,Industrials
+722,HESM,7.98B,Hess Midstream LP,Oil & Gas Midstream,Energy
+723,GTLS,7.98B,"Chart Industries, Inc.",Specialty Industrial Machinery,Industrials
+724,VOYA,7.98B,"Voya Financial, Inc.",Financial Conglomerates,Financials
+725,PATH,7.97B,UiPath Inc.,Software - Infrastructure,Technology
+726,VFC,7.95B,V.F. Corporation,Apparel Manufacturing,Consumer Discretionary
+727,DINO,7.95B,HF Sinclair Corporation,Oil & Gas Refining & Marketing,Energy
+728,AGI,7.93B,Alamos Gold Inc.,Gold,Materials
+729,LUMN,7.90B,"Lumen Technologies, Inc.",Telecom Services,Communication Services
+730,ADC,7.89B,Agree Realty Corporation,REIT - Retail,Real Estate
+731,ANF,7.89B,Abercrombie & Fitch Co.,Apparel Retail,Consumer Discretionary
+732,ASR,7.88B,"Grupo Aeroportuario del Sureste, S. A. B. de C. V.",Airports & Air Services,Industrials
+733,GKOS,7.88B,Glaukos Corporation,Medical Devices,Healthcare
+734,KD,7.87B,"Kyndryl Holdings, Inc.",Information Technology Services,Technology
+735,KT,7.86B,KT Corporation,Telecom Services,Communication Services
+736,BBWI,7.84B,"Bath & Body Works, Inc.",Specialty Retail,Consumer Discretionary
+737,ESAB,7.81B,ESAB Corporation,Metal Fabrication,Industrials
+738,SMAR,7.80B,Smartsheet Inc.,Software - Application,Technology
+739,HII,7.78B,"Huntington Ingalls Industries, Inc.",Aerospace & Defense,Industrials
+740,TMHC,7.74B,Taylor Morrison Home Corporation,Residential Construction,Consumer Discretionary
+741,BWA,7.69B,BorgWarner Inc.,Auto Parts,Consumer Discretionary
+742,RHI,7.69B,Robert Half Inc.,Staffing & Employment Services,Industrials
+743,DLB,7.66B,"Dolby Laboratories, Inc.",Specialty Business Services,Industrials
+744,GIL,7.66B,Gildan Activewear Inc.,Apparel Manufacturing,Consumer Discretionary
+745,AXS,7.63B,AXIS Capital Holdings Limited,Insurance - Specialty,Financials
+746,AZEK,7.63B,The AZEK Company Inc.,Building Products & Equipment,Industrials
+747,JXN,7.62B,Jackson Financial Inc.,Insurance - Life,Financials
+748,WH,7.60B,"Wyndham Hotels & Resorts, Inc.",Lodging,Consumer Discretionary
+749,FMC,7.57B,FMC Corporation,Agricultural Inputs,Materials
+750,WFG,7.57B,West Fraser Timber Co. Ltd.,Lumber & Wood Production,Materials
+751,AM,7.55B,Antero Midstream Corporation,Oil & Gas Midstream,Energy
+752,AGCO,7.54B,AGCO Corporation,Farm & Heavy Construction Machinery,Industrials
+753,KEX,7.49B,Kirby Corporation,Marine Shipping,Industrials
+754,WEX,7.49B,WEX Inc.,Software - Infrastructure,Technology
+755,OSK,7.43B,Oshkosh Corporation,Farm & Heavy Construction Machinery,Industrials
+756,DDS,7.41B,"Dillard's, Inc.",Department Stores,Consumer Discretionary
+757,FR,7.41B,"First Industrial Realty Trust, Inc.",REIT - Industrial,Real Estate
+758,SUN,7.39B,Sunoco LP,Oil & Gas Refining & Marketing,Energy
+759,MTDR,7.39B,Matador Resources Company,Oil & Gas Exploration & Production,Energy
+760,GXO,7.36B,"GXO Logistics, Inc.",Integrated Freight & Logistics,Industrials
+761,ELF,7.32B,"e.l.f. Beauty, Inc.",Household & Personal Products,Consumer Staples
+762,WTS,7.28B,"Watts Water Technologies, Inc.",Specialty Industrial Machinery,Industrials
+763,CAE,7.28B,CAE Inc.,Aerospace & Defense,Industrials
+764,ERJ,7.22B,Embraer S.A.,Aerospace & Defense,Industrials
+765,MOD,7.21B,Modine Manufacturing Company,Auto Parts,Consumer Discretionary
+766,FCN,7.21B,"FTI Consulting, Inc.",Consulting Services,Industrials
+767,RH,7.19B,RH,Specialty Retail,Consumer Discretionary
+768,CADE,7.19B,Cadence Bank,Banks - Regional,Financials
+769,BRFS,7.17B,BRF S.A.,Packaged Foods,Consumer Staples
+770,FAF,7.17B,First American Financial Corporation,Insurance - Specialty,Financials
+771,MOG.A,7.17B,Moog Inc.,Aerospace & Defense,Industrials
+772,R,7.17B,"Ryder System, Inc.",Rental & Leasing Services,Industrials
+773,SMR,7.17B,NuScale Power Corporation,Specialty Industrial Machinery,Industrials
+774,JHG,7.14B,Janus Henderson Group plc,Asset Management,Financials
+775,ENLC,7.13B,"EnLink Midstream, LLC",Oil & Gas Midstream,Energy
+776,AN,7.12B,"AutoNation, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+777,CHH,7.11B,"Choice Hotels International, Inc.",Lodging,Consumer Discretionary
+778,ESI,7.10B,Element Solutions Inc,Specialty Chemicals,Materials
+779,CMC,7.10B,Commercial Metals Company,Steel,Materials
+780,MOG.B,7.10B,Moog Inc.,Aerospace & Defense,Industrials
+781,MTH,7.09B,Meritage Homes Corporation,Residential Construction,Consumer Discretionary
+782,GGB,7.08B,Gerdau S.A.,Steel,Materials
+783,AWI,7.06B,"Armstrong World Industries, Inc.",Building Products & Equipment,Industrials
+784,SITE,7.05B,"SiteOne Landscape Supply, Inc.",Industrial Distribution,Industrials
+785,VMI,7.02B,"Valmont Industries, Inc.",Conglomerates,Industrials
+786,MTN,7.01B,"Vail Resorts, Inc.",Resorts & Casinos,Consumer Discretionary
+787,RHP,7.00B,"Ryman Hospitality Properties, Inc.",REIT - Hotel & Motel,Real Estate
+788,VIPS,6.96B,Vipshop Holdings Limited,Internet Retail,Consumer Discretionary
+789,BLCO,6.93B,Bausch + Lomb Corporation,Medical Instruments & Supplies,Healthcare
+790,MSA,6.93B,MSA Safety Incorporated,Security & Protection Services,Industrials
+791,POST,6.89B,"Post Holdings, Inc.",Packaged Foods,Consumer Staples
+792,PJT,6.88B,PJT Partners Inc.,Capital Markets,Financials
+793,ADT,6.87B,ADT Inc.,Security & Protection Services,Industrials
+794,OMF,6.85B,"OneMain Holdings, Inc.",Credit Services,Financials
+795,HIMS,6.85B,"Hims & Hers Health, Inc.",Household & Personal Products,Consumer Staples
+796,ZWS,6.83B,Zurn Elkay Water Solutions Corporation,Pollution & Treatment Controls,Industrials
+797,STAG,6.83B,"STAG Industrial, Inc.",REIT - Industrial,Real Estate
+798,STWD,6.82B,"Starwood Property Trust, Inc.",REIT - Mortgage,Real Estate
+799,COLD,6.82B,"Americold Realty Trust, Inc.",REIT - Industrial,Real Estate
+800,LEVI,6.79B,Levi Strauss & Co.,Apparel Manufacturing,Consumer Discretionary
+801,ALK,6.78B,"Alaska Air Group, Inc.",Airlines,Industrials
+802,TIMB,6.76B,TIM S.A.,Telecom Services,Communication Services
+803,IONQ,6.68B,"IonQ, Inc.",Computer Hardware,Technology
+804,GBCI,6.68B,"Glacier Bancorp, Inc.",Banks - Regional,Financials
+805,MTG,6.67B,MGIC Investment Corporation,Insurance - Specialty,Financials
+806,BFAM,6.67B,Bright Horizons Family Solutions Inc.,Personal Services,Consumer Discretionary
+807,TX,6.63B,Ternium S.A.,Steel,Materials
+808,ELAN,6.62B,Elanco Animal Health Incorporated,Drug Manufacturers - Specialty & Generic,Healthcare
+809,IBP,6.60B,"Installed Building Products, Inc.",Residential Construction,Consumer Discretionary
+810,COTY,6.55B,Coty Inc.,Household & Personal Products,Consumer Staples
+811,WHR,6.51B,Whirlpool Corporation,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+812,HRI,6.50B,Herc Holdings Inc.,Rental & Leasing Services,Industrials
+813,QTWO,6.48B,"Q2 Holdings, Inc.",Software - Application,Technology
+814,BMI,6.48B,"Badger Meter, Inc.",Scientific & Technical Instruments,Technology
+815,BYD,6.45B,Boyd Gaming Corporation,Resorts & Casinos,Consumer Discretionary
+816,BIPC,6.42B,Brookfield Infrastructure Corporation,Utilities - Regulated Gas,Utilities
+817,ARW,6.40B,"Arrow Electronics, Inc.",Electronics & Computer Distribution,Technology
+818,HOMB,6.37B,"Home Bancshares, Inc. (Conway, AR)",Banks - Regional,Financials
+819,DAR,6.37B,Darling Ingredients Inc.,Packaged Foods,Consumer Staples
+820,IDA,6.34B,"IDACORP, Inc.",Utilities - Regulated Electric,Utilities
+821,HR,6.32B,Healthcare Realty Trust Incorporated,REIT - Healthcare Facilities,Real Estate
+822,NOV,6.32B,NOV Inc.,Oil & Gas Equipment & Services,Energy
+823,UGI,6.30B,UGI Corporation,Utilities - Regulated Gas,Utilities
+824,JOBY,6.27B,"Joby Aviation, Inc.",Airports & Air Services,Industrials
+825,CIG,6.24B,Companhia Energética de Minas Gerais - CEMIG,Utilities - Diversified,Utilities
+826,KBH,6.24B,KB Home,Residential Construction,Consumer Discretionary
+827,TEO,6.23B,Telecom Argentina S.A.,Telecom Services,Communication Services
+828,FNB,6.22B,F.N.B. Corporation,Banks - Regional,Financials
+829,CBT,6.18B,Cabot Corporation,Specialty Chemicals,Materials
+830,ESNT,6.17B,Essent Group Ltd.,Insurance - Specialty,Financials
+831,CLF,6.17B,Cleveland-Cliffs Inc.,Steel,Materials
+832,FSK,6.16B,FS KKR Capital Corp.,Asset Management,Financials
+833,KRG,6.14B,Kite Realty Group Trust,REIT - Retail,Real Estate
+834,THO,6.14B,"THOR Industries, Inc.",Recreational Vehicles,Consumer Discretionary
+835,TAL,6.12B,TAL Education Group,Education & Training Services,Consumer Staples
+836,FG,6.11B,"F&G Annuities & Life, Inc.",Insurance - Life,Financials
+837,SLGN,6.10B,Silgan Holdings Inc.,Packaging & Containers,Consumer Discretionary
+838,TRNO,6.09B,Terreno Realty Corporation,REIT - Industrial,Real Estate
+839,LNC,6.08B,Lincoln National Corporation,Insurance - Life,Financials
+840,ICL,6.08B,ICL Group Ltd,Agricultural Inputs,Materials
+841,W,6.05B,Wayfair Inc.,Internet Retail,Consumer Discretionary
+842,AMTM,6.04B,"Amentum Holdings, Inc.",Specialty Business Services,Industrials
+843,CNX,6.03B,CNX Resources Corporation,Oil & Gas Exploration & Production,Energy
+844,PVH,6.01B,PVH Corp.,Apparel Manufacturing,Consumer Discretionary
+845,SKY,5.98B,"Champion Homes, Inc.",Residential Construction,Consumer Discretionary
+846,INSP,5.97B,"Inspire Medical Systems, Inc.",Medical Devices,Healthcare
+847,FSS,5.96B,Federal Signal Corporation,Pollution & Treatment Controls,Industrials
+848,MC,5.95B,Moelis & Company,Capital Markets,Financials
+849,EPRT,5.95B,"Essential Properties Realty Trust, Inc.",REIT - Diversified,Real Estate
+850,BE,5.93B,Bloom Energy Corporation,Electrical Equipment & Parts,Industrials
+851,OBDC,5.93B,Blue Owl Capital Corporation,Asset Management,Financials
+852,GATX,5.89B,GATX Corporation,Rental & Leasing Services,Industrials
+853,KNF,5.89B,Knife River Corporation,Building Materials,Materials
+854,TKC,5.88B,Turkcell Iletisim Hizmetleri A.S.,Telecom Services,Communication Services
+855,VNT,5.86B,Vontier Corporation,Scientific & Technical Instruments,Technology
+856,BCC,5.86B,Boise Cascade Company,Building Materials,Materials
+857,NFG,5.85B,National Fuel Gas Company,Oil & Gas Integrated,Energy
+858,THG,5.83B,"The Hanover Insurance Group, Inc.",Insurance - Property & Casualty,Financials
+859,EAT,5.82B,"Brinker International, Inc.",Restaurants,Consumer Discretionary
+860,AL,5.81B,Air Lease Corporation,Rental & Leasing Services,Industrials
+861,NSA,5.80B,National Storage Affiliates Trust,REIT - Industrial,Real Estate
+862,RITM,5.80B,Rithm Capital Corp.,REIT - Mortgage,Real Estate
+863,ZK,5.78B,ZEEKR Intelligent Technology Holding Limited,Auto Manufacturers,Consumer Discretionary
+864,HMY,5.74B,Harmony Gold Mining Company Limited,Gold,Materials
+865,ALTM,5.72B,Arcadium Lithium plc,Specialty Chemicals,Materials
+866,AMG,5.72B,"Affiliated Managers Group, Inc.",Asset Management,Financials
+867,BMA,5.71B,Banco Macro S.A.,Banks - Regional,Financials
+868,SWX,5.68B,"Southwest Gas Holdings, Inc.",Utilities - Regulated Gas,Utilities
+869,BC,5.66B,Brunswick Corporation,Recreational Vehicles,Consumer Discretionary
+870,GTES,5.64B,Gates Industrial Corporation plc,Specialty Industrial Machinery,Industrials
+871,GPI,5.63B,"Group 1 Automotive, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+872,DNB,5.63B,"Dun & Bradstreet Holdings, Inc.",Financial Data & Stock Exchanges,Financials
+873,CTRE,5.63B,"CareTrust REIT, Inc.",REIT - Healthcare Facilities,Real Estate
+874,SNDR,5.61B,"Schneider National, Inc.",Trucking,Industrials
+875,PIPR,5.56B,Piper Sandler Companies,Capital Markets,Financials
+876,MGY,5.54B,Magnolia Oil & Gas Corporation,Oil & Gas Exploration & Production,Energy
+877,WHD,5.53B,"Cactus, Inc.",Oil & Gas Equipment & Services,Energy
+878,PFSI,5.53B,"PennyMac Financial Services, Inc.",Mortgage Finance,Financials
+879,NE,5.50B,Noble Corporation plc,Oil & Gas Drilling,Energy
+880,SHAK,5.50B,Shake Shack Inc.,Restaurants,Consumer Discretionary
+881,MSGS,5.49B,Madison Square Garden Sports Corp.,Entertainment,Communication Services
+882,USM,5.49B,United States Cellular Corporation,Telecom Services,Communication Services
+883,LEA,5.49B,Lear Corporation,Auto Parts,Consumer Discretionary
+884,BBU,5.46B,Brookfield Business Partners L.P.,Conglomerates,Industrials
+885,CWEN.A,5.46B,"Clearway Energy, Inc.",Utilities - Renewable,Utilities
+886,TKR,5.45B,The Timken Company,Tools & Accessories,Industrials
+887,WK,5.45B,Workiva Inc.,Software - Application,Technology
+888,ACA,5.44B,"Arcosa, Inc.",Engineering & Construction,Industrials
+889,STVN,5.44B,Stevanato Group S.p.A.,Medical Instruments & Supplies,Healthcare
+890,SOBO,5.41B,South Bow Corporation,-,-
+891,SFBS,5.40B,"ServisFirst Bancshares, Inc.",Banks - Regional,Financials
+892,LAZ,5.40B,"Lazard, Inc.",Capital Markets,Financials
+893,LB,5.38B,LandBridge Company LLC,Oil & Gas Equipment & Services,Energy
+894,VIST,5.36B,"Vista Energy, S.A.B. de C.V.",Oil & Gas Exploration & Production,Energy
+895,CNS,5.34B,"Cohen & Steers, Inc.",Asset Management,Financials
+896,SEE,5.33B,Sealed Air Corporation,Packaging & Containers,Consumer Discretionary
+897,CRC,5.32B,California Resources Corporation,Oil & Gas Exploration & Production,Energy
+898,DY,5.30B,"Dycom Industries, Inc.",Engineering & Construction,Industrials
+899,RDN,5.28B,Radian Group Inc.,Insurance - Specialty,Financials
+900,ABG,5.23B,"Asbury Automotive Group, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+901,NEU,5.22B,NewMarket Corporation,Specialty Chemicals,Materials
+902,MNSO,5.21B,MINISO Group Holding Limited,Specialty Retail,Consumer Discretionary
+903,INGM,5.20B,Ingram Micro Holding Corporation,Information Technology Services,Technology
+904,MATX,5.18B,"Matson, Inc.",Marine Shipping,Industrials
+905,SLG,5.18B,SL Green Realty Corp.,REIT - Office,Real Estate
+906,KTB,5.17B,"Kontoor Brands, Inc.",Apparel Manufacturing,Consumer Discretionary
+907,SM,5.16B,SM Energy Company,Oil & Gas Exploration & Production,Energy
+908,LTH,5.11B,"Life Time Group Holdings, Inc.",Leisure,Consumer Discretionary
+909,NJR,5.11B,New Jersey Resources Corporation,Utilities - Regulated Gas,Utilities
+910,BOX,5.11B,"Box, Inc.",Software - Infrastructure,Technology
+911,WTM,5.10B,"White Mountains Insurance Group, Ltd.",Insurance - Property & Casualty,Financials
+912,SON,5.10B,Sonoco Products Company,Packaging & Containers,Consumer Discretionary
+913,FLG,5.10B,"Flagstar Financial, Inc.",Banks - Regional,Financials
+914,SG,5.09B,"Sweetgreen, Inc.",Restaurants,Consumer Discretionary
+915,OLN,5.08B,Olin Corporation,Chemicals,Materials
+916,HXL,5.07B,Hexcel Corporation,Aerospace & Defense,Industrials
+917,VVV,5.07B,Valvoline Inc.,Auto & Truck Dealerships,Consumer Discretionary
+918,POR,5.07B,Portland General Electric Company,Utilities - Regulated Electric,Utilities
+919,ZETA,5.05B,Zeta Global Holdings Corp.,Software - Infrastructure,Technology
+920,CUZ,5.04B,Cousins Properties Incorporated,REIT - Office,Real Estate
+921,BDC,5.04B,Belden Inc.,Communication Equipment,Technology
+922,ST,5.02B,Sensata Technologies Holding plc,Scientific & Technical Instruments,Technology
+923,IRT,5.01B,"Independence Realty Trust, Inc.",REIT - Residential,Real Estate
+924,NXE,5.01B,NexGen Energy Ltd.,Uranium,Energy
+925,PAM,5.01B,Pampa Energía S.A.,Utilities - Independent Power Producers,Utilities
+926,CIVI,5.01B,"Civitas Resources, Inc.",Oil & Gas Exploration & Production,Energy
+927,KRC,5.01B,Kilroy Realty Corporation,REIT - Office,Real Estate
+928,SEM,4.99B,Select Medical Holdings Corporation,Medical Care Facilities,Healthcare
+929,ABCB,4.98B,Ameris Bancorp,Banks - Regional,Financials
+930,ORA,4.96B,"Ormat Technologies, Inc.",Utilities - Renewable,Utilities
+931,AX,4.94B,"Axos Financial, Inc.",Banks - Regional,Financials
+932,TGS,4.93B,Transportadora de Gas del Sur S.A.,Oil & Gas Integrated,Energy
+933,KAI,4.92B,Kadant Inc.,Specialty Industrial Machinery,Industrials
+934,RXO,4.89B,"RXO, Inc.",Trucking,Industrials
+935,MSM,4.86B,"MSC Industrial Direct Co., Inc.",Industrial Distribution,Industrials
+936,AVNT,4.86B,Avient Corporation,Specialty Chemicals,Materials
+937,MUR,4.83B,Murphy Oil Corporation,Oil & Gas Exploration & Production,Energy
+938,AGO,4.82B,Assured Guaranty Ltd.,Insurance - Specialty,Financials
+939,AI,4.81B,"C3.ai, Inc.",Software - Application,Technology
+940,MAIN,4.81B,Main Street Capital Corporation,Asset Management,Financials
+941,FLO,4.79B,"Flowers Foods, Inc.",Packaged Foods,Consumer Staples
+942,MAC,4.78B,The Macerich Company,REIT - Retail,Real Estate
+943,RYN,4.77B,Rayonier Inc.,REIT - Specialty,Real Estate
+944,PHI,4.76B,PLDT Inc.,Telecom Services,Communication Services
+945,PAY,4.71B,"Paymentus Holdings, Inc.",Software - Infrastructure,Technology
+946,ITGR,4.71B,Integer Holdings Corporation,Medical Devices,Healthcare
+947,TNET,4.66B,"TriNet Group, Inc.",Staffing & Employment Services,Industrials
+948,SMG,4.64B,The Scotts Miracle-Gro Company,Agricultural Inputs,Materials
+949,BKH,4.63B,Black Hills Corporation,Utilities - Regulated Gas,Utilities
+950,KMPR,4.61B,Kemper Corporation,Insurance - Property & Casualty,Financials
+951,MHO,4.60B,"M/I Homes, Inc.",Residential Construction,Consumer Discretionary
+952,ELP,4.59B,Companhia Paranaense de Energia - COPEL,Utilities - Diversified,Utilities
+953,ELPC,4.59B,Companhia Paranaense de Energia - COPEL,Utilities - Diversified,Utilities
+954,SIG,4.59B,Signet Jewelers Limited,Luxury Goods,Consumer Discretionary
+955,FUN,4.59B,Six Flags Entertainment Corporation,Leisure,Consumer Discretionary
+956,BHVN,4.57B,Biohaven Ltd.,Biotechnology,Healthcare
+957,LRN,4.55B,"Stride, Inc.",Education & Training Services,Consumer Staples
+958,CRK,4.53B,"Comstock Resources, Inc.",Oil & Gas Exploration & Production,Energy
+959,AHR,4.52B,"American Healthcare REIT, Inc.",REIT - Healthcare Facilities,Real Estate
+960,GOLF,4.51B,Acushnet Holdings Corp.,Leisure,Consumer Discretionary
+961,PRIM,4.51B,Primoris Services Corporation,Engineering & Construction,Industrials
+962,OGS,4.46B,"ONE Gas, Inc.",Utilities - Regulated Gas,Utilities
+963,GBTG,4.45B,"Global Business Travel Group, Inc.",Software - Application,Technology
+964,AROC,4.45B,"Archrock, Inc.",Oil & Gas Equipment & Services,Energy
+965,HAE,4.44B,Haemonetics Corporation,Medical Instruments & Supplies,Healthcare
+966,BOOT,4.44B,"Boot Barn Holdings, Inc.",Apparel Retail,Consumer Discretionary
+967,TXNM,4.44B,"TXNM Energy, Inc.",Utilities - Regulated Electric,Utilities
+968,MMS,4.43B,"Maximus, Inc.",Specialty Business Services,Industrials
+969,ASB,4.42B,Associated Banc-Corp,Banks - Regional,Financials
+970,M,4.42B,"Macy's, Inc.",Department Stores,Consumer Discretionary
+971,AUB,4.40B,Atlantic Union Bankshares Corporation,Banks - Regional,Financials
+972,HOG,4.39B,"Harley-Davidson, Inc.",Recreational Vehicles,Consumer Discretionary
+973,HGV,4.36B,Hilton Grand Vacations Inc.,Resorts & Casinos,Consumer Discretionary
+974,BCO,4.34B,The Brink's Company,Security & Protection Services,Industrials
+975,GVA,4.33B,Granite Construction Incorporated,Engineering & Construction,Industrials
+976,ALIT,4.31B,"Alight, Inc.",Software - Application,Technology
+977,MCY,4.31B,Mercury General Corporation,Insurance - Property & Casualty,Financials
+978,NOG,4.30B,"Northern Oil and Gas, Inc.",Oil & Gas Exploration & Production,Energy
+979,HHH,4.28B,Howard Hughes Holdings Inc.,Real Estate - Diversified,Real Estate
+980,FUL,4.26B,H.B. Fuller Company,Specialty Chemicals,Materials
+981,SR,4.24B,Spire Inc.,Utilities - Regulated Gas,Utilities
+982,UAA,4.24B,"Under Armour, Inc.",Apparel Manufacturing,Consumer Discretionary
+983,FRO,4.24B,Frontline plc,Oil & Gas Midstream,Energy
+984,SKT,4.23B,Tanger Inc.,REIT - Retail,Real Estate
+985,PBH,4.18B,Prestige Consumer Healthcare Inc.,Drug Manufacturers - Specialty & Generic,Healthcare
+986,TPH,4.18B,"Tri Pointe Homes, Inc.",Residential Construction,Consumer Discretionary
+987,OGN,4.16B,Organon & Co.,Drug Manufacturers - General,Healthcare
+988,CNO,4.16B,"CNO Financial Group, Inc.",Insurance - Life,Financials
+989,OSCR,4.16B,"Oscar Health, Inc.",Healthcare Plans,Healthcare
+990,UCB,4.14B,"United Community Banks, Inc.",Banks - Regional,Financials
+991,KFY,4.13B,Korn Ferry,Staffing & Employment Services,Industrials
+992,MDU,4.10B,"MDU Resources Group, Inc.",Conglomerates,Industrials
+993,CBZ,4.10B,"CBIZ, Inc.",Specialty Business Services,Industrials
+994,BWMX,4.10B,"Betterware de México, S.A.P.I. de C.V.",Specialty Retail,Consumer Discretionary
+995,GHC,4.09B,Graham Holdings Company,Education & Training Services,Consumer Staples
+996,DXC,4.09B,DXC Technology Company,Information Technology Services,Technology
+997,JWN,4.09B,"Nordstrom, Inc.",Department Stores,Consumer Discretionary
+998,GMS,4.08B,GMS Inc.,Building Products & Equipment,Industrials
+999,CLVT,4.08B,Clarivate Plc,Information Technology Services,Technology
+1000,GFF,4.07B,Griffon Corporation,Conglomerates,Industrials
+1001,REZI,4.07B,"Resideo Technologies, Inc.",Industrial Distribution,Industrials
+1002,UA,4.05B,"Under Armour, Inc.",Apparel Manufacturing,Consumer Discretionary
+1003,ASGN,4.04B,ASGN Incorporated,Information Technology Services,Technology
+1004,MWA,4.02B,"Mueller Water Products, Inc.",Specialty Industrial Machinery,Industrials
+1005,AB,4.00B,AllianceBernstein Holding L.P.,Asset Management,Financials
+1006,CNK,3.99B,"Cinemark Holdings, Inc.",Entertainment,Communication Services
+1007,NNI,3.98B,"Nelnet, Inc.",Credit Services,Financials
+1008,PII,3.97B,Polaris Inc.,Recreational Vehicles,Consumer Discretionary
+1009,NPO,3.97B,Enpro Inc.,Specialty Industrial Machinery,Industrials
+1010,JBT,3.95B,John Bean Technologies Corporation,Specialty Industrial Machinery,Industrials
+1011,ENS,3.94B,EnerSys,Electrical Equipment & Parts,Industrials
+1012,DEI,3.93B,"Douglas Emmett, Inc.",REIT - Office,Real Estate
+1013,CEIX,3.92B,CONSOL Energy Inc.,Thermal Coal,Energy
+1014,APLE,3.92B,"Apple Hospitality REIT, Inc.",REIT - Hotel & Motel,Real Estate
+1015,SLVM,3.91B,Sylvamo Corporation,Paper & Paper Products,Materials
+1016,CPA,3.91B,"Copa Holdings, S.A.",Airlines,Industrials
+1017,HGTY,3.91B,"Hagerty, Inc.",Insurance - Property & Casualty,Financials
+1018,ESE,3.90B,ESCO Technologies Inc.,Scientific & Technical Instruments,Technology
+1019,IGT,3.89B,International Game Technology PLC,Gambling,Consumer Discretionary
+1020,PRGO,3.87B,Perrigo Company plc,Drug Manufacturers - Specialty & Generic,Healthcare
+1021,APAM,3.85B,Artisan Partners Asset Management Inc.,Asset Management,Financials
+1022,TNL,3.85B,Travel + Leisure Co.,Travel Services,Consumer Discretionary
+1023,RIG,3.84B,Transocean Ltd.,Oil & Gas Drilling,Energy
+1024,TBBB,3.83B,BBB Foods Inc.,Discount Stores,Consumer Staples
+1025,TGLS,3.82B,Tecnoglass Inc.,Building Materials,Materials
+1026,NVST,3.82B,Envista Holdings Corporation,Medical Instruments & Supplies,Healthcare
+1027,SPR,3.81B,"Spirit AeroSystems Holdings, Inc.",Aerospace & Defense,Industrials
+1028,GEO,3.80B,"The GEO Group, Inc.",Security & Protection Services,Industrials
+1029,UNF,3.80B,UniFirst Corporation,Specialty Business Services,Industrials
+1030,WD,3.80B,"Walker & Dunlop, Inc.",Mortgage Finance,Financials
+1031,TDS,3.80B,"Telephone and Data Systems, Inc.",Telecom Services,Communication Services
+1032,YOU,3.78B,"Clear Secure, Inc.",Software - Application,Technology
+1033,WU,3.77B,The Western Union Company,Credit Services,Financials
+1034,ALE,3.76B,"ALLETE, Inc.",Utilities - Diversified,Utilities
+1035,ASH,3.76B,Ashland Inc.,Specialty Chemicals,Materials
+1036,CBU,3.76B,"Community Financial System, Inc.",Banks - Regional,Financials
+1037,OR,3.75B,Osisko Gold Royalties Ltd,Gold,Materials
+1038,TEX,3.74B,Terex Corporation,Farm & Heavy Construction Machinery,Industrials
+1039,HCC,3.71B,"Warrior Met Coal, Inc.",Coking Coal,Materials
+1040,BBAR,3.71B,Banco BBVA Argentina S.A.,Banks - Regional,Financials
+1041,CDP,3.69B,COPT Defense Properties,REIT - Office,Real Estate
+1042,PBF,3.69B,PBF Energy Inc.,Oil & Gas Refining & Marketing,Energy
+1043,STR,3.68B,Sitio Royalties Corp.,Oil & Gas Exploration & Production,Energy
+1044,ATMU,3.66B,Atmus Filtration Technologies Inc.,Pollution & Treatment Controls,Industrials
+1045,ENIC,3.65B,Enel Chile S.A.,Utilities - Regulated Electric,Utilities
+1046,DOCN,3.65B,"DigitalOcean Holdings, Inc.",Software - Infrastructure,Technology
+1047,HASI,3.65B,"HA Sustainable Infrastructure Capital, Inc.",Real Estate Services,Real Estate
+1048,AQN,3.64B,Algonquin Power & Utilities Corp.,Utilities - Renewable,Utilities
+1049,LMND,3.64B,"Lemonade, Inc.",Insurance - Property & Casualty,Financials
+1050,COMP,3.61B,"Compass, Inc.",Real Estate Services,Real Estate
+1051,BRC,3.61B,Brady Corporation,Security & Protection Services,Industrials
+1052,CSAN,3.60B,Cosan S.A.,Oil & Gas Refining & Marketing,Energy
+1053,ABM,3.60B,ABM Industries Incorporated,Specialty Business Services,Industrials
+1054,HBM,3.59B,Hudbay Minerals Inc.,Copper,Materials
+1055,AEO,3.59B,"American Eagle Outfitters, Inc.",Apparel Retail,Consumer Discretionary
+1056,ASAN,3.58B,"Asana, Inc.",Software - Application,Technology
+1057,SAM,3.57B,"The Boston Beer Company, Inc.",Beverages - Brewers,Consumer Staples
+1058,CXT,3.56B,"Crane NXT, Co.",Specialty Industrial Machinery,Industrials
+1059,HAYW,3.53B,"Hayward Holdings, Inc.",Electrical Equipment & Parts,Industrials
+1060,RNG,3.53B,"RingCentral, Inc.",Software - Application,Technology
+1061,LPL,3.52B,"LG Display Co., Ltd.",Consumer Electronics,Technology
+1062,FBP,3.52B,First BanCorp.,Banks - Regional,Financials
+1063,HIW,3.50B,"Highwoods Properties, Inc.",REIT - Office,Real Estate
+1064,NHI,3.50B,"National Health Investors, Inc.",REIT - Healthcare Facilities,Real Estate
+1065,ENV,3.49B,"Envestnet, Inc.",Software - Application,Technology
+1066,DV,3.49B,"DoubleVerify Holdings, Inc.",Software - Application,Technology
+1067,HP,3.48B,"Helmerich & Payne, Inc.",Oil & Gas Drilling,Energy
+1068,CWK,3.48B,Cushman & Wakefield plc,Real Estate Services,Real Estate
+1069,KGS,3.48B,"Kodiak Gas Services, Inc.",Oil & Gas Equipment & Services,Energy
+1070,GEF.B,3.46B,"Greif, Inc.",Packaging & Containers,Consumer Discretionary
+1071,EPR,3.46B,EPR Properties,REIT - Specialty,Real Estate
+1072,HUN,3.45B,Huntsman Corporation,Chemicals,Materials
+1073,VAC,3.44B,Marriott Vacations Worldwide Corporation,Resorts & Casinos,Consumer Discretionary
+1074,UGP,3.44B,Ultrapar Participações S.A.,Oil & Gas Refining & Marketing,Energy
+1075,YETI,3.44B,"YETI Holdings, Inc.",Leisure,Consumer Discretionary
+1076,ATGE,3.43B,Adtalem Global Education Inc.,Education & Training Services,Consumer Staples
+1077,BNL,3.43B,"Broadstone Net Lease, Inc.",REIT - Diversified,Real Estate
+1078,MIR,3.43B,"Mirion Technologies, Inc.",Specialty Industrial Machinery,Industrials
+1079,HL,3.41B,Hecla Mining Company,Other Precious Metals & Mining,Materials
+1080,GEF,3.40B,"Greif, Inc.",Packaging & Containers,Consumer Discretionary
+1081,MP,3.40B,MP Materials Corp.,Other Industrial Metals & Mining,Materials
+1082,CRGY,3.39B,Crescent Energy Company,Oil & Gas Integrated,Energy
+1083,VAL,3.39B,Valaris Limited,Oil & Gas Equipment & Services,Energy
+1084,SXT,3.35B,Sensient Technologies Corporation,Specialty Chemicals,Materials
+1085,TFPM,3.34B,Triple Flag Precious Metals Corp.,Other Precious Metals & Mining,Materials
+1086,GNW,3.34B,"Genworth Financial, Inc.",Insurance - Life,Financials
+1087,VRN,3.33B,Veren Inc.,Oil & Gas Exploration & Production,Energy
+1088,GRBK,3.33B,"Green Brick Partners, Inc.",Residential Construction,Consumer Discretionary
+1089,SSL,3.32B,Sasol Limited,Specialty Chemicals,Materials
+1090,FHI,3.32B,"Federated Hermes, Inc.",Asset Management,Financials
+1091,CWEN,3.31B,"Clearway Energy, Inc.",Utilities - Renewable,Utilities
+1092,BXMT,3.31B,"Blackstone Mortgage Trust, Inc.",REIT - Mortgage,Real Estate
+1093,ATKR,3.30B,Atkore Inc.,Electrical Equipment & Parts,Industrials
+1094,ATHM,3.30B,Autohome Inc.,Internet Content & Information,Communication Services
+1095,CC,3.28B,The Chemours Company,Specialty Chemicals,Materials
+1096,IAG,3.26B,IAMGOLD Corporation,Gold,Materials
+1097,ECG,3.26B,"Everus Construction Group, Inc.",Engineering & Construction,Industrials
+1098,BSM,3.24B,"Black Stone Minerals, L.P.",Oil & Gas Exploration & Production,Energy
+1099,AMR,3.24B,"Alpha Metallurgical Resources, Inc.",Coking Coal,Materials
+1100,BKU,3.23B,"BankUnited, Inc.",Banks - Regional,Financials
+1101,AWR,3.23B,American States Water Company,Utilities - Regulated Water,Utilities
+1102,LCII,3.23B,LCI Industries,Recreational Vehicles,Consumer Discretionary
+1103,ACHR,3.22B,Archer Aviation Inc.,Aerospace & Defense,Industrials
+1104,OUT,3.21B,OUTFRONT Media Inc.,REIT - Specialty,Real Estate
+1105,IFS,3.20B,Intercorp Financial Services Inc.,Banks - Regional,Financials
+1106,TAC,3.20B,TransAlta Corporation,Utilities - Independent Power Producers,Utilities
+1107,BOH,3.20B,Bank of Hawaii Corporation,Banks - Regional,Financials
+1108,EGO,3.20B,Eldorado Gold Corporation,Gold,Materials
+1109,PK,3.20B,Park Hotels & Resorts Inc.,REIT - Hotel & Motel,Real Estate
+1110,EE,3.20B,"Excelerate Energy, Inc.",Oil & Gas Midstream,Energy
+1111,ARCH,3.18B,"Arch Resources, Inc.",Coking Coal,Materials
+1112,DFH,3.17B,"Dream Finders Homes, Inc.",Residential Construction,Consumer Discretionary
+1113,IIPR,3.17B,"Innovative Industrial Properties, Inc.",REIT - Industrial,Real Estate
+1114,BTU,3.16B,Peabody Energy Corporation,Thermal Coal,Energy
+1115,OKLO,3.13B,Oklo Inc.,Utilities - Regulated Electric,Utilities
+1116,GPOR,3.13B,Gulfport Energy Corporation,Oil & Gas Exploration & Production,Energy
+1117,RSI,3.11B,"Rush Street Interactive, Inc.",Gambling,Consumer Discretionary
+1118,AKR,3.11B,Acadia Realty Trust,REIT - Retail,Real Estate
+1119,PRKS,3.11B,United Parks & Resorts Inc.,Leisure,Consumer Discretionary
+1120,TRN,3.11B,"Trinity Industries, Inc.",Railroads,Industrials
+1121,AVA,3.11B,Avista Corporation,Utilities - Diversified,Utilities
+1122,CWT,3.09B,California Water Service Group,Utilities - Regulated Water,Utilities
+1123,SGHC,3.09B,Super Group (SGHC) Limited,Gambling,Consumer Discretionary
+1124,ATS,3.06B,ATS Corporation,Specialty Industrial Machinery,Industrials
+1125,LBRT,3.06B,Liberty Energy Inc.,Oil & Gas Equipment & Services,Energy
+1126,ESRT,3.05B,"Empire State Realty Trust, Inc.",REIT - Diversified,Real Estate
+1127,TGNA,3.05B,TEGNA Inc.,Broadcasting,Communication Services
+1128,BVN,3.05B,Compañía de Minas Buenaventura S.A.A.,Other Precious Metals & Mining,Materials
+1129,UE,3.05B,Urban Edge Properties,REIT - Retail,Real Estate
+1130,CPK,3.05B,Chesapeake Utilities Corporation,Utilities - Regulated Gas,Utilities
+1131,MAN,3.04B,ManpowerGroup Inc.,Staffing & Employment Services,Industrials
+1132,HTGC,3.03B,"Hercules Capital, Inc.",Asset Management,Financials
+1133,ABR,3.02B,"Arbor Realty Trust, Inc.",REIT - Mortgage,Real Estate
+1134,CAAP,3.01B,Corporación América Airports S.A.,Airports & Air Services,Industrials
+1135,OII,3.01B,"Oceaneering International, Inc.",Oil & Gas Equipment & Services,Energy
+1136,BUR,3.00B,Burford Capital Limited,Asset Management,Financials
+1137,JOE,3.00B,The St. Joe Company,Real Estate - Diversified,Real Estate
+1138,BANC,3.00B,"Banc of California, Inc.",Banks - Regional,Financials
+1139,TDC,2.98B,Teradata Corporation,Software - Infrastructure,Technology
+1140,HBI,2.98B,Hanesbrands Inc.,Apparel Manufacturing,Consumer Discretionary
+1141,NSP,2.98B,"Insperity, Inc.",Staffing & Employment Services,Industrials
+1142,CCS,2.96B,"Century Communities, Inc.",Real Estate - Development,Real Estate
+1143,VSCO,2.94B,Victoria's Secret & Co.,Apparel Retail,Consumer Discretionary
+1144,BFH,2.93B,"Bread Financial Holdings, Inc.",Credit Services,Financials
+1145,BHC,2.92B,Bausch Health Companies Inc.,Drug Manufacturers - Specialty & Generic,Healthcare
+1146,MANU,2.91B,Manchester United plc,Entertainment,Communication Services
+1147,WRBY,2.89B,Warby Parker Inc.,Medical Instruments & Supplies,Healthcare
+1148,KWR,2.89B,Quaker Chemical Corporation,Specialty Chemicals,Materials
+1149,WLY,2.88B,"John Wiley & Sons, Inc.",Publishing,Communication Services
+1150,NPWR,2.86B,NET Power Inc.,Specialty Industrial Machinery,Industrials
+1151,AZZ,2.85B,AZZ Inc.,Specialty Business Services,Industrials
+1152,FCPT,2.85B,"Four Corners Property Trust, Inc.",REIT - Retail,Real Estate
+1153,NOMD,2.84B,Nomad Foods Limited,Packaged Foods,Consumer Staples
+1154,PAR,2.84B,PAR Technology Corporation,Software - Application,Technology
+1155,WLYB,2.83B,"John Wiley & Sons, Inc.",Publishing,Communication Services
+1156,PFS,2.83B,"Provident Financial Services, Inc.",Banks - Regional,Financials
+1157,SBSW,2.82B,Sibanye Stillwater Limited,Other Precious Metals & Mining,Materials
+1158,CON,2.82B,"Concentra Group Holdings Parent, Inc.",Medical Care Facilities,Healthcare
+1159,ENVA,2.80B,"Enova International, Inc.",Credit Services,Financials
+1160,ENR,2.79B,"Energizer Holdings, Inc.",Electrical Equipment & Parts,Industrials
+1161,USAC,2.77B,"USA Compression Partners, LP",Oil & Gas Equipment & Services,Energy
+1162,LXP,2.77B,LXP Industrial Trust,REIT - Industrial,Real Estate
+1163,HNI,2.75B,HNI Corporation,Business Equipment & Supplies,Industrials
+1164,QS,2.74B,QuantumScape Corporation,Auto Parts,Consumer Discretionary
+1165,HAFN,2.73B,Hafnia Limited,Marine Shipping,Industrials
+1166,TDW,2.73B,Tidewater Inc.,Oil & Gas Equipment & Services,Energy
+1167,AIN,2.70B,Albany International Corp.,Textile Manufacturing,Consumer Discretionary
+1168,MTX,2.70B,Minerals Technologies Inc.,Specialty Chemicals,Materials
+1169,ENOV,2.70B,Enovis Corporation,Specialty Industrial Machinery,Industrials
+1170,LSPD,2.69B,Lightspeed Commerce Inc.,Software - Application,Technology
+1171,MPW,2.69B,"Medical Properties Trust, Inc.",REIT - Healthcare Facilities,Real Estate
+1172,RVLV,2.69B,"Revolve Group, Inc.",Internet Retail,Consumer Discretionary
+1173,GRND,2.68B,Grindr Inc.,Software - Application,Technology
+1174,ZIM,2.68B,ZIM Integrated Shipping Services Ltd.,Marine Shipping,Industrials
+1175,FBK,2.67B,FB Financial Corporation,Banks - Regional,Financials
+1176,EPAC,2.67B,Enerpac Tool Group Corp.,Specialty Industrial Machinery,Industrials
+1177,KLC,2.66B,"KinderCare Learning Companies, Inc.",Diversified Consumer Services,Consumer Discretionary
+1178,SDRL,2.65B,Seadrill Limited,Oil & Gas Drilling,Energy
+1179,MCW,2.65B,"Mister Car Wash, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+1180,AESI,2.61B,Atlas Energy Solutions Inc.,Oil & Gas Equipment & Services,Energy
+1181,VSTO,2.59B,Vista Outdoor Inc.,Leisure,Consumer Discretionary
+1182,AAP,2.58B,"Advance Auto Parts, Inc.",Specialty Retail,Consumer Discretionary
+1183,SPB,2.57B,"Spectrum Brands Holdings, Inc.",Household & Personal Products,Consumer Staples
+1184,SID,2.57B,Companhia Siderúrgica Nacional,Steel,Materials
+1185,PAGS,2.56B,PagSeguro Digital Ltd.,Software - Infrastructure,Technology
+1186,SXI,2.56B,Standex International Corporation,Specialty Industrial Machinery,Industrials
+1187,BKE,2.56B,"The Buckle, Inc.",Apparel Retail,Consumer Discretionary
+1188,CPRI,2.54B,Capri Holdings Limited,Luxury Goods,Consumer Discretionary
+1189,SPNT,2.53B,SiriusPoint Ltd.,Insurance - Reinsurance,Financials
+1190,PACS,2.52B,"PACS Group, Inc.",Medical Care Facilities,Healthcare
+1191,CURB,2.52B,Curbline Properties Corp.,REIT - Retail,Real Estate
+1192,CDE,2.52B,"Coeur Mining, Inc.",Gold,Materials
+1193,CWH,2.51B,"Camping World Holdings, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+1194,AIR,2.49B,AAR Corp.,Aerospace & Defense,Industrials
+1195,YELP,2.47B,Yelp Inc.,Internet Content & Information,Communication Services
+1196,MTRN,2.46B,Materion Corporation,Other Industrial Metals & Mining,Materials
+1197,RNST,2.45B,Renasant Corporation,Banks - Regional,Financials
+1198,AVAL,2.45B,Grupo Aval Acciones y Valores S.A.,Banks - Regional,Financials
+1199,STNG,2.45B,Scorpio Tankers Inc.,Oil & Gas Midstream,Energy
+1200,ALG,2.44B,Alamo Group Inc.,Farm & Heavy Construction Machinery,Industrials
+1201,AKO.A,2.44B,Embotelladora Andina S.A.,Beverages - Non-Alcoholic,Consumer Staples
+1202,AKO.B,2.44B,Embotelladora Andina S.A.,Beverages - Non-Alcoholic,Consumer Staples
+1203,HI,2.43B,"Hillenbrand, Inc.",Specialty Industrial Machinery,Industrials
+1204,CXW,2.42B,"CoreCivic, Inc.",Security & Protection Services,Industrials
+1205,UTZ,2.42B,"Utz Brands, Inc.",Packaged Foods,Consumer Staples
+1206,TR,2.40B,"Tootsie Roll Industries, Inc.",Confectioners,Consumer Staples
+1207,CNMD,2.40B,CONMED Corporation,Medical Devices,Healthcare
+1208,DBRG,2.39B,"DigitalBridge Group, Inc.",Real Estate Services,Real Estate
+1209,CABO,2.39B,"Cable One, Inc.",Telecom Services,Communication Services
+1210,B,2.39B,Barnes Group Inc.,Specialty Industrial Machinery,Industrials
+1211,SAH,2.38B,"Sonic Automotive, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+1212,PHIN,2.37B,PHINIA Inc.,Auto Parts,Consumer Discretionary
+1213,BTE,2.36B,Baytex Energy Corp.,Oil & Gas Exploration & Production,Energy
+1214,IVT,2.36B,InvenTrust Properties Corp.,REIT - Retail,Real Estate
+1215,CEPU,2.34B,Central Puerto S.A.,Utilities - Regulated Electric,Utilities
+1216,ARDT,2.34B,"Ardent Health Partners, Inc.",Medical Care Facilities,Healthcare
+1217,EVTC,2.34B,"EVERTEC, Inc.",Software - Infrastructure,Technology
+1218,CMBT,2.33B,Cmb.Tech NV,Oil & Gas Midstream,Energy
+1219,FL,2.33B,"Foot Locker, Inc.",Apparel Retail,Consumer Discretionary
+1220,RLX,2.33B,RLX Technology Inc.,Tobacco,Consumer Staples
+1221,VSH,2.33B,"Vishay Intertechnology, Inc.",Semiconductors,Technology
+1222,FIHL,2.30B,Fidelis Insurance Holdings Limited,Insurance - Diversified,Financials
+1223,WNS,2.30B,WNS (Holdings) Limited,Information Technology Services,Technology
+1224,AGM,2.30B,Federal Agricultural Mortgage Corporation,Credit Services,Financials
+1225,VZIO,2.29B,VIZIO Holding Corp.,Consumer Electronics,Technology
+1226,WS,2.29B,"Worthington Steel, Inc.",Steel,Materials
+1227,KMT,2.29B,Kennametal Inc.,Tools & Accessories,Industrials
+1228,MBC,2.27B,"MasterBrand, Inc.","Furnishings, Fixtures & Appliances",Consumer Discretionary
+1229,SWI,2.27B,SolarWinds Corporation,Software - Infrastructure,Technology
+1230,NATL,2.26B,NCR Atleos Corporation,Software - Application,Technology
+1231,AGM.A,2.25B,Federal Agricultural Mortgage Corporation,Credit Services,Financials
+1232,CALX,2.24B,"Calix, Inc.",Software - Infrastructure,Technology
+1233,AMBP,2.22B,Ardagh Metal Packaging S.A.,Packaging & Containers,Consumer Discretionary
+1234,LOB,2.20B,"Live Oak Bancshares, Inc.",Banks - Regional,Financials
+1235,AAT,2.18B,"American Assets Trust, Inc.",REIT - Diversified,Real Estate
+1236,SOC,2.17B,Sable Offshore Corp.,Oil & Gas Drilling,Energy
+1237,SHO,2.16B,"Sunstone Hotel Investors, Inc.",REIT - Hotel & Motel,Real Estate
+1238,EQC,2.16B,Equity Commonwealth,REIT - Office,Real Estate
+1239,KAR,2.16B,"OPENLANE, Inc.",Auto & Truck Dealerships,Consumer Discretionary
+1240,IBTA,2.16B,"Ibotta, Inc.",Software - Application,Technology
+1241,VYX,2.15B,NCR Voyix Corporation,Information Technology Services,Technology
+1242,VSTS,2.15B,Vestis Corporation,Rental & Leasing Services,Industrials
+1243,OFG,2.14B,OFG Bancorp,Banks - Regional,Financials
+1244,CDLR,2.12B,Cadeler A/S,Engineering & Construction,Industrials
+1245,HTH,2.12B,Hilltop Holdings Inc.,Banks - Regional,Financials
+1246,GBX,2.12B,"The Greenbrier Companies, Inc.",Railroads,Industrials
+1247,AGX,2.12B,"Argan, Inc.",Engineering & Construction,Industrials
+1248,STC,2.11B,Stewart Information Services Corporation,Insurance - Property & Casualty,Financials
+1249,BAK,2.11B,Braskem S.A.,Chemicals,Materials
+1250,CXM,2.11B,"Sprinklr, Inc.",Software - Application,Technology
+1251,VTMX,2.10B,"Corporación Inmobiliaria Vesta, S.A.B. de C.V.",Real Estate - Development,Real Estate
+1252,CCU,2.08B,Compañía Cervecerías Unidas S.A.,Beverages - Brewers,Consumer Staples
+1253,TDOC,2.07B,"Teladoc Health, Inc.",Health Information Services,Healthcare
+1254,WOR,2.07B,"Worthington Enterprises, Inc.",Metal Fabrication,Industrials
+1255,KSS,2.04B,Kohl's Corporation,Department Stores,Consumer Discretionary
+1256,SEMR,2.04B,"Semrush Holdings, Inc.",Software - Application,Technology
+1257,DKL,2.04B,"Delek Logistics Partners, LP",Oil & Gas Refining & Marketing,Energy
+1258,TALO,2.03B,Talos Energy Inc.,Oil & Gas Exploration & Production,Energy
+1259,RAMP,2.02B,"LiveRamp Holdings, Inc.",Software - Infrastructure,Technology
+1260,LU,2.02B,Lufax Holding Ltd,Credit Services,Financials
+1261,ZGN,2.01B,Ermenegildo Zegna N.V.,Apparel Manufacturing,Consumer Discretionary
+1262,INSW,2.01B,"International Seaways, Inc.",Oil & Gas Midstream,Energy
+1263,OI,2.01B,"O-I Glass, Inc.",Packaging & Containers,Consumer Discretionary
+1264,PRG,2.00B,"PROG Holdings, Inc.",Rental & Leasing Services,Industrials
+1265,ROG,1.99B,Rogers Corporation,Electronic Components,Technology
+1266,CRI,1.99B,"Carter's, Inc.",Apparel Retail,Consumer Discretionary
+1267,BBUC,1.99B,Brookfield Business Corporation,Asset Management,Financials
+1268,WMK,1.98B,"Weis Markets, Inc.",Grocery Stores,Consumer Staples
+1269,TROX,1.97B,Tronox Holdings plc,Chemicals,Materials
+1270,FCF,1.97B,First Commonwealth Financial Corporation,Banks - Regional,Financials
+1271,GENI,1.96B,Genius Sports Limited,Internet Content & Information,Communication Services
+1272,TSLX,1.95B,"Sixth Street Specialty Lending, Inc.",Asset Management,Financials
+1273,DRH,1.95B,DiamondRock Hospitality Company,REIT - Hotel & Motel,Real Estate
+1274,HG,1.94B,"Hamilton Insurance Group, Ltd.",Insurance - Reinsurance,Financials
+1275,LGF.A,1.94B,Lions Gate Entertainment Corp.,Entertainment,Communication Services
+1276,CVI,1.94B,"CVR Energy, Inc.",Oil & Gas Refining & Marketing,Energy
+1277,PD,1.92B,"PagerDuty, Inc.",Software - Application,Technology
+1278,PRM,1.92B,"Perimeter Solutions, Inc.",Specialty Chemicals,Materials
+1279,NABL,1.92B,"N-able, Inc.",Information Technology Services,Technology
+1280,VVX,1.91B,"V2X, Inc.",Aerospace & Defense,Industrials
+1281,WWW,1.90B,"Wolverine World Wide, Inc.",Footwear & Accessories,Consumer Discretionary
+1282,AG,1.90B,First Majestic Silver Corp.,Silver,Materials
+1283,LZB,1.90B,La-Z-Boy Incorporated,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+1284,HE,1.89B,"Hawaiian Electric Industries, Inc.",Utilities - Regulated Electric,Utilities
+1285,NBHC,1.88B,National Bank Holdings Corporation,Banks - Regional,Financials
+1286,KOS,1.86B,Kosmos Energy Ltd.,Oil & Gas Exploration & Production,Energy
+1287,LC,1.86B,LendingClub Corporation,Banks - Regional,Financials
+1288,VRE,1.86B,"Veris Residential, Inc.",REIT - Residential,Real Estate
+1289,SJW,1.86B,SJW Group,Utilities - Regulated Water,Utilities
+1290,BOWL,1.86B,Bowlero Corp.,Leisure,Consumer Discretionary
+1291,CTRI,1.85B,"Centuri Holdings, Inc.",Utilities - Regulated Gas,Utilities
+1292,MSDL,1.84B,Morgan Stanley Direct Lending Fund,-,-
+1293,UP,1.84B,Wheels Up Experience Inc.,Airports & Air Services,Industrials
+1294,CSTM,1.83B,Constellium SE,Aluminum,Materials
+1295,AMC,1.83B,"AMC Entertainment Holdings, Inc.",Entertainment,Communication Services
+1296,NGVT,1.83B,Ingevity Corporation,Specialty Chemicals,Materials
+1297,GTY,1.81B,Getty Realty Corp.,REIT - Retail,Real Estate
+1298,CUBI,1.81B,"Customers Bancorp, Inc.",Banks - Regional,Financials
+1299,BKV,1.81B,BKV Corporation,"Oil, Gas & Consumable Fuels",Energy
+1300,BWLP,1.80B,BW LPG Limited,Marine Shipping,Industrials
+1301,HLIO,1.79B,"Helios Technologies, Inc.",Specialty Industrial Machinery,Industrials
+1302,THS,1.79B,"TreeHouse Foods, Inc.",Packaged Foods,Consumer Staples
+1303,GLP,1.79B,Global Partners LP,Oil & Gas Midstream,Energy
+1304,EPC,1.79B,Edgewell Personal Care Company,Household & Personal Products,Consumer Staples
+1305,MSGE,1.79B,Madison Square Garden Entertainment Corp.,Leisure,Consumer Discretionary
+1306,OBDE,1.78B,Blue Owl Capital Corporation III,Asset Management,Financials
+1307,CODI,1.78B,Compass Diversified,Conglomerates,Industrials
+1308,ARCO,1.78B,Arcos Dorados Holdings Inc.,Restaurants,Consumer Discretionary
+1309,EDN,1.78B,Empresa Distribuidora y Comercializadora Norte Sociedad Anónima,Utilities - Regulated Electric,Utilities
+1310,LGF.B,1.77B,Lions Gate Entertainment Corp.,Entertainment,Communication Services
+1311,WGO,1.77B,"Winnebago Industries, Inc.",Recreational Vehicles,Consumer Discretionary
+1312,DFIN,1.77B,"Donnelley Financial Solutions, Inc.",Software - Application,Technology
+1313,NWN,1.76B,Northwest Natural Holding Company,Utilities - Regulated Gas,Utilities
+1314,LEG,1.75B,"Leggett & Platt, Incorporated","Furnishings, Fixtures & Appliances",Consumer Discretionary
+1315,DBD,1.75B,"Diebold Nixdorf, Incorporated",Software - Application,Technology
+1316,SCL,1.75B,Stepan Company,Specialty Chemicals,Materials
+1317,BHE,1.74B,"Benchmark Electronics, Inc.",Electronic Components,Technology
+1318,GNL,1.74B,"Global Net Lease, Inc.",REIT - Diversified,Real Estate
+1319,LTC,1.74B,"LTC Properties, Inc.",REIT - Healthcare Facilities,Real Estate
+1320,MLNK,1.74B,"MeridianLink, Inc.",Software - Application,Technology
+1321,KLG,1.74B,WK Kellogg Co,Packaged Foods,Consumer Staples
+1322,SAND,1.73B,Sandstorm Gold Ltd.,Gold,Materials
+1323,WTTR,1.73B,"Select Water Solutions, Inc.",Oil & Gas Equipment & Services,Energy
+1324,WT,1.72B,"WisdomTree, Inc.",Asset Management,Financials
+1325,DAVA,1.72B,Endava plc,Software - Infrastructure,Technology
+1326,TNC,1.72B,Tennant Company,Specialty Industrial Machinery,Industrials
+1327,MNR,1.71B,Mach Natural Resources LP,Oil & Gas Exploration & Production,Energy
+1328,VRTS,1.71B,"Virtus Investment Partners, Inc.",Asset Management,Financials
+1329,STEL,1.70B,"Stellar Bancorp, Inc.",Banks - Regional,Financials
+1330,NIC,1.70B,"Nicolet Bankshares, Inc.",Banks - Regional,Financials
+1331,SDHC,1.70B,Smith Douglas Homes Corp.,Real Estate - Development,Real Estate
+1332,KN,1.70B,Knowles Corporation,Electronic Components,Technology
+1333,ADNT,1.69B,Adient plc,Auto Parts,Consumer Discretionary
+1334,WKC,1.68B,World Kinect Corporation,Oil & Gas Refining & Marketing,Energy
+1335,HMN,1.68B,Horace Mann Educators Corporation,Insurance - Property & Casualty,Financials
+1336,NTB,1.68B,The Bank of N.T. Butterfield & Son Limited,Banks - Diversified,Financials
+1337,ASAI,1.68B,Sendas Distribuidora S.A.,Grocery Stores,Consumer Staples
+1338,CTS,1.67B,CTS Corporation,Electronic Components,Technology
+1339,HLX,1.66B,"Helix Energy Solutions Group, Inc.",Oil & Gas Equipment & Services,Energy
+1340,REVG,1.66B,"REV Group, Inc.",Farm & Heavy Construction Machinery,Industrials
+1341,PEB,1.66B,Pebblebrook Hotel Trust,REIT - Hotel & Motel,Real Estate
+1342,CMRE,1.64B,Costamare Inc.,Marine Shipping,Industrials
+1343,JBGS,1.64B,JBG SMITH Properties,REIT - Office,Real Estate
+1344,MMI,1.64B,"Marcus & Millichap, Inc.",Real Estate Services,Real Estate
+1345,XPRO,1.63B,Expro Group Holdings N.V.,Oil & Gas Equipment & Services,Energy
+1346,MODG,1.63B,Topgolf Callaway Brands Corp.,Leisure,Consumer Discretionary
+1347,BV,1.63B,"BrightView Holdings, Inc.",Specialty Business Services,Industrials
+1348,VET,1.62B,Vermilion Energy Inc.,Oil & Gas Exploration & Production,Energy
+1349,FINV,1.62B,FinVolution Group,Credit Services,Financials
+1350,NEP,1.62B,"NextEra Energy Partners, LP",Utilities - Renewable,Utilities
+1351,NAPA,1.62B,"The Duckhorn Portfolio, Inc.",Beverages - Wineries & Distilleries,Consumer Staples
+1352,DHT,1.62B,"DHT Holdings, Inc.",Oil & Gas Midstream,Energy
+1353,FDP,1.61B,Fresh Del Monte Produce Inc.,Farm Products,Consumer Staples
+1354,ERO,1.61B,Ero Copper Corp.,Copper,Materials
+1355,XHR,1.60B,"Xenia Hotels & Resorts, Inc.",REIT - Hotel & Motel,Real Estate
+1356,DNOW,1.59B,DNOW Inc.,Industrial Distribution,Industrials
+1357,KEN,1.58B,Kenon Holdings Ltd.,Utilities - Independent Power Producers,Utilities
+1358,ARIS,1.57B,"Aris Water Solutions, Inc.",Utilities - Regulated Water,Utilities
+1359,SCS,1.56B,Steelcase Inc.,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+1360,DAC,1.56B,Danaos Corporation,Marine Shipping,Industrials
+1361,PX,1.56B,"P10, Inc.",Asset Management,Financials
+1362,FSM,1.56B,Fortuna Mining Corp.,Gold,Materials
+1363,FOR,1.56B,Forestar Group Inc.,Real Estate - Development,Real Estate
+1364,GRDN,1.55B,"Guardian Pharmacy Services, Inc.",Pharmaceutical Retailers,Healthcare
+1365,SVV,1.55B,"Savers Value Village, Inc.",Specialty Retail,Consumer Discretionary
+1366,GSBD,1.55B,"Goldman Sachs BDC, Inc.",Asset Management,Financials
+1367,KW,1.54B,"Kennedy-Wilson Holdings, Inc.",Real Estate Services,Real Estate
+1368,RLJ,1.54B,RLJ Lodging Trust,REIT - Hotel & Motel,Real Estate
+1369,TPC,1.53B,Tutor Perini Corporation,Engineering & Construction,Industrials
+1370,UMH,1.53B,"UMH Properties, Inc.",REIT - Residential,Real Estate
+1371,ZUO,1.52B,"Zuora, Inc.",Software - Infrastructure,Technology
+1372,KRP,1.52B,"Kimbell Royalty Partners, LP",Oil & Gas Exploration & Production,Energy
+1373,SAFE,1.51B,Safehold Inc.,REIT - Diversified,Real Estate
+1374,NMM,1.50B,Navios Maritime Partners L.P.,Marine Shipping,Industrials
+1375,LADR,1.50B,Ladder Capital Corp,REIT - Mortgage,Real Estate
+1376,UNFI,1.49B,"United Natural Foods, Inc.",Food Distribution,Consumer Staples
+1377,PBI,1.48B,Pitney Bowes Inc.,Integrated Freight & Logistics,Industrials
+1378,NX,1.48B,Quanex Building Products Corporation,Building Products & Equipment,Industrials
+1379,USPH,1.48B,"U.S. Physical Therapy, Inc.",Medical Care Facilities,Healthcare
+1380,DEA,1.47B,"Easterly Government Properties, Inc.",REIT - Office,Real Estate
+1381,SPHR,1.47B,Sphere Entertainment Co.,Entertainment,Communication Services
+1382,TGI,1.47B,"Triumph Group, Inc.",Aerospace & Defense,Industrials
+1383,DOLE,1.46B,Dole plc,Farm Products,Consumer Staples
+1384,LNN,1.44B,Lindsay Corporation,Farm & Heavy Construction Machinery,Industrials
+1385,ELME,1.44B,Elme Communities,REIT - Residential,Real Estate
+1386,SFL,1.44B,SFL Corporation Ltd.,Marine Shipping,Industrials
+1387,GEL,1.44B,"Genesis Energy, L.P.",Oil & Gas Midstream,Energy
+1388,SBH,1.44B,"Sally Beauty Holdings, Inc.",Specialty Retail,Consumer Discretionary
+1389,DX,1.43B,"Dynex Capital, Inc.",REIT - Mortgage,Real Estate
+1390,UVV,1.43B,Universal Corporation,Tobacco,Consumer Staples
+1391,SILA,1.43B,"Sila Realty Trust, Inc.",REIT - Healthcare Facilities,Real Estate
+1392,TNK,1.43B,Teekay Tankers Ltd.,Oil & Gas Midstream,Energy
+1393,AMRC,1.43B,"Ameresco, Inc.",Engineering & Construction,Industrials
+1394,BY,1.42B,"Byline Bancorp, Inc.",Banks - Regional,Financials
+1395,ALEX,1.41B,"Alexander & Baldwin, Inc.",REIT - Retail,Real Estate
+1396,FLNG,1.41B,FLEX LNG Ltd.,Oil & Gas Midstream,Energy
+1397,EVH,1.40B,"Evolent Health, Inc.",Health Information Services,Healthcare
+1398,NRP,1.40B,Natural Resource Partners L.P.,Thermal Coal,Energy
+1399,UTI,1.40B,"Universal Technical Institute, Inc.",Education & Training Services,Consumer Staples
+1400,BB,1.39B,BlackBerry Limited,Software - Infrastructure,Technology
+1401,BFS,1.39B,"Saul Centers, Inc.",REIT - Retail,Real Estate
+1402,DESP,1.38B,"Despegar.com, Corp.",Travel Services,Consumer Discretionary
+1403,SEI,1.38B,"Solaris Energy Infrastructure, Inc.",Oil & Gas Equipment & Services,Energy
+1404,CTOS,1.37B,"Custom Truck One Source, Inc.",Rental & Leasing Services,Industrials
+1405,CDRE,1.36B,"Cadre Holdings, Inc.",Aerospace & Defense,Industrials
+1406,CNNE,1.36B,"Cannae Holdings, Inc.",Restaurants,Consumer Discretionary
+1407,AIV,1.36B,Apartment Investment and Management Company,REIT - Residential,Real Estate
+1408,BLND,1.35B,"Blend Labs, Inc.",Software - Application,Technology
+1409,RES,1.35B,"RPC, Inc.",Oil & Gas Equipment & Services,Energy
+1410,GB,1.34B,Global Blue Group Holding AG,Software - Infrastructure,Technology
+1411,KRO,1.34B,"Kronos Worldwide, Inc.",Specialty Chemicals,Materials
+1412,NTST,1.34B,NETSTREIT Corp.,REIT - Retail,Real Estate
+1413,RCUS,1.33B,"Arcus Biosciences, Inc.",Biotechnology,Healthcare
+1414,IMAX,1.33B,IMAX Corporation,Entertainment,Communication Services
+1415,BHLB,1.32B,"Berkshire Hills Bancorp, Inc.",Banks - Regional,Financials
+1416,CGAU,1.32B,Centerra Gold Inc.,Gold,Materials
+1417,EIG,1.32B,"Employers Holdings, Inc.",Insurance - Specialty,Financials
+1418,SA,1.32B,Seabridge Gold Inc.,Gold,Materials
+1419,LOMA,1.30B,Loma Negra Compañía Industrial Argentina Sociedad Anónima,Building Materials,Materials
+1420,ENFN,1.29B,"Enfusion, Inc.",Software - Application,Technology
+1421,IDT,1.29B,IDT Corporation,Telecom Services,Communication Services
+1422,CARS,1.29B,Cars.com Inc.,Auto & Truck Dealerships,Consumer Discretionary
+1423,DAN,1.29B,Dana Incorporated,Auto Parts,Consumer Discretionary
+1424,OXM,1.28B,"Oxford Industries, Inc.",Apparel Manufacturing,Consumer Discretionary
+1425,DQ,1.28B,Daqo New Energy Corp.,Semiconductor Equipment & Materials,Technology
+1426,MSC,1.28B,Studio City International Holdings Limited,Resorts & Casinos,Consumer Discretionary
+1427,LVWR,1.28B,"LiveWire Group, Inc.",Auto Manufacturers,Consumer Discretionary
+1428,ARI,1.28B,"Apollo Commercial Real Estate Finance, Inc.",REIT - Mortgage,Real Estate
+1429,CSR,1.27B,Centerspace,REIT - Residential,Real Estate
+1430,WOLF,1.27B,"Wolfspeed, Inc.",Semiconductors,Technology
+1431,COUR,1.25B,"Coursera, Inc.",Education & Training Services,Consumer Staples
+1432,BLX,1.25B,"Banco Latinoamericano de Comercio Exterior, S. A.",Banks - Regional,Financials
+1433,RC,1.25B,Ready Capital Corporation,REIT - Mortgage,Real Estate
+1434,MD,1.25B,"Pediatrix Medical Group, Inc.",Medical Care Facilities,Healthcare
+1435,ASPN,1.23B,"Aspen Aerogels, Inc.",Building Products & Equipment,Industrials
+1436,TWO,1.22B,Two Harbors Investment Corp.,REIT - Mortgage,Real Estate
+1437,ARLO,1.22B,"Arlo Technologies, Inc.",Building Products & Equipment,Industrials
+1438,ATEN,1.22B,"A10 Networks, Inc.",Software - Infrastructure,Technology
+1439,SPH,1.21B,"Suburban Propane Partners, L.P.",Utilities - Regulated Gas,Utilities
+1440,DK,1.21B,"Delek US Holdings, Inc.",Oil & Gas Refining & Marketing,Energy
+1441,CIM,1.21B,Chimera Investment Corporation,REIT - Mortgage,Real Estate
+1442,VTEX,1.20B,VTEX,Software - Application,Technology
+1443,NXRT,1.20B,"NexPoint Residential Trust, Inc.",REIT - Residential,Real Estate
+1444,IRS,1.20B,IRSA Inversiones y Representaciones Sociedad Anónima,Real Estate Services,Real Estate
+1445,EVEX,1.20B,"Eve Holding, Inc.",Aerospace & Defense,Industrials
+1446,MRC,1.20B,MRC Global Inc.,Oil & Gas Equipment & Services,Energy
+1447,JKS,1.20B,"JinkoSolar Holding Co., Ltd.",Solar,Technology
+1448,FBMS,1.19B,"The First Bancshares, Inc.",Banks - Regional,Financials
+1449,GETY,1.19B,"Getty Images Holdings, Inc.",Internet Content & Information,Communication Services
+1450,AORT,1.19B,"Artivion, Inc.",Medical Devices,Healthcare
+1451,HCI,1.19B,"HCI Group, Inc.",Insurance - Property & Casualty,Financials
+1452,BRDG,1.19B,Bridge Investment Group Holdings Inc.,Asset Management,Financials
+1453,HOV,1.19B,"Hovnanian Enterprises, Inc.",Residential Construction,Consumer Discretionary
+1454,OLO,1.19B,Olo Inc.,Software - Application,Technology
+1455,ATUS,1.18B,"Altice USA, Inc.",Telecom Services,Communication Services
+1456,PMT,1.18B,PennyMac Mortgage Investment Trust,REIT - Mortgage,Real Estate
+1457,KBDC,1.18B,"Kayne Anderson BDC, Inc.",-,-
+1458,BOW,1.18B,Bowhead Specialty Holdings Inc.,Insurance - Property & Casualty,Financials
+1459,PHR,1.18B,"Phreesia, Inc.",Health Information Services,Healthcare
+1460,VTLE,1.18B,"Vital Energy, Inc.",Oil & Gas Exploration & Production,Energy
+1461,EXK,1.17B,Endeavour Silver Corp.,Other Precious Metals & Mining,Materials
+1462,FVRR,1.17B,Fiverr International Ltd.,Internet Content & Information,Communication Services
+1463,PDM,1.17B,"Piedmont Office Realty Trust, Inc.",REIT - Office,Real Estate
+1464,EFXT,1.16B,Enerflex Ltd.,Oil & Gas Equipment & Services,Energy
+1465,EVRI,1.16B,Everi Holdings Inc.,Gambling,Consumer Discretionary
+1466,BSIG,1.16B,BrightSphere Investment Group Inc.,Asset Management,Financials
+1467,CAL,1.15B,"Caleres, Inc.",Apparel Retail,Consumer Discretionary
+1468,PGRE,1.15B,"Paramount Group, Inc.",REIT - Office,Real Estate
+1469,ALX,1.14B,"Alexander's, Inc.",REIT - Retail,Real Estate
+1470,MFA,1.14B,"MFA Financial, Inc.",REIT - Mortgage,Real Estate
+1471,EFC,1.14B,Ellington Financial Inc.,REIT - Mortgage,Real Estate
+1472,FSLY,1.14B,"Fastly, Inc.",Software - Application,Technology
+1473,INVX,1.14B,"Innovex International, Inc.",Oil & Gas Equipment & Services,Energy
+1474,PRO,1.14B,"PROS Holdings, Inc.",Software - Application,Technology
+1475,GRC,1.13B,The Gorman-Rupp Company,Specialty Industrial Machinery,Industrials
+1476,SII,1.13B,Sprott Inc.,Asset Management,Financials
+1477,SSTK,1.12B,"Shutterstock, Inc.",Internet Content & Information,Communication Services
+1478,AHH,1.11B,"Armada Hoffler Properties, Inc.",REIT - Diversified,Real Estate
+1479,AGRO,1.11B,Adecoagro S.A.,Farm Products,Consumer Staples
+1480,PSFE,1.11B,Paysafe Limited,Software - Infrastructure,Technology
+1481,PL,1.11B,Planet Labs PBC,Aerospace & Defense,Industrials
+1482,BKD,1.11B,Brookdale Senior Living Inc.,Medical Care Facilities,Healthcare
+1483,BXC,1.10B,BlueLinx Holdings Inc.,Industrial Distribution,Industrials
+1484,NVGS,1.10B,Navigator Holdings Ltd.,Oil & Gas Midstream,Energy
+1485,KFRC,1.10B,Kforce Inc.,Staffing & Employment Services,Industrials
+1486,TV,1.10B,"Grupo Televisa, S.A.B.",Telecom Services,Communication Services
+1487,OBK,1.10B,"Origin Bancorp, Inc.",Banks - Regional,Financials
+1488,PGRU,1.09B,PropertyGuru Group Limited,Internet Content & Information,Communication Services
+1489,SBSI,1.09B,"Southside Bancshares, Inc.",Banks - Regional,Financials
+1490,GIC,1.09B,Global Industrial Company,Industrial Distribution,Industrials
+1491,LPG,1.09B,Dorian LPG Ltd.,Oil & Gas Midstream,Energy
+1492,VTOL,1.09B,Bristow Group Inc.,Oil & Gas Equipment & Services,Energy
+1493,YEXT,1.09B,"Yext, Inc.",Software - Infrastructure,Technology
+1494,THR,1.09B,"Thermon Group Holdings, Inc.",Specialty Industrial Machinery,Industrials
+1495,BCSF,1.09B,"Bain Capital Specialty Finance, Inc.",Asset Management,Financials
+1496,OEC,1.08B,Orion S.A.,Specialty Chemicals,Materials
+1497,BZH,1.08B,"Beazer Homes USA, Inc.",Residential Construction,Consumer Discretionary
+1498,TPB,1.08B,"Turning Point Brands, Inc.",Tobacco,Consumer Staples
+1499,BBDC,1.08B,"Barings BDC, Inc.",Asset Management,Financials
+1500,NGVC,1.08B,"Natural Grocers by Vitamin Cottage, Inc.",Grocery Stores,Consumer Staples
+1501,FBRT,1.07B,"Franklin BSP Realty Trust, Inc.",REIT - Mortgage,Real Estate
+1502,AMTB,1.07B,Amerant Bancorp Inc.,Banks - Regional,Financials
+1503,JBI,1.07B,"Janus International Group, Inc.",Building Products & Equipment,Industrials
+1504,GATO,1.06B,"Gatos Silver, Inc.",Other Precious Metals & Mining,Materials
+1505,TIXT,1.06B,TELUS International (Cda) Inc.,Software - Infrastructure,Technology
+1506,IHS,1.06B,IHS Holding Limited,Telecom Services,Communication Services
+1507,SXC,1.06B,"SunCoke Energy, Inc.",Coking Coal,Materials
+1508,SUPV,1.05B,Grupo Supervielle S.A.,Banks - Regional,Financials
+1509,ETWO,1.05B,"E2open Parent Holdings, Inc.",Software - Application,Technology
+1510,OMI,1.05B,"Owens & Minor, Inc.",Medical Distribution,Healthcare
+1511,ARR,1.05B,"ARMOUR Residential REIT, Inc.",REIT - Mortgage,Real Estate
+1512,SMWB,1.05B,Similarweb Ltd.,Software - Application,Technology
+1513,DLX,1.04B,Deluxe Corporation,Conglomerates,Industrials
+1514,AMN,1.03B,"AMN Healthcare Services, Inc.",Medical Care Facilities,Healthcare
+1515,MTAL,1.03B,Metals Acquisition Limited,Shell Companies,Financials
+1516,WEAV,1.02B,"Weave Communications, Inc.",Health Information Services,Healthcare
+1517,PRLB,1.01B,"Proto Labs, Inc.",Metal Fabrication,Industrials
+1518,HY,1.00B,"Hyster-Yale, Inc.",Farm & Heavy Construction Machinery,Industrials
+1519,NEXA,999.91M,Nexa Resources S.A.,Other Industrial Metals & Mining,Materials
+1520,BDN,997.53M,Brandywine Realty Trust,REIT - Office,Real Estate
+1521,DCO,996.57M,Ducommun Incorporated,Aerospace & Defense,Industrials
+1522,EEX,990.56M,"Emerald Holding, Inc.",Advertising Agencies,Communication Services
+1523,PARR,986.44M,"Par Pacific Holdings, Inc.",Oil & Gas Refining & Marketing,Energy
+1524,UTL,981.55M,Unitil Corporation,Utilities - Diversified,Utilities
+1525,CMTG,981.11M,"Claros Mortgage Trust, Inc.",REIT - Mortgage,Real Estate
+1526,SKE,979.56M,Skeena Resources Limited,Other Industrial Metals & Mining,Materials
+1527,BORR,978.53M,Borr Drilling Limited,Oil & Gas Drilling,Energy
+1528,CLB,978.44M,Core Laboratories Inc.,Oil & Gas Equipment & Services,Energy
+1529,SHCO,976.38M,Soho House & Co Inc.,Lodging,Consumer Discretionary
+1530,NUVB,972.68M,Nuvation Bio Inc.,Biotechnology,Healthcare
+1531,KIND,966.82M,"Nextdoor Holdings, Inc.",Internet Content & Information,Communication Services
+1532,ACEL,964.24M,"Accel Entertainment, Inc.",Gambling,Consumer Discretionary
+1533,ML,961.92M,MoneyLion Inc.,Software - Application,Technology
+1534,JELD,955.36M,"JELD-WEN Holding, Inc.",Building Products & Equipment,Industrials
+1535,RWT,952.32M,"Redwood Trust, Inc.",REIT - Mortgage,Real Estate
+1536,ECVT,948.39M,Ecovyst Inc.,Specialty Chemicals,Materials
+1537,NCDL,942.83M,Nuveen Churchill Direct Lending Corp.,Asset Management,Financials
+1538,CBL,940.17M,"CBL & Associates Properties, Inc.",REIT - Retail,Real Estate
+1539,VVI,939.88M,Viad Corp,Specialty Business Services,Industrials
+1540,GES,933.94M,"Guess?, Inc.",Apparel Retail,Consumer Discretionary
+1541,PDS,932.14M,Precision Drilling Corporation,Oil & Gas Drilling,Energy
+1542,AGL,931.16M,"agilon health, inc.",Medical Care Facilities,Healthcare
+1543,SBR,919.96M,Sabine Royalty Trust,Oil & Gas Midstream,Energy
+1544,RDW,916.27M,Redwire Corporation,Aerospace & Defense,Industrials
+1545,ZIP,908.63M,"ZipRecruiter, Inc.",Staffing & Employment Services,Industrials
+1546,GOOS,905.97M,Canada Goose Holdings Inc.,Apparel Manufacturing,Consumer Discretionary
+1547,CINT,903.04M,CI&T Inc.,Software - Infrastructure,Technology
+1548,TUYA,901.37M,Tuya Inc.,Software - Infrastructure,Technology
+1549,VLRS,900.30M,"Controladora Vuela Compañía de Aviación, S.A.B. de C.V.",Airlines,Industrials
+1550,LAC,886.14M,Lithium Americas Corp.,Other Industrial Metals & Mining,Materials
+1551,CPF,883.11M,Central Pacific Financial Corp.,Banks - Regional,Financials
+1552,GRNT,872.06M,"Granite Ridge Resources, Inc.",Oil & Gas Exploration & Production,Energy
+1553,WNC,870.21M,Wabash National Corporation,Farm & Heavy Construction Machinery,Industrials
+1554,HLF,869.83M,Herbalife Ltd.,Packaged Foods,Consumer Staples
+1555,PUMP,869.76M,ProPetro Holding Corp.,Oil & Gas Equipment & Services,Energy
+1556,PLYM,868.50M,"Plymouth Industrial REIT, Inc.",REIT - Industrial,Real Estate
+1557,MAX,864.64M,"MediaAlpha, Inc.",Internet Content & Information,Communication Services
+1558,ASIX,864.48M,AdvanSix Inc.,Chemicals,Materials
+1559,PRA,856.87M,ProAssurance Corporation,Insurance - Property & Casualty,Financials
+1560,GHLD,853.41M,Guild Holdings Company,Mortgage Finance,Financials
+1561,FIGS,845.66M,"FIGS, Inc.",Apparel Manufacturing,Consumer Discretionary
+1562,MLR,842.62M,"Miller Industries, Inc.",Auto Parts,Consumer Discretionary
+1563,SITC,838.88M,SITE Centers Corp.,REIT - Retail,Real Estate
+1564,AVNS,836.03M,"Avanos Medical, Inc.",Medical Devices,Healthcare
+1565,VTS,830.77M,"Vitesse Energy, Inc.",Oil & Gas Exploration & Production,Energy
+1566,DRD,826.18M,DRDGOLD Limited,Gold,Materials
+1567,FNA,825.48M,"Paragon 28, Inc.",Medical Devices,Healthcare
+1568,WLKP,824.58M,Westlake Chemical Partners LP,Chemicals,Materials
+1569,DEC,823.39M,Diversified Energy Company PLC,Oil & Gas Exploration & Production,Energy
+1570,RYI,821.34M,Ryerson Holding Corporation,Metal Fabrication,Industrials
+1571,INN,819.54M,"Summit Hotel Properties, Inc.",REIT - Hotel & Motel,Real Estate
+1572,BRSP,818.31M,"BrightSpire Capital, Inc.",REIT - Mortgage,Real Estate
+1573,KREF,815.39M,KKR Real Estate Finance Trust Inc.,REIT - Mortgage,Real Estate
+1574,PFLT,809.10M,PennantPark Floating Rate Capital Ltd.,Asset Management,Financials
+1575,DDL,806.26M,Dingdong (Cayman) Limited,Grocery Stores,Consumer Staples
+1576,HIPO,803.63M,Hippo Holdings Inc.,Insurance - Specialty,Financials
+1577,AXL,801.90M,"American Axle & Manufacturing Holdings, Inc.",Auto Parts,Consumer Discretionary
+1578,LDI,791.34M,"loanDepot, Inc.",Mortgage Finance,Financials
+1579,KOP,790.89M,Koppers Holdings Inc.,Specialty Chemicals,Materials
+1580,ETD,789.35M,Ethan Allen Interiors Inc.,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+1581,SPLP,787.56M,Steel Partners Holdings L.P.,Conglomerates,Industrials
+1582,REX,784.02M,REX American Resources Corporation,Chemicals,Materials
+1583,CCO,777.63M,"Clear Channel Outdoor Holdings, Inc.",Advertising Agencies,Communication Services
+1584,CAPL,777.29M,CrossAmerica Partners LP,Oil & Gas Refining & Marketing,Energy
+1585,GSL,773.66M,"Global Ship Lease, Inc.",Rental & Leasing Services,Industrials
+1586,AC,769.85M,"Associated Capital Group, Inc.",Asset Management,Financials
+1587,RSKD,769.42M,Riskified Ltd.,Software - Application,Technology
+1588,CVLG,767.32M,"Covenant Logistics Group, Inc.",Trucking,Industrials
+1589,NOAH,765.14M,Noah Holdings Limited,Asset Management,Financials
+1590,MATV,761.79M,"Mativ Holdings, Inc.",Specialty Chemicals,Materials
+1591,WSR,761.23M,Whitestone REIT,REIT - Retail,Real Estate
+1592,USNA,760.86M,"USANA Health Sciences, Inc.",Packaged Foods,Consumer Staples
+1593,XPOF,758.36M,"Xponential Fitness, Inc.",Leisure,Consumer Discretionary
+1594,HZO,754.43M,"MarineMax, Inc.",Specialty Retail,Consumer Discretionary
+1595,UAN,753.83M,"CVR Partners, LP",Agricultural Inputs,Materials
+1596,MCB,753.60M,Metropolitan Bank Holding Corp.,Banks - Regional,Financials
+1597,EQBK,752.40M,"Equity Bancshares, Inc.",Banks - Regional,Financials
+1598,GCI,751.74M,"Gannett Co., Inc.",Publishing,Communication Services
+1599,VHI,750.66M,"Valhi, Inc.",Chemicals,Materials
+1600,ECO,736.41M,Okeanis Eco Tankers Corp.,Marine Shipping,Industrials
+1601,TXO,733.17M,"TXO Partners, L.P.",Oil & Gas Exploration & Production,Energy
+1602,TRTX,730.78M,"TPG RE Finance Trust, Inc.",REIT - Mortgage,Real Estate
+1603,GNK,728.59M,Genco Shipping & Trading Limited,Marine Shipping,Industrials
+1604,MAGN,722.73M,Magnera Corporation,-,-
+1605,BALY,722.65M,Bally's Corporation,Resorts & Casinos,Consumer Discretionary
+1606,SMP,721.60M,"Standard Motor Products, Inc.",Auto Parts,Consumer Discretionary
+1607,NBR,716.95M,Nabors Industries Ltd.,Oil & Gas Drilling,Energy
+1608,BFLY,698.84M,"Butterfly Network, Inc.",Medical Devices,Healthcare
+1609,NR,697.17M,"Newpark Resources, Inc.",Oil & Gas Equipment & Services,Energy
+1610,MCS,695.75M,The Marcus Corporation,Entertainment,Communication Services
+1611,MTUS,687.56M,Metallus Inc.,Steel,Materials
+1612,AMPS,684.80M,"Altus Power, Inc.",Utilities - Renewable,Utilities
+1613,AACT,681.25M,Ares Acquisition Corporation II,Shell Companies,Financials
+1614,TK,680.50M,Teekay Corporation Ltd.,Oil & Gas Midstream,Energy
+1615,HUYA,678.54M,HUYA Inc.,Entertainment,Communication Services
+1616,VEL,678.19M,"Velocity Financial, Inc.",Mortgage Finance,Financials
+1617,OPFI,676.78M,OppFi Inc.,Credit Services,Financials
+1618,NOVA,667.25M,Sunnova Energy International Inc.,Solar,Technology
+1619,HYLN,663.09M,Hyliion Holdings Corp.,Auto Parts,Consumer Discretionary
+1620,YALA,660.89M,Yalla Group Limited,Software - Application,Technology
+1621,MEG,660.29M,"Montrose Environmental Group, Inc.",Waste Management,Industrials
+1622,GOTU,659.78M,Gaotu Techedu Inc.,Education & Training Services,Consumer Staples
+1623,BH,652.86M,Biglari Holdings Inc.,Restaurants,Consumer Discretionary
+1624,PACK,651.91M,Ranpak Holdings Corp.,Packaging & Containers,Consumer Discretionary
+1625,UVE,650.02M,"Universal Insurance Holdings, Inc.",Insurance - Property & Casualty,Financials
+1626,QBTS,647.40M,D-Wave Quantum Inc.,Computer Hardware,Technology
+1627,RGR,646.95M,"Sturm, Ruger & Company, Inc.",Aerospace & Defense,Industrials
+1628,BH.A,645.42M,Biglari Holdings Inc.,Restaurants,Consumer Discretionary
+1629,LXU,640.29M,"LSB Industries, Inc.",Chemicals,Materials
+1630,BRCC,636.10M,BRC Inc.,Packaged Foods,Consumer Staples
+1631,DAO,633.45M,"Youdao, Inc.",Education & Training Services,Consumer Staples
+1632,CION,631.44M,CION Investment Corporation,Asset Management,Financials
+1633,OPY,628.67M,Oppenheimer Holdings Inc.,Capital Markets,Financials
+1634,FPI,625.37M,Farmland Partners Inc.,REIT - Specialty,Real Estate
+1635,CMP,624.64M,"Compass Minerals International, Inc.",Other Industrial Metals & Mining,Materials
+1636,EXTO,623.73M,Almacenes Éxito S.A.,Department Stores,Consumer Discretionary
+1637,ORC,622.82M,"Orchid Island Capital, Inc.",REIT - Mortgage,Real Estate
+1638,SMBK,622.21M,"SmartFinancial, Inc.",Banks - Regional,Financials
+1639,OLP,621.51M,"One Liberty Properties, Inc.",REIT - Diversified,Real Estate
+1640,CSV,618.82M,"Carriage Services, Inc.",Personal Services,Consumer Discretionary
+1641,NAT,615.95M,Nordic American Tankers Limited,Oil & Gas Midstream,Energy
+1642,GMRE,611.76M,Global Medical REIT Inc.,REIT - Healthcare Facilities,Real Estate
+1643,AMBC,608.22M,"Ambac Financial Group, Inc.",Insurance - Specialty,Financials
+1644,NGL,604.62M,NGL Energy Partners LP,Oil & Gas Midstream,Energy
+1645,IIIN,602.04M,"Insteel Industries, Inc.",Metal Fabrication,Industrials
+1646,FPH,601.89M,"Five Point Holdings, LLC",Real Estate - Development,Real Estate
+1647,RERE,601.39M,ATRenew Inc.,Internet Retail,Consumer Discretionary
+1648,PLOW,598.37M,"Douglas Dynamics, Inc.",Auto Parts,Consumer Discretionary
+1649,PBT,597.99M,Permian Basin Royalty Trust,Oil & Gas Midstream,Energy
+1650,NVRI,597.01M,Enviri Corporation,Waste Management,Industrials
+1651,HKD,595.64M,AMTD Digital Inc.,Software - Application,Technology
+1652,CTO,595.33M,"CTO Realty Growth, Inc.",REIT - Diversified,Real Estate
+1653,MYTE,594.30M,MYT Netherlands Parent B.V.,Luxury Goods,Consumer Discretionary
+1654,RYAM,587.31M,Rayonier Advanced Materials Inc.,Chemicals,Materials
+1655,TEN,586.28M,Tsakos Energy Navigation Limited,Oil & Gas Midstream,Energy
+1656,ZKH,581.60M,ZKH Group Limited,Internet Retail,Consumer Discretionary
+1657,UHT,566.86M,Universal Health Realty Income Trust,REIT - Healthcare Facilities,Real Estate
+1658,UIS,566.69M,Unisys Corporation,Information Technology Services,Technology
+1659,CRD.A,566.14M,Crawford & Company,Insurance Brokers,Financials
+1660,BBAI,563.82M,"BigBear.ai Holdings, Inc.",Information Technology Services,Technology
+1661,LAAC,563.33M,Lithium Americas (Argentina) Corp.,Other Industrial Metals & Mining,Materials
+1662,NPK,562.85M,"National Presto Industries, Inc.",Aerospace & Defense,Industrials
+1663,LZM,562.06M,Lifezone Metals Limited,Other Industrial Metals & Mining,Materials
+1664,HOUS,561.87M,Anywhere Real Estate Inc.,Real Estate Services,Real Estate
+1665,GDOT,561.00M,Green Dot Corporation,Credit Services,Financials
+1666,ACCO,553.57M,ACCO Brands Corporation,Business Equipment & Supplies,Industrials
+1667,EAF,550.34M,GrafTech International Ltd.,Electrical Equipment & Parts,Industrials
+1668,EBF,549.98M,"Ennis, Inc.",Business Equipment & Supplies,Industrials
+1669,NOA,545.26M,North American Construction Group Ltd.,Oil & Gas Equipment & Services,Energy
+1670,EGY,542.58M,"VAALCO Energy, Inc.",Oil & Gas Exploration & Production,Energy
+1671,CHPT,539.48M,"ChargePoint Holdings, Inc.",Specialty Retail,Consumer Discretionary
+1672,EBS,533.71M,Emergent BioSolutions Inc.,Drug Manufacturers - Specialty & Generic,Healthcare
+1673,BGS,531.19M,"B&G Foods, Inc.",Packaged Foods,Consumer Staples
+1674,DIN,530.27M,"Dine Brands Global, Inc.",Restaurants,Consumer Discretionary
+1675,CRD.B,529.32M,Crawford & Company,Insurance Brokers,Financials
+1676,FVR,525.57M,"FrontView REIT, Inc.",REIT - Retail,Real Estate
+1677,CHCT,525.28M,Community Healthcare Trust Incorporated,REIT - Healthcare Facilities,Real Estate
+1678,GFR,524.49M,Greenfire Resources Ltd.,Oil & Gas Exploration & Production,Energy
+1679,AUNA,523.34M,Auna S.A.,Medical Care Facilities,Healthcare
+1680,TTI,521.97M,"TETRA Technologies, Inc.",Oil & Gas Equipment & Services,Energy
+1681,FUBO,521.18M,fuboTV Inc.,Broadcasting,Communication Services
+1682,HPP,519.55M,"Hudson Pacific Properties, Inc.",REIT - Office,Real Estate
+1683,PSBD,514.66M,Palmer Square Capital BDC Inc.,Asset Management,Financials
+1684,SLQT,511.08M,"SelectQuote, Inc.",Insurance Brokers,Financials
+1685,ODC,508.83M,Oil-Dri Corporation of America,Specialty Chemicals,Materials
+1686,BBW,508.34M,"Build-A-Bear Workshop, Inc.",Specialty Retail,Consumer Discretionary
+1687,IVR,505.28M,Invesco Mortgage Capital Inc.,REIT - Mortgage,Real Estate
+1688,JMIA,503.32M,Jumia Technologies AG,Internet Retail,Consumer Discretionary
+1689,KODK,502.50M,Eastman Kodak Company,Specialty Business Services,Industrials
+1690,ASC,497.42M,Ardmore Shipping Corporation,Marine Shipping,Industrials
+1691,OUST,491.73M,"Ouster, Inc.",Electronic Components,Technology
+1692,CPAC,490.77M,Cementos Pacasmayo S.A.A.,Building Materials,Materials
+1693,CYH,489.86M,"Community Health Systems, Inc.",Medical Care Facilities,Healthcare
+1694,FC,485.84M,Franklin Covey Co.,Education & Training Services,Consumer Staples
+1695,PKST,483.88M,Peakstone Realty Trust,REIT - Office,Real Estate
+1696,GHM,482.75M,Graham Corporation,Specialty Industrial Machinery,Industrials
+1697,GBLI,480.99M,"Global Indemnity Group, LLC",Insurance - Property & Casualty,Financials
+1698,TYG,478.72M,Tortoise Energy Infrastructure Corporation,Asset Management,Financials
+1699,AGS,475.98M,"PlayAGS, Inc.",Gambling,Consumer Discretionary
+1700,TWI,474.81M,"Titan International, Inc.",Farm & Heavy Construction Machinery,Industrials
+1701,BOC,472.49M,Boston Omaha Corporation,Conglomerates,Industrials
+1702,NLOP,466.76M,Net Lease Office Properties,REIT - Office,Real Estate
+1703,CLDT,465.64M,Chatham Lodging Trust,REIT - Hotel & Motel,Real Estate
+1704,SNDA,463.82M,"Sonida Senior Living, Inc.",Medical Care Facilities,Healthcare
+1705,CLCO,463.07M,Cool Company Ltd.,Oil & Gas Midstream,Energy
+1706,MLP,461.93M,"Maui Land & Pineapple Company, Inc.",Real Estate Services,Real Estate
+1707,GPRK,461.25M,GeoPark Limited,Oil & Gas Exploration & Production,Energy
+1708,DDD,458.16M,3D Systems Corporation,Computer Hardware,Technology
+1709,CLW,457.60M,Clearwater Paper Corporation,Paper & Paper Products,Materials
+1710,PNNT,453.15M,PennantPark Investment Corporation,Asset Management,Financials
+1711,CTV,453.11M,Innovid Corp.,Advertising Agencies,Communication Services
+1712,MOV,446.93M,"Movado Group, Inc.",Luxury Goods,Consumer Discretionary
+1713,YSG,446.47M,Yatsen Holding Limited,Household & Personal Products,Consumer Staples
+1714,TRC,444.72M,Tejon Ranch Co.,Conglomerates,Industrials
+1715,GNE,443.90M,Genie Energy Ltd.,Utilities - Regulated Electric,Utilities
+1716,AAM,441.94M,AA Mission Acquisition Corp.,Shell Companies,Financials
+1717,EQV,441.46M,EQV Ventures Acquisition Corp.,Shell Companies,Financials
+1718,GNTY,441.41M,"Guaranty Bancshares, Inc.",Banks - Regional,Financials
+1719,RMAX,441.30M,"RE/MAX Holdings, Inc.",Real Estate Services,Real Estate
+1720,SD,441.09M,"SandRidge Energy, Inc.",Oil & Gas Exploration & Production,Energy
+1721,GTN.A,440.14M,"Gray Television, Inc.",Broadcasting,Communication Services
+1722,WOW,439.14M,"WideOpenWest, Inc.",Telecom Services,Communication Services
+1723,SB,435.65M,"Safe Bulkers, Inc.",Marine Shipping,Industrials
+1724,CURV,435.47M,Torrid Holdings Inc.,Apparel Retail,Consumer Discretionary
+1725,MUX,434.51M,McEwen Mining Inc.,Other Precious Metals & Mining,Materials
+1726,SGU,433.96M,"Star Group, L.P.",Oil & Gas Refining & Marketing,Energy
+1727,QD,433.73M,Qudian Inc.,Credit Services,Financials
+1728,DNA,432.09M,"Ginkgo Bioworks Holdings, Inc.",Biotechnology,Healthcare
+1729,COOK,424.46M,"Traeger, Inc.","Furnishings, Fixtures & Appliances",Consumer Discretionary
+1730,MYE,420.66M,"Myers Industries, Inc.",Packaging & Containers,Consumer Discretionary
+1731,JILL,420.25M,"J.Jill, Inc.",Apparel Retail,Consumer Discretionary
+1732,XPER,418.27M,Xperi Inc.,Software - Application,Technology
+1733,GTN,415.82M,"Gray Television, Inc.",Broadcasting,Communication Services
+1734,TRAK,412.70M,"ReposiTrak, Inc.",Software - Application,Technology
+1735,SPMC,412.58M,"Sound Point Meridian Capital, Inc.",-,-
+1736,CANG,412.24M,Cango Inc.,Auto & Truck Dealerships,Consumer Discretionary
+1737,LND,411.66M,BrasilAgro - Companhia Brasileira de Propriedades Agrícolas,Farm Products,Consumer Staples
+1738,WDH,409.52M,Waterdrop Inc.,Insurance - Diversified,Financials
+1739,YRD,405.98M,Yiren Digital Ltd.,Credit Services,Financials
+1740,SPIR,404.16M,"Spire Global, Inc.",Specialty Business Services,Industrials
+1741,HVT,403.80M,"Haverty Furniture Companies, Inc.",Home Improvement Retail,Consumer Discretionary
+1742,SMC,397.83M,Summit Midstream Corporation,Oil & Gas Midstream,Energy
+1743,ACRE,397.15M,Ares Commercial Real Estate Corporation,REIT - Mortgage,Real Estate
+1744,NL,394.69M,"NL Industries, Inc.",Security & Protection Services,Industrials
+1745,PSTL,394.61M,"Postal Realty Trust, Inc.",REIT - Office,Real Estate
+1746,BRT,392.99M,BRT Apartments Corp.,REIT - Residential,Real Estate
+1747,GCO,391.76M,Genesco Inc.,Apparel Retail,Consumer Discretionary
+1748,LXFR,388.38M,Luxfer Holdings PLC,Specialty Industrial Machinery,Industrials
+1749,OOMA,385.92M,"Ooma, Inc.",Software - Application,Technology
+1750,NREF,385.19M,"NexPoint Real Estate Finance, Inc.",REIT - Mortgage,Real Estate
+1751,HVT.A,384.78M,"Haverty Furniture Companies, Inc.",Home Improvement Retail,Consumer Discretionary
+1752,MTW,384.64M,"The Manitowoc Company, Inc.",Farm & Heavy Construction Machinery,Industrials
+1753,QUAD,383.60M,"Quad/Graphics, Inc.",Specialty Business Services,Industrials
+1754,EHAB,383.16M,"Enhabit, Inc.",Medical Care Facilities,Healthcare
+1755,BKKT,382.93M,"Bakkt Holdings, Inc.",Software - Infrastructure,Technology
+1756,ASA,377.48M,ASA Gold and Precious Metals Limited,Asset Management,Financials
+1757,MEI,376.77M,"Methode Electronics, Inc.",Electronic Components,Technology
+1758,NUS,375.32M,"Nu Skin Enterprises, Inc.",Household & Personal Products,Consumer Staples
+1759,SCM,374.21M,Stellus Capital Investment Corporation,Asset Management,Financials
+1760,RNGR,367.05M,"Ranger Energy Services, Inc.",Oil & Gas Equipment & Services,Energy
+1761,HRTG,363.89M,"Heritage Insurance Holdings, Inc.",Insurance - Property & Casualty,Financials
+1762,EB,357.49M,"Eventbrite, Inc.",Software - Application,Technology
+1763,SAR,355.37M,Saratoga Investment Corp.,Asset Management,Financials
+1764,MPX,354.42M,Marine Products Corporation,Recreational Vehicles,Consumer Discretionary
+1765,LAW,354.06M,"CS Disco, Inc.",Software - Application,Technology
+1766,CYD,352.99M,China Yuchai International Limited,Auto Manufacturers,Consumer Discretionary
+1767,MBI,351.09M,MBIA Inc.,Insurance - Specialty,Financials
+1768,MEC,349.92M,"Mayville Engineering Company, Inc.",Metal Fabrication,Industrials
+1769,HLLY,348.99M,Holley Inc.,Auto Parts,Consumer Discretionary
+1770,IPI,347.87M,"Intrepid Potash, Inc.",Agricultural Inputs,Materials
+1771,OIS,347.74M,"Oil States International, Inc.",Oil & Gas Equipment & Services,Energy
+1772,BKSY,346.58M,BlackSky Technology Inc.,Scientific & Technical Instruments,Technology
+1773,BARK,346.17M,"BARK, Inc.",Specialty Retail,Consumer Discretionary
+1774,NGS,342.41M,"Natural Gas Services Group, Inc.",Oil & Gas Equipment & Services,Energy
+1775,MSB,338.23M,Mesabi Trust,Steel,Materials
+1776,ORN,331.44M,"Orion Group Holdings, Inc.",Engineering & Construction,Industrials
+1777,TPVG,330.40M,TriplePoint Venture Growth BDC Corp.,Asset Management,Financials
+1778,CVEO,329.72M,Civeo Corporation,Lodging,Consumer Discretionary
+1779,XYF,321.35M,X Financial,Credit Services,Financials
+1780,HYAC,317.05M,Haymaker Acquisition Corp. 4,Shell Companies,Financials
+1781,RM,314.35M,Regional Management Corp.,Credit Services,Financials
+1782,FREY,313.29M,"FREYR Battery, Inc.",Electrical Equipment & Parts,Industrials
+1783,CBAN,312.51M,"Colony Bankcorp, Inc.",Banks - Regional,Financials
+1784,SMRT,311.96M,"SmartRent, Inc.",Software - Application,Technology
+1785,ZH,310.83M,Zhihu Inc.,Internet Content & Information,Communication Services
+1786,PKE,307.01M,Park Aerospace Corp.,Aerospace & Defense,Industrials
+1787,DBI,306.36M,Designer Brands Inc.,Footwear & Accessories,Consumer Discretionary
+1788,VPG,298.13M,"Vishay Precision Group, Inc.",Scientific & Technical Instruments,Technology
+1789,AZUL,297.70M,Azul S.A.,Airlines,Industrials
+1790,HSHP,296.51M,Himalaya Shipping Ltd.,Marine Shipping,Industrials
+1791,WTI,291.77M,"W&T Offshore, Inc.",Oil & Gas Exploration & Production,Energy
+1792,MG,290.57M,"Mistras Group, Inc.",Security & Protection Services,Industrials
+1793,BYON,287.28M,"Beyond, Inc.",Internet Retail,Consumer Discretionary
+1794,PINE,279.87M,"Alpine Income Property Trust, Inc.",REIT - Retail,Real Estate
+1795,GHI,279.72M,Greystone Housing Impact Investors LP,Mortgage Finance,Financials
+1796,ONTF,275.31M,"ON24, Inc.",Software - Application,Technology
+1797,NRGV,273.82M,"Energy Vault Holdings, Inc.",Utilities - Renewable,Utilities
+1798,BNED,272.04M,"Barnes & Noble Education, Inc.",Specialty Retail,Consumer Discretionary
+1799,ALTG,270.04M,Alta Equipment Group Inc.,Rental & Leasing Services,Industrials
+1800,HBB,269.16M,Hamilton Beach Brands Holding Company,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+1801,GHG,269.09M,GreenTree Hospitality Group Ltd.,Lodging,Consumer Discretionary
+1802,AMPY,268.05M,Amplify Energy Corp.,Oil & Gas Exploration & Production,Energy
+1803,ARL,265.06M,"American Realty Investors, Inc.",Real Estate Services,Real Estate
+1804,BHR,261.71M,Braemar Hotels & Resorts Inc.,REIT - Hotel & Motel,Real Estate
+1805,CPS,254.35M,Cooper-Standard Holdings Inc.,Auto Parts,Consumer Discretionary
+1806,NRDY,250.72M,"Nerdy, Inc.",Software - Application,Technology
+1807,ODV,249.97M,Osisko Development Corp.,Gold,Materials
+1808,TBN,249.39M,Tamboran Resources Corporation,Oil & Gas Exploration & Production,Energy
+1809,TCI,249.24M,"Transcontinental Realty Investors, Inc.",Real Estate Services,Real Estate
+1810,SRG,247.02M,Seritage Growth Properties,Real Estate Services,Real Estate
+1811,KFS,244.85M,Kingsway Financial Services Inc.,Auto & Truck Dealerships,Consumer Discretionary
+1812,ONIT,243.61M,Onity Group Inc.,Mortgage Finance,Financials
+1813,AEVA,242.47M,"Aeva Technologies, Inc.",Software - Infrastructure,Technology
+1814,DOUG,240.75M,Douglas Elliman Inc.,Real Estate Services,Real Estate
+1815,FTK,239.62M,"Flotek Industries, Inc.",Oil & Gas Equipment & Services,Energy
+1816,TG,238.74M,Tredegar Corporation,Metal Fabrication,Industrials
+1817,CHGG,235.73M,"Chegg, Inc.",Education & Training Services,Consumer Staples
+1818,NC,235.62M,"NACCO Industries, Inc.",Thermal Coal,Energy
+1819,CIA,233.06M,"Citizens, Inc.",Insurance - Life,Financials
+1820,ONL,232.18M,Orion Office REIT Inc.,REIT - Office,Real Estate
+1821,FF,226.69M,FutureFuel Corp.,Specialty Chemicals,Materials
+1822,DSX,226.08M,Diana Shipping Inc.,Marine Shipping,Industrials
+1823,AOMR,225.94M,"Angel Oak Mortgage REIT, Inc.",REIT - Mortgage,Real Estate
+1824,CLBR,225.89M,Colombier Acquisition Corp. II,Shell Companies,Financials
+1825,AKA,224.83M,a.k.a. Brands Holding Corp.,Apparel Retail,Consumer Discretionary
+1826,EVC,220.47M,Entravision Communications Corporation,Advertising Agencies,Communication Services
+1827,SPCE,216.57M,"Virgin Galactic Holdings, Inc.",Aerospace & Defense,Industrials
+1828,AMPX,215.91M,"Amprius Technologies, Inc.",Electrical Equipment & Parts,Industrials
+1829,TBI,214.01M,"TrueBlue, Inc.",Staffing & Employment Services,Industrials
+1830,CIO,212.41M,"City Office REIT, Inc.",REIT - Office,Real Estate
+1831,CLPR,212.40M,Clipper Realty Inc.,REIT - Residential,Real Estate
+1832,KNOP,210.33M,KNOT Offshore Partners LP,Marine Shipping,Industrials
+1833,SBXD,205.34M,SilverBox Corp IV,Shell Companies,Financials
+1834,FRGE,199.64M,"Forge Global Holdings, Inc.",Capital Markets,Financials
+1835,MED,198.34M,"Medifast, Inc.",Personal Services,Consumer Discretionary
+1836,MITT,197.72M,"AG Mortgage Investment Trust, Inc.",REIT - Mortgage,Real Estate
+1837,ADCT,196.28M,ADC Therapeutics SA,Biotechnology,Healthcare
+1838,FOA,196.15M,Finance of America Companies Inc.,Credit Services,Financials
+1839,EARN,193.83M,Ellington Credit Company,Asset Management,Financials
+1840,VLN,191.32M,Valens Semiconductor Ltd.,Semiconductors,Technology
+1841,SMHI,191.31M,SEACOR Marine Holdings Inc.,Marine Shipping,Industrials
+1842,SJT,189.23M,San Juan Basin Royalty Trust,Oil & Gas Exploration & Production,Energy
+1843,SRI,188.00M,"Stoneridge, Inc.",Auto Parts,Consumer Discretionary
+1844,PERF,187.40M,Perfect Corp.,Software - Application,Technology
+1845,BW,186.75M,"Babcock & Wilcox Enterprises, Inc.",Specialty Industrial Machinery,Industrials
+1846,LANV,186.54M,Lanvin Group Holdings Limited,Luxury Goods,Consumer Discretionary
+1847,FET,186.22M,"Forum Energy Technologies, Inc.",Oil & Gas Equipment & Services,Energy
+1848,AXR,186.10M,AMREP Corporation,Real Estate - Development,Real Estate
+1849,DLNG,176.82M,Dynagas LNG Partners LP,Oil & Gas Midstream,Energy
+1850,MDV,175.99M,"Modiv Industrial, Inc.",REIT - Industrial,Real Estate
+1851,GPMT,175.85M,Granite Point Mortgage Trust Inc.,REIT - Mortgage,Real Estate
+1852,NVRO,170.50M,Nevro Corp.,Medical Devices,Healthcare
+1853,ZVIA,169.39M,Zevia PBC,Beverages - Non-Alcoholic,Consumer Staples
+1854,AVD,167.55M,American Vanguard Corporation,Agricultural Inputs,Materials
+1855,WBX,165.43M,Wallbox N.V.,Electronic Components,Technology
+1856,CCRD,163.32M,CoreCard Corporation,Software - Application,Technology
+1857,CBNA,157.48M,"Chain Bridge Bancorp, Inc.",Banks - Diversified,Financials
+1858,EVTL,155.60M,Vertical Aerospace Ltd.,Aerospace & Defense,Industrials
+1859,TSQ,150.81M,"Townsquare Media, Inc.",Advertising Agencies,Communication Services
+1860,CMCM,149.12M,Cheetah Mobile Inc.,Internet Content & Information,Communication Services
+1861,MX,148.44M,Magnachip Semiconductor Corporation,Semiconductors,Technology
+1862,PHX,143.93M,PHX Minerals Inc.,Oil & Gas Exploration & Production,Energy
+1863,AMWL,142.63M,American Well Corporation,Health Information Services,Healthcare
+1864,NMG,139.24M,Nouveau Monde Graphite Inc.,Other Industrial Metals & Mining,Materials
+1865,DM,138.70M,"Desktop Metal, Inc.",Computer Hardware,Technology
+1866,BFAC,136.98M,Battery Future Acquisition Corp.,Shell Companies,Financials
+1867,AJX,136.72M,Great Ajax Corp.,REIT - Mortgage,Real Estate
+1868,LFT,135.44M,"Lument Finance Trust, Inc.",REIT - Mortgage,Real Estate
+1869,TSE,134.17M,Trinseo PLC,Specialty Chemicals,Materials
+1870,NOTE,130.89M,"FiscalNote Holdings, Inc.",Information Technology Services,Technology
+1871,WHG,127.78M,"Westwood Holdings Group, Inc.",Asset Management,Financials
+1872,SKIL,125.92M,Skillsoft Corp.,Education & Training Services,Consumer Staples
+1873,ACR,123.91M,ACRES Commercial Realty Corp.,REIT - Mortgage,Real Estate
+1874,SES,123.25M,SES AI Corporation,Auto Parts,Consumer Discretionary
+1875,TLYS,120.61M,"Tilly's, Inc.",Apparel Retail,Consumer Discretionary
+1876,ANRO,119.21M,"Alto Neuroscience, Inc.",Biotechnology,Healthcare
+1877,DTC,118.26M,"Solo Brands, Inc.",Internet Retail,Consumer Discretionary
+1878,MPLN,118.05M,MultiPlan Corporation,Health Information Services,Healthcare
+1879,OPAD,113.25M,Offerpad Solutions Inc.,Real Estate Services,Real Estate
+1880,GCTS,105.98M,"GCT Semiconductor Holding, Inc.",Semiconductors,Technology
+1881,SRL,104.99M,Scully Royalty Ltd.,Capital Markets,Financials
+1882,UFI,102.30M,"Unifi, Inc.",Textile Manufacturing,Consumer Discretionary
+1883,OCFT,102.24M,"OneConnect Financial Technology Co., Ltd.",Software - Application,Technology
+1884,SKLZ,100.96M,Skillz Inc.,Electronic Gaming & Multimedia,Communication Services
+1885,SOL,99.43M,Emeren Group Ltd,Solar,Technology
+1886,ANVS,97.55M,"Annovis Bio, Inc.",Biotechnology,Healthcare
+1887,SST,90.99M,"System1, Inc.",Specialty Business Services,Industrials
+1888,MKFG,88.67M,Markforged Holding Corporation,Computer Hardware,Technology
+1889,CHMI,86.35M,Cherry Hill Mortgage Investment Corporation,REIT - Mortgage,Real Estate
+1890,VOC,85.51M,VOC Energy Trust,Oil & Gas Exploration & Production,Energy
+1891,WEL,84.92M,Integrated Wellness Acquisition Corp,Shell Companies,Financials
+1892,AMTD,83.89M,AMTD IDEA Group,Asset Management,Financials
+1893,STG,82.89M,Sunlands Technology Group,Education & Training Services,Consumer Staples
+1894,MNTN,81.53M,Everest Consolidator Acquisition Corporation,Shell Companies,Financials
+1895,IH,81.17M,iHuman Inc.,Education & Training Services,Consumer Staples
+1896,DHX,79.62M,"DHI Group, Inc.",Software - Application,Technology
+1897,VATE,78.51M,INNOVATE Corp.,Engineering & Construction,Industrials
+1898,RBOT,77.61M,Vicarious Surgical Inc.,Medical Devices,Healthcare
+1899,TISI,75.13M,"Team, Inc.",Specialty Business Services,Industrials
+1900,OWLT,73.77M,"Owlet, Inc.",Health Information Services,Healthcare
+1901,SUP,73.37M,"Superior Industries International, Inc.",Auto Parts,Consumer Discretionary
+1902,PSQH,73.00M,"PSQ Holdings, Inc.",Software - Application,Technology
+1903,SQNS,70.23M,Sequans Communications S.A.,Semiconductors,Technology
+1904,GWH,69.51M,"ESS Tech, Inc.",Electrical Equipment & Parts,Industrials
+1905,CNF,67.88M,CNFinance Holdings Limited,Mortgage Finance,Financials
+1906,CATO,65.84M,The Cato Corporation,Apparel Retail,Consumer Discretionary
+1907,STEM,65.36M,"Stem, Inc.",Utilities - Renewable,Utilities
+1908,CULP,64.82M,"Culp, Inc.",Textile Manufacturing,Consumer Discretionary
+1909,CRT,64.68M,Cross Timbers Royalty Trust,Oil & Gas Exploration & Production,Energy
+1910,NINE,63.55M,"Nine Energy Service, Inc.",Oil & Gas Equipment & Services,Energy
+1911,BGSF,63.50M,"BGSF, Inc.",Staffing & Employment Services,Industrials
+1912,SRFM,58.16M,Surf Air Mobility Inc.,Airlines,Industrials
+1913,BEDU,55.07M,Bright Scholar Education Holdings Limited,Education & Training Services,Consumer Staples
+1914,LICY,54.33M,Li-Cycle Holdings Corp.,Waste Management,Industrials
+1915,GROV,53.52M,"Grove Collaborative Holdings, Inc.",Household & Personal Products,Consumer Staples
+1916,AHT,52.58M,"Ashford Hospitality Trust, Inc.",REIT - Hotel & Motel,Real Estate
+1917,PVL,51.15M,Permianville Royalty Trust,Oil & Gas Exploration & Production,Energy
+1918,ENZ,50.94M,"Enzo Biochem, Inc.",Diagnostics & Research,Healthcare
+1919,BEST,50.29M,BEST Inc.,Trucking,Industrials
+1920,PNST,50.07M,Pinstripes Holdings Inc.,Restaurants,Consumer Discretionary
+1921,NTZ,49.57M,Natuzzi S.p.A.,"Furnishings, Fixtures & Appliances",Consumer Discretionary
+1922,PRT,48.42M,PermRock Royalty Trust,Oil & Gas Exploration & Production,Energy
+1923,RFL,47.37M,"Rafael Holdings, Inc.",Real Estate Services,Real Estate
+1924,LEV,46.90M,The Lion Electric Company,Farm & Heavy Construction Machinery,Industrials
+1925,BODI,43.96M,"The Beachbody Company, Inc.",Internet Content & Information,Communication Services
+1926,SPRU,43.16M,Spruce Power Holding Corporation,Solar,Technology
+1927,ZEPP,42.59M,Zepp Health Corporation,Consumer Electronics,Technology
+1928,NEUE,40.11M,"NeueHealth, Inc.",Healthcare Plans,Healthcare
+1929,NRT,38.14M,North European Oil Royalty Trust,Oil & Gas Exploration & Production,Energy
+1930,AP,37.78M,Ampco-Pittsburgh Corporation,Metal Fabrication,Industrials
+1931,LITB,36.40M,"LightInTheBox Holding Co., Ltd.",Internet Retail,Consumer Discretionary
+1932,ALUR,33.58M,Allurion Technologies Inc.,Medical Devices,Healthcare
+1933,BTCM,32.32M,BIT Mining Limited,Information Technology Services,Technology
+1934,FENG,31.64M,Phoenix New Media Limited,Internet Content & Information,Communication Services
+1935,KORE,30.22M,"KORE Group Holdings, Inc.",Telecom Services,Communication Services
+1936,CGA,29.29M,"China Green Agriculture, Inc.",Agricultural Inputs,Materials
+1937,FEDU,23.08M,Four Seasons Education (Cayman) Inc.,Education & Training Services,Consumer Staples
+1938,NYC,22.91M,American Strategic Investment Co.,Real Estate Services,Real Estate
+1939,BPT,22.90M,BP Prudhoe Bay Royalty Trust,Oil & Gas Midstream,Energy
+1940,CCM,21.71M,Concord Medical Services Holdings Limited,Medical Care Facilities,Healthcare
+1941,VNCE,21.17M,Vince Holding Corp.,Apparel Manufacturing,Consumer Discretionary
+1942,VHC,19.95M,VirnetX Holding Corporation,Software - Infrastructure,Technology
+1943,KUKE,18.75M,Kuke Music Holding Limited,Entertainment,Communication Services
+1944,XIN,18.24M,"Xinyuan Real Estate Co., Ltd.",Real Estate - Development,Real Estate
+1945,MOGU,17.91M,MOGU Inc.,Internet Retail,Consumer Discretionary
+1946,EQS,16.44M,"Equus Total Return, Inc.",Asset Management,Financials
+1947,LOCL,14.45M,Local Bounti Corporation,Farm Products,Consumer Staples
+1948,DNMR,14.31M,"Danimer Scientific, Inc.",Specialty Chemicals,Materials
+1949,MTR,13.42M,Mesa Royalty Trust,Oil & Gas Exploration & Production,Energy
+1950,TCS,13.15M,"The Container Store Group, Inc.",Specialty Retail,Consumer Discretionary
+1951,ATIP,7.45M,"ATI Physical Therapy, Inc.",Medical Care Facilities,Healthcare
+1952,SOS,3.23M,SOS Limited,Capital Markets,Financials

@@ -2,11 +2,11 @@ SELECT
     i1.ticker, 
     i1.date,
     i1.close, 
-    i1.type AS 'type1', 
-    i2.type AS 'type2',
-    i1.value AS 'value1',
-    i2.value AS 'value2',
-    i1.value > i2.value AS 'cross'
+    i1.TYPE AS 'type1', 
+    i2.TYPE AS 'type2',
+    i1.VALUE AS 'value1',
+    i2.VALUE AS 'value2',
+    i1.VALUE > i2.VALUE AS 'cross'
 FROM 
     indicators i1, 
     indicators i2
