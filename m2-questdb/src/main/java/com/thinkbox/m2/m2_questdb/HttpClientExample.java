@@ -20,16 +20,23 @@ import java.util.EnumSet;
 import java.util.List;
 import java.io.IOException;
 import java.io.File;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class HttpClientExample {
     public static void main(String[] args) {
+
         Path startPath = Paths.get("/Users/admin/historial_data");
         String urlTemplate = "http://%s/imp?fmt=json&forceHeader=true&name=%s";
         String hostName = "127.0.0.1:9000";
         String tableName = "historial_raw_d";
-
         String url = String.format(urlTemplate, hostName, tableName);
 
+        singlethread(url, startPath);
+    }
+
+    public static void singlethread(String url, Path startPath) {
+        long start = System.currentTimeMillis();
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
@@ -38,6 +45,29 @@ public class HttpClientExample {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        long end = System.currentTimeMillis();
+        System.out.println("TOTAL TIME: " + (end - start));
+    }
+
+    public static void multithread(String url, Path startPath) {
+        long start = System.currentTimeMillis();
+        ExecutorService executorService = Executors.newFixedThreadPool(10);
+        try {
+            List<String> fileNames = listFiles(startPath);
+            for (String fullFileName : fileNames) {
+                executorService.submit(() -> importFile(url, fullFileName));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        executorService.shutdown();
+
+        while (!executorService.isTerminated()) { // Wait for all tasks to complete
+        }
+        long end = System.currentTimeMillis();
+        System.out.println("TOTAL TIME: " + (end - start));
+
     }
 
     public static void importFile(String url, String fileName) {
@@ -61,7 +91,7 @@ public class HttpClientExample {
             }
         } catch (Exception e) {
             System.out.println("ERROR:" + fileName);
-           // e.printStackTrace();
+            // e.printStackTrace();
             copyToErrorDirectory(file);
         }
     }
@@ -83,6 +113,7 @@ public class HttpClientExample {
             ioException.printStackTrace();
         }
     }
+
     public static List<String> listFiles(Path startPath) throws IOException {
         List<String> fileNames = new ArrayList<>();
         Files.walkFileTree(startPath, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisitor<>() {
