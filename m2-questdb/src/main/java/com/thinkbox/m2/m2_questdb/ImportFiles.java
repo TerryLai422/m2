@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class HttpClientExample {
+public class ImportFiles {
     public static void main(String[] args) {
 
         Path startPath = Paths.get("/Users/admin/historial_data");
