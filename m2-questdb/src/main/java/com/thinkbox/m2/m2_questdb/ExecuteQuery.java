@@ -13,9 +13,26 @@ import java.net.URI;
 public class ExecuteQuery {
     public static void main(String[] args) {
         String url = "http://localhost:9000/exec";
-        String query = "select count(*) from ticker_info;";
+        String query = "INSERT INTO historial_d\n" +
+                "SELECT \n" +
+                "    replace(ticker, '.US', ''), \n" +
+                "    to_timestamp(date, 'yyyyMMdd') AS date, \n" +
+                "    open, \n" +
+                "    high, \n" +
+                "    low, \n" +
+                "    close, \n" +
+                "    vol\n" +
+                "FROM historial_raw_d\n" +
+                "WHERE date >= '19700101' \n" +
+                "ORDER BY date ASC;";
+
+        execute(url, query);;
+    }
+
+    public static void execute(String url, String query) {
         String count = "true";
 
+        long start = System.currentTimeMillis();
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             URI uri = new URIBuilder(url)
                     .addParameter("query", query)
@@ -34,5 +51,7 @@ public class ExecuteQuery {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        long end = System.currentTimeMillis();
+        System.out.println("TOTAL TIME: " + (end - start));
     }
 }
