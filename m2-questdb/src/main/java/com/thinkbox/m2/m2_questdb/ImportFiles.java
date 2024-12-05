@@ -24,17 +24,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ImportFiles {
-    public static void main(String[] args) {
-
-        Path startPath = Paths.get("/Users/admin/historial_data");
-        String urlTemplate = "http://%s/imp?fmt=json&forceHeader=true&name=%s";
-        String hostName = "127.0.0.1:9000";
-        String tableName = "historial_raw_d";
-        String url = String.format(urlTemplate, hostName, tableName);
-
-        singlethread(url, startPath);
-    }
-
     public static void singlethread(String url, Path startPath) {
         long start = System.currentTimeMillis();
         try {
