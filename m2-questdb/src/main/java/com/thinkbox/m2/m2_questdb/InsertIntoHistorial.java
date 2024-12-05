@@ -1,15 +1,5 @@
 package com.thinkbox.m2.m2_questdb;
 
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
-
-import java.net.URI;
-
 public class InsertIntoHistorial {
     public static void main(String[] args) {
         String url = "http://localhost:9000/exec";
