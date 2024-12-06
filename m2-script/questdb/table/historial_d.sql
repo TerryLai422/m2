@@ -6,4 +6,6 @@ CREATE TABLE historial_d (
   low DOUBLE,
   close DOUBLE,
   vol DOUBLE
-), INDEX (ticker CAPACITY 9000) TIMESTAMP(date);
+), 
+INDEX (ticker CAPACITY 9000) 
+TIMESTAMP(date) PARTITION BY YEAR WAL;
