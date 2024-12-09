@@ -1,7 +1,7 @@
-INSERT INTO indicators
-SELECT 
+WITH first_stage AS
+(SELECT 
     ticker, 
-    'MA_5', 
+    'MA_5' AS type, 
     date, 
     close, 
     avg(close) 
@@ -18,7 +18,21 @@ SELECT
         OVER 
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 4 PRECEDING) 
-        AS 'total',    
-    0 AS difference,
-    0 AS percentage
-FROM historial_d;
+        AS 'total'
+FROM historial_d
+),
+second_stage AS
+(SELECT     
+    type,
+    date,
+    ticker,
+    close,
+    value,
+    first,    
+    total,
+    close - value AS 'difference',
+    ((close - value) / value) * 100 AS 'percentage'
+FROM first_stage 
+)
+INSERT INTO indicators
+SELECT * FROM second_stage;
