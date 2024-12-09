@@ -4,21 +4,21 @@ SELECT
     'AV_20', 
     date, 
     vol, 
-    count() 
+    avg(vol)
         OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN UNBOUNDED PRECEDING AND 19 PRECEDING) 
-        AS 'valid',    
+        ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
+        AS 'value',    
     first_value(vol) 
         OVER 
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
         AS 'first',
-    avg(vol)
+    count() 
         OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
-        AS 'value',
+        ROWS BETWEEN UNBOUNDED PRECEDING AND 19 PRECEDING) 
+        AS 'total',   
     0 AS difference,
     0 AS percentage 
 FROM historial_d;

@@ -1,11 +1,11 @@
 CREATE TABLE indicators (
-  ticker SYMBOL,
   type SYMBOL CAPACITY 32 CACHE,
   date TIMESTAMP,
+  ticker SYMBOL,
   close DOUBLE,
-  total SHORT,
-  first DOUBLE,
   value DOUBLE,
+  first DOUBLE,
+  total SHORT,
   difference DOUBLE,
   percentage DOUBLE
 ), 
