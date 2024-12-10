@@ -2,12 +2,15 @@ CREATE TABLE indicators (
   type SYMBOL CAPACITY 32 CACHE,
   date TIMESTAMP,
   ticker SYMBOL,
-  close DOUBLE,
-  value DOUBLE,
-  first DOUBLE,
+  value1 DOUBLE,
+  value2 DOUBLE,
   total SHORT,
   difference DOUBLE,
-  percentage DOUBLE
+  previous_difference DOUBLE,
+  percentage DOUBLE,
+  trend LONG,
+  minimum_trend DOUBLE,
+  trending DOUBLE
 ), 
 INDEX(ticker CAPACITY 9000) 
 TIMESTAMP(date) PARTITION BY YEAR WAL;
