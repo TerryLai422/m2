@@ -9,11 +9,6 @@ SELECT
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
         AS 'value',    
-    first_value(vol) 
-        OVER 
-        (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
-        AS 'first',
     count() 
         OVER 
         (PARTITION BY ticker ORDER BY date 

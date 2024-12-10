@@ -5,11 +5,11 @@ WITH first_stage AS
     close, 
     avg(close) OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN 4 PRECEDING AND CURRENT ROW) 
+        ROWS BETWEEN (% - 1) PRECEDING AND CURRENT ROW) 
     AS 'value',    
     count() OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN UNBOUNDED PRECEDING AND 4 PRECEDING) 
+        ROWS BETWEEN UNBOUNDED PRECEDING AND (% - 1) PRECEDING) 
     AS 'total'
 FROM historial_d),
 second_stage AS
@@ -63,7 +63,7 @@ fourth_stage AS
 FROM third_stage),
 fifth_stage AS
 (SELECT
-    'MA_5' AS type,
+    'MA_%' AS type,
     date,
     ticker,
     close,
