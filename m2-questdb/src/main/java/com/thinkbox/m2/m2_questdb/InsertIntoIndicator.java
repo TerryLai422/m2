@@ -49,15 +49,15 @@ public class InsertIntoIndicator {
             "FROM third_stage),\n" +
             "fifth_stage AS\n" +
             "(SELECT\n" +
-            "    'MA_%d' AS type, date, ticker, value1, value2, total,\n" +
+            "    '%s_%d' AS type, date, ticker, value1, value2, total,\n" +
             "    difference, previous_difference, percentage, trend, minimum_trend,\n" +
             "    (total + minimum_trend) AS 'trending'\n" +
             "FROM fourth_stage)\n" +
             "INSERT INTO indicators\n" +
             "SELECT * FROM fifth_stage;";
 
-    public static void execute(String type, int interval) {
-        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, interval);
+    public static void execute(String type, String prefix, int interval) {
+        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval);
         ExecuteQuery.execute(url, query);
     }
 }

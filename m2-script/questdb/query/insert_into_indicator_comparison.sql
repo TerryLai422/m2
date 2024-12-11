@@ -5,10 +5,6 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN %d PRECEDING AND CURRENT ROW) 
     AS 'value2',    
-    count() OVER 
-        (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN UNBOUNDED PRECEDING AND %d PRECEDING) 
-    AS 'total'
 FROM historial_d),
 second_stage AS
 (SELECT     
@@ -19,8 +15,7 @@ second_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS 1 PRECEDING EXCLUDE CURRENT ROW) 
     AS 'previous_difference'
-FROM first_stage 
-WHERE total > 0), 
+FROM first_stage), 
 third_stage AS
 (SELECT
     date, ticker, value1, value2, total,

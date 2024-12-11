@@ -20,7 +20,7 @@ second_stage AS
         ROWS 1 PRECEDING EXCLUDE CURRENT ROW) 
     AS 'previous_difference'
 FROM first_stage 
-WHERE TOTAL > 0), 
+WHERE total > 0), 
 third_stage AS
 (SELECT
     date, ticker, value1, value2, total,
