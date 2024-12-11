@@ -1,4 +1,4 @@
-CREATE TABLE market_analysis (
+CREATE TABLE analysis_market (
   type SYMBOL,
   date TIMESTAMP,
   total LONG,
