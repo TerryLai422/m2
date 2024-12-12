@@ -4,7 +4,7 @@ WITH total_counts AS (
         i.date,
         ti.sector, 
         COUNT(*) AS total_count
-    FROM indicators i
+    FROM indicators_MA i
     JOIN ticker_info ti ON i.ticker = ti.ticker
     WHERE 
         type LIKE 'MA_%' 
@@ -16,7 +16,7 @@ positive_difference_counts AS (
         i.date, 
         ti.sector,
         COUNT(*) AS positive_count
-    FROM indicators i
+    FROM indicators_MA i
     JOIN ticker_info ti ON i.ticker = ti.ticker
     WHERE 
         type LIKE 'MA_%' 
