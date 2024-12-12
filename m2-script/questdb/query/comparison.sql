@@ -11,8 +11,8 @@ SELECT
         ELSE 'B'
     END AS 'cross'
 FROM 
-    indicators i1, 
-    indicators i2
+    indicators_MA i1, 
+    indicators_MA i2
 WHERE 
     i1.ticker = i2.ticker 
     AND i1.date = i2.date

@@ -44,9 +44,9 @@ fourth_stage AS
 FROM third_stage),
 fifth_stage AS
 (SELECT
-    'MA_%d' AS type, date, ticker, value1, value2, total,
+    '%s_%d' AS type, date, ticker, value1, value2, total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage)
-INSERT INTO indicators
+INSERT INTO %s
 SELECT * FROM fifth_stage;

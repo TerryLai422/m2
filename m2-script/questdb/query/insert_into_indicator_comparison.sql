@@ -5,7 +5,9 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN %d PRECEDING AND CURRENT ROW) 
     AS 'value2',    
-FROM historial_d),
+FROM indicators_MA i1
+    JOIN indicators_MA i2 ON i1.date = i2.date AND i1.ticker = i2.ticker 
+),
 second_stage AS
 (SELECT     
     date, ticker, value1, value2, total,
@@ -39,9 +41,9 @@ fourth_stage AS
 FROM third_stage),
 fifth_stage AS
 (SELECT
-    'MA_%d' AS type, date, ticker, value1, value2, total,
+    '%s_%d' AS type, date, ticker, value1, value2, total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage)
-INSERT INTO indicators
+INSERT INTO %s
 SELECT * FROM fifth_stage;

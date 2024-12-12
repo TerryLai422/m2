@@ -14,7 +14,7 @@ public class InsertIntoIndicator {
             "        (PARTITION BY ticker ORDER BY date \n" +
             "        ROWS BETWEEN UNBOUNDED PRECEDING AND %d PRECEDING) \n" +
             "    AS 'total'\n" +
-            "FROM historial_d),\n" +
+            "FROM historical_d),\n" +
             "second_stage AS\n" +
             "(SELECT     \n" +
             "    date, ticker, value1, value2, total,\n" +
@@ -53,11 +53,11 @@ public class InsertIntoIndicator {
             "    difference, previous_difference, percentage, trend, minimum_trend,\n" +
             "    (total + minimum_trend) AS 'trending'\n" +
             "FROM fourth_stage)\n" +
-            "INSERT INTO indicators\n" +
+            "INSERT INTO %s\n" +
             "SELECT * FROM fifth_stage;";
 
-    public static void execute(String type, String prefix, int interval) {
-        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval);
+    public static void execute(String type, String prefix, int interval, String tableName) {
+        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval, tableName);
         ExecuteQuery.execute(url, query);
     }
 }

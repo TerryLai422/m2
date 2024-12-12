@@ -6,7 +6,7 @@ SELECT
     SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) AS positive_count,
     (SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS percentage_positive
 FROM
-  indicators
+  indicators_MA
 WHERE 
 type LIKE 'MA_%' 
 AND total > 0
