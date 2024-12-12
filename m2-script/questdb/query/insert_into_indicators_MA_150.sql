@@ -9,7 +9,7 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 149 PRECEDING) 
     AS 'total'
-FROM historial_d),
+FROM historical_d),
 second_stage AS
 (SELECT     
     date, ticker, value1, value2, total,

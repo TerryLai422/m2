@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class ImportFiles {
+public class ImportFiles implements Constants {
     public static void singlethread(String url, Path startPath) {
         long start = System.currentTimeMillis();
         try {
@@ -88,8 +88,7 @@ public class ImportFiles {
     public static void copyToErrorDirectory(File file) {
         try {
             String parentPath = file.getParent();
-            String writePath = parentPath.replace("/Users/admin/historial_data/",
-                    "/Users/admin/historial_error/");
+            String writePath = parentPath.replace(importFilePath, importErrorPath);
             Path writeDir = Paths.get(writePath);
             if (!Files.exists(writeDir)) {
                 Files.createDirectories(writeDir);

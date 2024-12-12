@@ -1,4 +1,4 @@
-INSERT INTO historial_d
+INSERT INTO historical_d
 SELECT 
     replace(ticker, '.US', ''), 
     to_timestamp(date, 'yyyyMMdd') AS date, 
@@ -7,6 +7,6 @@ SELECT
     low, 
     close, 
     vol
-FROM historial_raw_d
+FROM historical_raw_d
 WHERE date >= '19700101' 
 ORDER BY date ASC;
