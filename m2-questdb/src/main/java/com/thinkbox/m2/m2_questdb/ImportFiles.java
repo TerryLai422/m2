@@ -24,12 +24,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ImportFiles implements Constants {
-    public static void singlethread(String url, Path startPath) {
+    public static void singlethread(String url, Path startPath, String errorPath) {
         long start = System.currentTimeMillis();
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
-                importFile(url, fullFileName);
+                importFile(url, fullFileName, errorPath);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -38,13 +38,13 @@ public class ImportFiles implements Constants {
         System.out.println("TOTAL TIME: " + (end - start));
     }
 
-    public static void multithread(String url, Path startPath) {
+    public static void multithread(String url, Path startPath, String errorPath) {
         long start = System.currentTimeMillis();
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
-                executorService.submit(() -> importFile(url, fullFileName));
+                executorService.submit(() -> importFile(url, fullFileName, errorPath));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,7 +59,7 @@ public class ImportFiles implements Constants {
 
     }
 
-    public static void importFile(String url, String fileName) {
+    public static void importFile(String url, String fileName, String errorPath) {
         System.out.println(fileName);
         File file = new File(fileName);
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
@@ -81,14 +81,14 @@ public class ImportFiles implements Constants {
         } catch (Exception e) {
             System.out.println("ERROR:" + fileName);
             // e.printStackTrace();
-            copyToErrorDirectory(file);
+            copyToErrorDirectory(file, errorPath);
         }
     }
 
-    public static void copyToErrorDirectory(File file) {
+    public static void copyToErrorDirectory(File file, String errorPath) {
         try {
             String parentPath = file.getParent();
-            String writePath = parentPath.replace(importFilePath, importErrorPath);
+            String writePath = parentPath.replace(importHistoricalFilePath, errorPath);
             Path writeDir = Paths.get(writePath);
             if (!Files.exists(writeDir)) {
                 Files.createDirectories(writeDir);
