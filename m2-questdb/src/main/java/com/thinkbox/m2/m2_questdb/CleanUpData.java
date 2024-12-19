@@ -7,7 +7,7 @@ public class CleanUpData {
         ExecuteQuery.execute(url, query1);
         String query2 = "TRUNCATE TABLE historial_raw_d";
         ExecuteQuery.execute(url, query2);
-        String query3 = "TRUNCATE TABLE indicators";
-        ExecuteQuery.execute(url, query3);
+//        String query3 = "TRUNCATE TABLE indicators";
+//        ExecuteQuery.execute(url, query3);
     }
 }

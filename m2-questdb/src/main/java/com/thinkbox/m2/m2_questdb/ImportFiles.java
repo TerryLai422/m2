@@ -24,27 +24,28 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ImportFiles implements Constants {
-    public static void singlethread(String url, Path startPath, String errorPath) {
+    public static long singlethread(String url, Path startPath, String errorPath) {
         long start = System.currentTimeMillis();
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
-                importFile(url, fullFileName, errorPath);
+                importFile(url, fullFileName, startPath.toAbsolutePath().toString(), errorPath);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         long end = System.currentTimeMillis();
         System.out.println("TOTAL TIME: " + (end - start));
+        return (end - start);
     }
 
-    public static void multithread(String url, Path startPath, String errorPath) {
+    public static void multithread(String url, Path startPath, String importHistoricalFilePath, String errorPath) {
         long start = System.currentTimeMillis();
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
-                executorService.submit(() -> importFile(url, fullFileName, errorPath));
+                executorService.submit(() -> importFile(url, fullFileName, importHistoricalFilePath, errorPath));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,10 +57,9 @@ public class ImportFiles implements Constants {
         }
         long end = System.currentTimeMillis();
         System.out.println("TOTAL TIME: " + (end - start));
-
     }
 
-    public static void importFile(String url, String fileName, String errorPath) {
+    public static void importFile(String url, String fileName, String importHistoricalFilePath, String errorPath) {
         System.out.println(fileName);
         File file = new File(fileName);
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
@@ -81,11 +81,11 @@ public class ImportFiles implements Constants {
         } catch (Exception e) {
             System.out.println("ERROR:" + fileName);
             // e.printStackTrace();
-            copyToErrorDirectory(file, errorPath);
+            copyToErrorDirectory(file, importHistoricalFilePath, errorPath);
         }
     }
 
-    public static void copyToErrorDirectory(File file, String errorPath) {
+    public static void copyToErrorDirectory(File file, String importHistoricalFilePath, String errorPath) {
         try {
             String parentPath = file.getParent();
             String writePath = parentPath.replace(importHistoricalFilePath, errorPath);

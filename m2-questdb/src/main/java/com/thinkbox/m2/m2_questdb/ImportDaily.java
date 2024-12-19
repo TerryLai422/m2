@@ -7,8 +7,8 @@ public class ImportDaily implements Constants{
     public static String tableName = "daily_raw_d";
 
     public static void main(String[] args) {
-        Path startPath = Paths.get(importDailyFilePath);
-        String url = String.format(importUrlTemplate, hostName, tableName);
-        ImportFiles.singlethread(url, startPath, importDailyErrorPath);
+//        Path startPath = Paths.get(importDailyFilePath);
+//        String url = String.format(importUrlTemplate, hostName, tableName);
+//        ImportFiles.singlethread(url, startPath, importDailyErrorPath);
     }
 }

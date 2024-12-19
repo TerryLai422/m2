@@ -1,3 +1,9 @@
 spring:
   application:
     name: m2-questdb
+
+path:
+  importHistoricalFile: "/Users/admin/historical_data"
+  importHistoricalError: "/Users/admin/historical_error"
+  importDailyFile: "/Users/admin/daily_data"
+  importDailyError: "/Users/admin/daily_error/"

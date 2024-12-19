@@ -11,7 +11,7 @@ import org.apache.http.util.EntityUtils;
 import java.net.URI;
 
 public class ExecuteQuery {
-    public static void execute(String url, String query) {
+    public static long execute(String url, String query) {
         String count = "true";
 
         long start = System.currentTimeMillis();
@@ -35,5 +35,6 @@ public class ExecuteQuery {
         }
         long end = System.currentTimeMillis();
         System.out.println("TOTAL TIME: " + (end - start));
+        return (end - start);
     }
 }
