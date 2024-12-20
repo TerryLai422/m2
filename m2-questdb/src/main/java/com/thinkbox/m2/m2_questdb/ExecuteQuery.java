@@ -11,7 +11,7 @@ import org.apache.http.util.EntityUtils;
 import java.net.URI;
 
 public class ExecuteQuery {
-    public static long execute(String url, String query) {
+    public static long run(String url, String query) {
         String count = "true";
 
         long start = System.currentTimeMillis();

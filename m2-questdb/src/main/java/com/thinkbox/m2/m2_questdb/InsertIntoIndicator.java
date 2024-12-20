@@ -56,8 +56,8 @@ public class InsertIntoIndicator {
             "INSERT INTO %s\n" +
             "SELECT * FROM fifth_stage;";
 
-    public static void execute(String type, String prefix, int interval, String tableName) {
+    public static long run(String type, String prefix, int interval, String tableName) {
         String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval, tableName);
-        ExecuteQuery.execute(url, query);
+        return ExecuteQuery.run(url, query);
     }
 }
