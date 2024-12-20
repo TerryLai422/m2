@@ -23,7 +23,7 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 4 PRECEDING) 
         AS 'total'        
-FROM historial_d
+FROM historical_d
 WHERE ticker = 'AAPL'
 ),
 second_stage AS
