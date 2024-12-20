@@ -1,0 +1,27 @@
+1	AIQ	Global X Artificial Intelligence & Technology ETF	38.97	-0.08%	2.69B
+2	BOTZ	Global X Robotics & Artificial Intelligence ETF	31.80	-0.81%	2.67B
+3	ROBO	ROBO Global Robotics & Automation Index ETF	55.76	-0.18%	1.06B
+4	ARKQ	ARK Autonomous Technology & Robotics ETF	76.92	-0.29%	1.00B
+5	ARTY	iShares Future AI & Tech ETF	37.21	0.54%	717.20M
+6	ROBT	First Trust Nasdaq Artificial Intelligence & Robotics ETF	44.93	-0.64%	468.90M
+7	WTAI	WisdomTree Artificial Intelligence and Innovation Fund	22.09	-0.27%	213.27M
+8	AIPI	REX AI Equity Premium Income ETF	50.02	-0.36%	169.16M
+9	THNQ	ROBO Global Artificial Intelligence ETF	49.08	-0.40%	156.82M
+10	AIEQ	Amplify AI Powered Equity ETF	39.78	0.25%	113.90M
+11	AVGX	Defiance Daily Target 2X Long AVGO ETF	29.14	-4.46%	66.52M
+12	AIVI	WisdomTree International AI Enhanced Value Fund	39.29	0.24%	66.31M
+13	AIFD	TCW Artificial Intelligence ETF	29.45	-0.34%	64.07M
+14	BAI	iShares A.I. Innovation and Tech Active ETF	27.15	0.07%	42.33M
+15	UBOT	Direxion Daily Robotics, Artificial Intelligence & Automation Index Bull 2X Shares	22.71	-2.28%	28.99M
+16	AIVC	Amplify Bloomberg AI Value Chain ETF	49.25	-3.35%	25.88M
+17	XAIX	Xtrackers Artificial Intelligence and Big Data ETF	33.64	0.33%	22.86M
+18	ALAI	Alger AI Enablers & Adopters ETF	26.28	0.50%	21.21M
+19	SMCX	Defiance Daily Target 2X Long SMCI ETF	41.92	-6.30%	19.51M
+20	WISE	Themes Generative Artificial Intelligence ETF	36.40	-2.27%	16.82M
+21	DRAI	Draco Evolution AI ETF	23.42	-1.06%	13.56M
+22	AIBU	Direxion Daily AI and Big Data Bull 2X Shares	35.70	1.26%	12.41M
+23	AGIX	KraneShares Artificial Intelligence & Technology ETF	28.87	-	9.09M
+24	TEKX	SPDR Galaxy Transformative Tech Accelerators ETF	30.50	-3.27%	6.83M
+25	AIBD	Direxion Daily AI and Big Data Bear 2X Shares	15.67	-1.26%	1.85M
+26	FAI	First Trust Bloomberg Artificial Intelligence ETF	30.87	-0.82%	1.62M
+27	AIS	VistaShares Artificial Intelligence Supercycle ETF	24.05	0.04%	-
