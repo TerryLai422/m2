@@ -1,9 +1,8 @@
-package com.thinkbox.m2.m2_questdb;
+package com.thinkbox.m2.m2_questdb.command;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import com.thinkbox.m2.m2_questdb.constants.Constants;
 
-public class ImportDaily implements Constants{
+public class ImportDaily implements Constants {
     public static String tableName = "daily_raw_d";
 
     public static void main(String[] args) {

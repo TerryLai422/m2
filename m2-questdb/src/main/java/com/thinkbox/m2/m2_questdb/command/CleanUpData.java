@@ -1,4 +1,6 @@
-package com.thinkbox.m2.m2_questdb;
+package com.thinkbox.m2.m2_questdb.command;
+
+import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class CleanUpData {
     public static long run() {

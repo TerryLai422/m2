@@ -1,5 +1,6 @@
-package com.thinkbox.m2.m2_questdb;
+package com.thinkbox.m2.m2_questdb.service;
 
+import com.thinkbox.m2.m2_questdb.constants.Constants;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;

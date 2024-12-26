@@ -1,4 +1,4 @@
-package com.thinkbox.m2.m2_questdb;
+package com.thinkbox.m2.m2_questdb.service;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
