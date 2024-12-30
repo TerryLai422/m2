@@ -19,6 +19,8 @@ import java.util.Map;
 @RequestMapping("/test")
 @Slf4j
 public class Controller implements Constants {
+    @Value("${path.hostName}")
+    String hostName;
     @Value("${path.importHistoricalFile}")
     String importHistoricalFilePath;
 
@@ -36,20 +38,24 @@ public class Controller implements Constants {
         String action = request.getOrDefault("action", "");
         String returnValue = "cannot find action";
         if ("import_raw_file".equals(action)) {
-            returnValue = Long.valueOf(ImportRawData.run(importHistoricalFilePath, importHistoricalErrorPath,
-                    importUrlTemplate, hostName, "historical_raw_d")).toString();
+            String url = String.format(importUrlTemplate, hostName, "historical_raw_d");
+            returnValue = Long.valueOf(ImportRawData.run(url, importHistoricalFilePath, importHistoricalErrorPath
+            )).toString();
         } else if ("insert_into_historical".equals(action)) {
-            returnValue = Long.valueOf(InsertIntoHistorial.run()).toString();
+            String url = String.format(execUrlTemplate, hostName);
+            returnValue = Long.valueOf(InsertIntoHistorial.run(url)).toString();
         } else if ("clean_up_historical".equals(action)) {
-            returnValue = Long.valueOf(CleanUpData.run()).toString();
+            String url = String.format(execUrlTemplate, hostName);
+            returnValue = Long.valueOf(CleanUpData.run(url)).toString();
         } else if ("indicator".equals(action)) {
             int day = Integer.parseInt(request.getOrDefault("day", String.valueOf(0)));
             if (day > 0) {
                 String type = request.getOrDefault("type", "");
+                String url = String.format(execUrlTemplate, hostName);
                 if ("AV".equals(type)) {
-                    returnValue = Long.valueOf(InsertIntoIndicator.run("vol", "AV", day, "indicators_AV")).toString();
+                    returnValue = Long.valueOf(InsertIntoIndicator.run(url,"vol", "AV", day, "indicators_AV")).toString();
                 } else if ("MA".equals(type)) {
-                    returnValue = Long.valueOf(InsertIntoIndicator.run("close", "MV", day, "indicators_MA")).toString();
+                    returnValue = Long.valueOf(InsertIntoIndicator.run(url,"close", "MV", day, "indicators_MA")).toString();
                 }
             }
         }

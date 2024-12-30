@@ -4,7 +4,7 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class InsertIntoHistorial implements Constants {
-    public static long run() {
+    public static long run(String url) {
         String query = "INSERT INTO historical_d\n" +
                 "SELECT \n" +
                 "    replace(ticker, '.US', ''), \n" +
@@ -17,7 +17,6 @@ public class InsertIntoHistorial implements Constants {
                 "FROM historical_raw_d\n" +
                 "WHERE date >= '19700101' \n" +
                 "ORDER BY date ASC;";
-        String url = String.format(execUrlTemplate, hostName);
         return ExecuteQuery.run(url, query);
     }
 }

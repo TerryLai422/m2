@@ -1,10 +1,9 @@
 package com.thinkbox.m2.m2_questdb.command;
 
+import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
-public class InsertIntoIndicator {
-    public static String url = "http://localhost:9000/exec";
-
+public class InsertIntoIndicator implements Constants {
     public static String queryTemplate = "WITH first_stage AS\n" +
             "(SELECT \n" +
             "    date, ticker, %s AS 'value1', \n" +
@@ -58,7 +57,7 @@ public class InsertIntoIndicator {
             "INSERT INTO %s\n" +
             "SELECT * FROM fifth_stage;";
 
-    public static long run(String type, String prefix, int interval, String tableName) {
+    public static long run(String url, String type, String prefix, int interval, String tableName) {
         String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval, tableName);
         return ExecuteQuery.run(url, query);
     }
