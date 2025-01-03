@@ -1,9 +1,6 @@
 package com.thinkbox.m2.m2_questdb.controller;
 
-import com.thinkbox.m2.m2_questdb.command.CleanUpData;
-import com.thinkbox.m2.m2_questdb.command.ImportRawData;
-import com.thinkbox.m2.m2_questdb.command.InsertIntoHistorial;
-import com.thinkbox.m2.m2_questdb.command.InsertIntoIndicator;
+import com.thinkbox.m2.m2_questdb.command.*;
 import com.thinkbox.m2.m2_questdb.constants.Constants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,24 +35,30 @@ public class Controller implements Constants {
         String action = request.getOrDefault("action", "");
         String returnValue = "cannot find action";
         if ("import_raw_file".equals(action)) {
-            String url = String.format(importUrlTemplate, hostName, "historical_raw_d");
+            String type = request.getOrDefault("type", "d");
+            String url = String.format(importUrlTemplate, hostName, "historical_raw_" + type);
             returnValue = Long.valueOf(ImportRawData.run(url, importHistoricalFilePath, importHistoricalErrorPath
             )).toString();
         } else if ("insert_into_historical".equals(action)) {
+            String type = request.getOrDefault("type", "d");
             String url = String.format(execUrlTemplate, hostName);
-            returnValue = Long.valueOf(InsertIntoHistorial.run(url)).toString();
+            returnValue = Long.valueOf(InsertIntoHistorial.run(url, type)).toString();
         } else if ("clean_up_historical".equals(action)) {
+            String type = request.getOrDefault("type", "d");
             String url = String.format(execUrlTemplate, hostName);
-            returnValue = Long.valueOf(CleanUpData.run(url)).toString();
+            returnValue = Long.valueOf(CleanUpData.run(url, type)).toString();
         } else if ("indicator".equals(action)) {
+            String type = request.getOrDefault("type", "");
+            String url = String.format(execUrlTemplate, hostName);
+            if ("52w".equals(type)) {
+                returnValue = Long.valueOf(InsertIntoIndicator_52w.run(url)).toString();
+            }
             int day = Integer.parseInt(request.getOrDefault("day", String.valueOf(0)));
             if (day > 0) {
-                String type = request.getOrDefault("type", "");
-                String url = String.format(execUrlTemplate, hostName);
                 if ("AV".equals(type)) {
                     returnValue = Long.valueOf(InsertIntoIndicator.run(url,"vol", "AV", day, "indicators_AV")).toString();
                 } else if ("MA".equals(type)) {
-                    returnValue = Long.valueOf(InsertIntoIndicator.run(url,"close", "MV", day, "indicators_MA")).toString();
+                    returnValue = Long.valueOf(InsertIntoIndicator.run(url,"close", "MA", day, "indicators_MA")).toString();
                 }
             }
         }

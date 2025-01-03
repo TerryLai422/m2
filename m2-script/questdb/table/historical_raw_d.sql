@@ -1,4 +1,4 @@
-CREATE TABLE historical_raw_d (
+CREATE TABLE historical_raw_% (
   ticker SYMBOL CAPACITY 9000 CACHE,
   per SYMBOL CAPACITY 2 CACHE,
   date VARCHAR,

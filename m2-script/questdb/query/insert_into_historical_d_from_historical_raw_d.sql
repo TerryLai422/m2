@@ -1,7 +1,12 @@
 INSERT INTO historical_d
 SELECT 
     replace(ticker, '.US', ''), 
-    to_timestamp(date, 'yyyyMMdd') AS date, 
+    CASE
+      WHEN per = 'D' THEN 
+        to_timestamp(date, 'yyyyMMdd')
+      ELSE
+        dateadd('h', -6, to_timestamp(concat(date,'T',time), 'yyyyMMddTHHmmss'))    
+    END AS 'date',
     open, 
     high, 
     low, 
