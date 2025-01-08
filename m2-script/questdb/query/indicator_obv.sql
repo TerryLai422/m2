@@ -1,16 +1,28 @@
-SELECT 
-    ticker,
-    date_trunc('day', date),
-    count(*) AS counter,
-    sum(
-        case 
-        when close > open then vol 
-        else 
-            case 
-            when close < open then -1 * vol 
-            else 0 
-            end
-        end) AS obv
+WITH first_stage AS
+(SELECT 
+ticker,
+date,
+open, 
+high,
+low,
+close,
+vol,
+(high + low + close) / 3 AS 'tp'
 FROM historical_5m
 WHERE
-ticker = 'MNSO'
+ticker = 'BRK-B')
+SELECT     
+ticker,
+date_trunc('day', date) AS date,
+count(*) AS counter,
+sum(vol) AS total_vol,
+sum(
+  case 
+    when close > tp then vol 
+    else 
+      case 
+        when close < tp then -1 * vol 
+        else 0 
+      end
+  end) AS obv
+FROM first_stage order by date desc

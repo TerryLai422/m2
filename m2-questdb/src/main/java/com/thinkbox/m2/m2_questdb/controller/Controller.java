@@ -39,10 +39,15 @@ public class Controller implements Constants {
             String url = String.format(importUrlTemplate, hostName, "historical_raw_" + type);
             returnValue = Long.valueOf(ImportRawData.run(url, importHistoricalFilePath, importHistoricalErrorPath
             )).toString();
-        } else if ("insert_into_historical".equals(action)) {
+        } else if ("select_from_historical".equals(action)) {
             String type = request.getOrDefault("type", "d");
             String url = String.format(execUrlTemplate, hostName);
-            returnValue = Long.valueOf(InsertIntoHistorial.run(url, type)).toString();
+            returnValue = Long.valueOf(SelectFromHistorial_5m.run(url, type)).toString();
+        } else if ("insert_into_historical".equals(action)) {
+            String type = request.getOrDefault("type", "d");
+            String date = request.getOrDefault("date", "");
+            String url = String.format(execUrlTemplate, hostName);
+            returnValue = Long.valueOf(InsertIntoHistorial.run(url, type, date)).toString();
         } else if ("clean_up_historical".equals(action)) {
             String type = request.getOrDefault("type", "d");
             String url = String.format(execUrlTemplate, hostName);
