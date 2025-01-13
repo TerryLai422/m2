@@ -1,13 +1,13 @@
 WITH first_stage AS
 (SELECT 
-    date, ticker, close AS 'value1', 
-    avg(close) OVER 
+    date, ticker, vol AS 'value1', 
+    avg(vol) OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN 4 PRECEDING AND CURRENT ROW) 
+        ROWS BETWEEN 19 PRECEDING AND CURRENT ROW) 
     AS 'value2',    
     count() OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN UNBOUNDED PRECEDING AND 4 PRECEDING) 
+        ROWS BETWEEN UNBOUNDED PRECEDING AND 19 PRECEDING) 
     AS 'total'
 FROM historical_d),
 second_stage AS
@@ -44,9 +44,9 @@ fourth_stage AS
 FROM third_stage),
 fifth_stage AS
 (SELECT
-    'MA_5' AS type, date, ticker, value1, value2, total,
+    'AV_20' AS type, date, ticker, value1, value2, total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage)
-INSERT INTO indicators_MA
+INSERT INTO indicator_AV
 SELECT * FROM fifth_stage;

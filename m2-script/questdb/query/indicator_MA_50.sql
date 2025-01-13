@@ -48,5 +48,5 @@ fifth_stage AS
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage)
-INSERT INTO indicators_MA
+INSERT INTO indicator_MA
 SELECT * FROM fifth_stage;

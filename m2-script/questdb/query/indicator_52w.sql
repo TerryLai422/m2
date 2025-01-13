@@ -1,4 +1,4 @@
-INSERT INTO indicators_52w
+INSERT INTO indicator_52w
 SELECT 
     'GENERAL' AS type,
     date, 
