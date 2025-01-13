@@ -25,7 +25,6 @@ replay_pid*
 m2-questdb/target/classes/application.properties
 m2-questdb/target/classes/application.yaml
 m2-questdb/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
-/m2-questdb/target
-m2-questdb/target/classes/application.yaml
+m2-questdb/target
 m2-questdb/.project
 m2-questdb/.factorypath
