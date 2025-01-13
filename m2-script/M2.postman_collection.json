@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Clean up Historical",
+			"name": "Clean up Raw",
 			"event": [
 				{
 					"listen": "prerequest",
@@ -35,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\": \"clean_up_historical\"\n}",
+					"raw": "{\n    \"action\": \"clean_up_historical_raw\",\n    \"list\": [\n        \"d\",\n        \"5m\",\n        \"etf_d\",\n        \"etf_5m\"\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -85,7 +85,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\": \"import_raw_file\"\n}",
+					"raw": "{\n    \"action\": \"import_raw_file\",\n    \"type\": \"etf_d\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,107 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\": \"insert_into_historical\"\n}",
+					"raw": "{\n    \"action\": \"insert_into_historical\",\n    \"type\": \"etf_5m\",\n    \"date\": \"20250103\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select from Historical",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"select_from_historical\",\n    \"type\": \"etf_5m\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clean up Indicator",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"clean_up_indicator\",\n    \"list\": [\n        \"MA\",\n        \"AV\",\n        \"52w\"\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -336,6 +436,56 @@
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"action\": \"indicator\",\n    \"type\": \"MA\",\n    \"day\": 200\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/test/post",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Indicator 52w",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"indicator\",\n    \"type\": \"52w\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
