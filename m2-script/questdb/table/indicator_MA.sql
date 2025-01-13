@@ -1,4 +1,4 @@
-CREATE TABLE indicators_MA (
+CREATE TABLE indicator_MA (
   type SYMBOL CAPACITY 32 CACHE,
   date TIMESTAMP,
   ticker SYMBOL,

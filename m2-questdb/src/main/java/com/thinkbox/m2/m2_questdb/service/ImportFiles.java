@@ -9,37 +9,35 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import java.nio.file.FileVisitOption;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.List;
-import java.io.IOException;
 import java.io.File;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.*;
 
 public class ImportFiles implements Constants {
-    public static long singlethread(String url, Path startPath, String errorPath) {
+    public static Object singlethread(String url, Path startPath, String errorPath) {
         long start = System.currentTimeMillis();
+        Map<String, Object> map = new HashMap<>();
+        int count = 0;
         try {
             List<String> fileNames = listFiles(startPath);
             for (String fullFileName : fileNames) {
-                importFile(url, fullFileName, startPath.toAbsolutePath().toString(), errorPath);
+                if (importFile(url, fullFileName, startPath.toAbsolutePath().toString(), errorPath)) {
+                    count++;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
         long end = System.currentTimeMillis();
-        System.out.println("TOTAL TIME: " + (end - start));
-        return (end - start);
+        System.out.println("duration: " + (end - start));
+        map.put("duration", end - start);
+        map.put("count", count);
+        return map;
     }
 
+/*
     public static void multithread(String url, Path startPath, String importHistoricalFilePath, String errorPath) {
         long start = System.currentTimeMillis();
         ExecutorService executorService = Executors.newFixedThreadPool(10);
@@ -57,10 +55,11 @@ public class ImportFiles implements Constants {
         while (!executorService.isTerminated()) { // Wait for all tasks to complete
         }
         long end = System.currentTimeMillis();
-        System.out.println("TOTAL TIME: " + (end - start));
+        System.out.println("duration: " + (end - start));
     }
+*/
 
-    public static void importFile(String url, String fileName, String importHistoricalFilePath, String errorPath) {
+    public static boolean importFile(String url, String fileName, String importHistoricalFilePath, String errorPath) {
         System.out.println(fileName);
         File file = new File(fileName);
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
@@ -79,11 +78,12 @@ public class ImportFiles implements Constants {
                 String responseString = EntityUtils.toString(responseEntity);
                 System.out.println("Response: " + responseString);
             }
+            return true;
         } catch (Exception e) {
             System.out.println("ERROR:" + fileName);
-            // e.printStackTrace();
             copyToErrorDirectory(file, importHistoricalFilePath, errorPath);
         }
+        return false;
     }
 
     public static void copyToErrorDirectory(File file, String importHistoricalFilePath, String errorPath) {

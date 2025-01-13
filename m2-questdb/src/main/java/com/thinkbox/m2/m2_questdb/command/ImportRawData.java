@@ -7,7 +7,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class ImportRawData implements Constants {
-    public static long run(String url, String importHistoricalFilePath, String importHistoricalErrorPath) {
+    public static Object run(String url, String importHistoricalFilePath, String importHistoricalErrorPath) {
         Path startPath = Paths.get(importHistoricalFilePath);
         return ImportFiles.singlethread(url, startPath, importHistoricalErrorPath);
     }

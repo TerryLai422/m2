@@ -4,7 +4,7 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class InsertIntoIndicator_52w implements Constants {
-    public static String query = "INSERT INTO indicators_52w\n" +
+    public static String query = "INSERT INTO indicator_52w\n" +
             "SELECT \n" +
             "    'GENERAL' AS type,\n" +
             "    date, \n" +
@@ -45,7 +45,7 @@ public class InsertIntoIndicator_52w implements Constants {
             "    ) AS 'previous_52wLow' \n" +
             "FROM historical_d;";
 
-    public static long run(String url) {
+    public static Object run(String url) {
         return ExecuteQuery.run(url, query);
     }
 }

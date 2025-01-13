@@ -4,7 +4,7 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class InsertIntoHistorial implements Constants {
-    public static long run(String url, String type, String date) {
+    public static Object run(String url, String type, String date) {
         String query = "INSERT INTO historical_" + type + "\n" +
                 "SELECT \n" +
                 "    replace(ticker, '.US', ''), \n" +
