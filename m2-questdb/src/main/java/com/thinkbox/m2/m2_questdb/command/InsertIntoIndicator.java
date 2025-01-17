@@ -47,15 +47,13 @@ public class InsertIntoIndicator implements Constants {
             "    min(trend) OVER (PARTITION BY ticker ORDER BY date \n" +
             "        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)\n" +
             "    AS 'minimum_trend'\n" +
-            "FROM third_stage),\n" +
-            "fifth_stage AS\n" +
-            "(SELECT\n" +
+            "FROM third_stage)\n" +
+            "INSERT INTO %s\n" +
+            "SELECT\n" +
             "    '%s_%d' AS type, date, ticker, value1, value2, total,\n" +
             "    difference, previous_difference, percentage, trend, minimum_trend,\n" +
             "    (total + minimum_trend) AS 'trending'\n" +
-            "FROM fourth_stage)\n" +
-            "INSERT INTO %s\n" +
-            "SELECT * FROM fifth_stage;";
+            "FROM fourth_stage;";
 
     public static Object run(String url, String type, String prefix, int interval, String tableName) {
         String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval, tableName);

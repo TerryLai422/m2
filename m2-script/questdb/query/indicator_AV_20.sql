@@ -41,12 +41,10 @@ fourth_stage AS
     min(trend) OVER (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
     AS 'minimum_trend'
-FROM third_stage),
-fifth_stage AS
-(SELECT
+FROM third_stage)
+INSERT INTO indicator_AV
+SELECT
     'AV_20' AS type, date, ticker, value1, value2, total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
-FROM fourth_stage)
-INSERT INTO indicator_AV
-SELECT * FROM fifth_stage;
+FROM fourth_stage;
