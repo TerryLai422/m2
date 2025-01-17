@@ -2,9 +2,9 @@ INSERT INTO analysis_market
 SELECT
     type,
     date,
-    COUNT(ticker) AS total_count,
-    SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) AS positive_count,
-    (SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS percentage_positive
+    COUNT(ticker) AS 'total',
+    SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) AS 'count',
+    (SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS 'percentage'
 FROM
   indicators_MA
 WHERE 

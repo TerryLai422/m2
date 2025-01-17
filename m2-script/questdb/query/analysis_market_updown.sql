@@ -1,14 +1,13 @@
 INSERT INTO analysis_market 
 SELECT
-    type,
+    'up_down',
     date,
-    COUNT(ticker) AS total_count,
-    SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) AS positive_count,
-    (SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS percentage_positive
+    COUNT(ticker) AS 'total',
+    SUM(CASE WHEN close > previous_close THEN 1 ELSE 0 END) AS 'count',
+    (SUM(CASE WHEN close > previous_close THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS 'percentage'
 FROM
-  indicators_MA
+  indicators_52w
 WHERE 
-type LIKE 'MA_%' 
-AND total > 0
+previous_close <> null
 GROUP BY type, date
 ORDER BY type, date desc
