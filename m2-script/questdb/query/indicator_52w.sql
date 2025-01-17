@@ -21,20 +21,20 @@ SELECT
       PARTITION BY ticker        
         ORDER BY date
         RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW
-    ) AS '52wHigh',       
+    ) AS 'high52w',       
     max(high) OVER (
       PARTITION BY ticker        
         ORDER BY date
         RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW
-    ) AS 'previous_52wHigh',
+    ) AS 'previous_high52w',
     min(low) OVER (
       PARTITION BY ticker        
         ORDER BY date
         RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW
-    ) AS '52wLow',       
+    ) AS 'low52w',       
     min(low) OVER (
       PARTITION BY ticker        
         ORDER BY date
         RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW
-    ) AS 'previous_52wLow' 
+    ) AS 'previous_low52w' 
 FROM historical_d

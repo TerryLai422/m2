@@ -27,22 +27,22 @@ public class InsertIntoIndicator_52w implements Constants {
             "      PARTITION BY ticker        \n" +
             "        ORDER BY date\n" +
             "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW\n" +
-            "    ) AS '52wHigh',       \n" +
+            "    ) AS 'high52w',       \n" +
             "    max(high) OVER (\n" +
             "      PARTITION BY ticker        \n" +
             "        ORDER BY date\n" +
             "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_52wHigh',\n" +
+            "    ) AS 'previous_high52w',\n" +
             "    min(low) OVER (\n" +
             "      PARTITION BY ticker        \n" +
             "        ORDER BY date\n" +
             "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW\n" +
-            "    ) AS '52wLow',       \n" +
+            "    ) AS 'low52w',       \n" +
             "    min(low) OVER (\n" +
             "      PARTITION BY ticker        \n" +
             "        ORDER BY date\n" +
             "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_52wLow' \n" +
+            "    ) AS 'previous_low52w' \n" +
             "FROM historical_d;";
 
     public static Object run(String url) {
