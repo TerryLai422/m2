@@ -56,7 +56,7 @@ public class InsertIntoIndicator implements Constants {
             "FROM fourth_stage;";
 
     public static Object run(String url, String type, String prefix, int interval, String tableName) {
-        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, prefix, interval, tableName);
+        String query = String.format(queryTemplate, type, type, interval - 1, interval - 1, tableName, prefix, interval);
         return ExecuteQuery.run(url, query);
     }
 }
