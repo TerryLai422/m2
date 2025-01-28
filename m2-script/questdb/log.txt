@@ -28,3 +28,4 @@ WHERE
     AND i1.total > 0
     AND i2.total > 0
 ORDER BY i1.date DESC
+
