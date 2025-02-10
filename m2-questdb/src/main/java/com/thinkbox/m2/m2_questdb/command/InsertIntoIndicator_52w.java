@@ -4,46 +4,52 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class InsertIntoIndicator_52w implements Constants {
-    public static String query = "INSERT INTO indicator_52w\n" +
-            "SELECT \n" +
-            "    'GENERAL' AS type,\n" +
-            "    date, \n" +
-            "    ticker, \n" +
-            "    high,\n" +
-            "    low,\n" +
-            "    close, \n" +
-            "    first_value(close) OVER (\n" +
-            "        PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        ROWS 1 PRECEDING EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_close', \n" +
-            "    vol,\n" +
-            "    first_value(vol) OVER (\n" +
-            "        PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        ROWS 1 PRECEDING EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_vol',\n" +
-            "    max(high) OVER (\n" +
-            "      PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW\n" +
-            "    ) AS 'high52w',       \n" +
-            "    max(high) OVER (\n" +
-            "      PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_high52w',\n" +
-            "    min(low) OVER (\n" +
-            "      PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW\n" +
-            "    ) AS 'low52w',       \n" +
-            "    min(low) OVER (\n" +
-            "      PARTITION BY ticker        \n" +
-            "        ORDER BY date\n" +
-            "        RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW\n" +
-            "    ) AS 'previous_low52w' \n" +
-            "FROM historical_d;";
+    public static String query = """
+            WITH first_stage AS
+            (SELECT\s
+              'GENERAL' AS type,
+              date,\s
+              ticker,\s
+              high,
+              low,
+              close,\s
+              first_value(close) OVER (
+                  PARTITION BY ticker       \s
+                  ORDER BY date
+                  ROWS 1 PRECEDING EXCLUDE CURRENT ROW
+              ) AS 'previous_close',\s
+              vol,
+              first_value(vol) OVER (
+                  PARTITION BY ticker       \s
+                  ORDER BY date
+                  ROWS 1 PRECEDING EXCLUDE CURRENT ROW
+              ) AS 'previous_vol',
+              max(high) OVER (
+                PARTITION BY ticker       \s
+                  ORDER BY date
+                  RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW
+              ) AS 'high52w',      \s
+              max(high) OVER (
+                PARTITION BY ticker       \s
+                  ORDER BY date
+                  RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW
+              ) AS 'previous_high52w',
+              min(low) OVER (
+                PARTITION BY ticker       \s
+                  ORDER BY date
+                  RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW
+              ) AS 'low52w',      \s
+              min(low) OVER (
+                PARTITION BY ticker       \s
+                  ORDER BY date
+                  RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW
+              ) AS 'previous_low52w'\s
+            FROM historical_d)
+            INSERT INTO indicator_52w
+            SELECT
+              type, date, ticker, high, low, close, previous_close, vol, previous_vol,
+              high52w, previous_high52w, (close - high52w)/high52w, low52w, previous_low52w, (close - low52w)/low52w
+            FROM first_stage;""";
 
     public static Object run(String url) {
         return ExecuteQuery.run(url, query);
