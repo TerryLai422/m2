@@ -35,7 +35,7 @@ public class ExecuteQuery {
                 ObjectMapper mapper = new ObjectMapper();
                 Map<String, Object> responseMap = mapper.readValue(responseString, Map.class);
                 map.put("response", responseMap);
-                System.out.println("Response: " + responseString);
+//                System.out.println("Response: " + responseString);
             }
         } catch (Exception e) {
             e.printStackTrace();

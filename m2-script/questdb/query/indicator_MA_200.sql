@@ -3,11 +3,12 @@ WITH first_stage AS
     date, ticker, close AS 'value1', 
     avg(close) OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN 199 PRECEDING AND CURRENT ROW) 
+        ROWS BETWEEN 200 PRECEDING AND CURRENT ROW 
+        EXCLUDE CURRENT ROW) 
     AS 'value2',    
     count() OVER 
         (PARTITION BY ticker ORDER BY date 
-        ROWS BETWEEN UNBOUNDED PRECEDING AND 199 PRECEDING) 
+        ROWS BETWEEN UNBOUNDED PRECEDING AND 200 PRECEDING) 
     AS 'total'
 FROM historical_d),
 second_stage AS

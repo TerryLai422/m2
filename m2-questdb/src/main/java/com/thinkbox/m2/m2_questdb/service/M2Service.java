@@ -5,6 +5,9 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -57,18 +60,46 @@ public class M2Service implements Constants {
         return SelectFromHistorial.run(url, type);
     }
 
+    public Object selectFromHistoricalForTicker(Map<String, Object> request) {
+        String ticker = request.getOrDefault("ticker", "").toString();
+        String url = String.format(execUrlTemplate, hostName);
+        Map<String, Object> map = (Map<String, Object>) SelectFromHistorialForTicker.run(url, ticker);
+        Map<String, Object> response = (Map<String, Object>) map.get("response");
+        List<List<Object>> dataset = (List<List<Object>>) response.get("dataset");
+        System.out.println("dataset:" + dataset.get(0));
+        List<Map<String, Object>> list = new ArrayList<>();
+        for (List<Object> data : dataset) {
+
+            Map<String, Object> i = new HashMap<>();
+            i.put("date", data.get(0).toString().substring(0, 10));
+            i.put("open", data.get(1));
+            i.put("high", data.get(2));
+            i.put("low", data.get(3));
+            i.put("close", data.get(4));
+            i.put("volume", BigDecimal.valueOf((Double) data.get(5)).setScale(0, RoundingMode.HALF_UP));
+            list.add(i);
+        }
+        return list;
+    }
+
     public Object calculateIndicator(Map<String, Object> request) {
         String type = request.getOrDefault("type", "").toString();
         String url = String.format(execUrlTemplate, hostName);
+        boolean etf = Boolean.parseBoolean(request.getOrDefault("etf", Boolean.FALSE).toString());
         if ("52w".equals(type)) {
-            return InsertIntoIndicator_52w.run(url);
+            String sourceTable = etf ? "historical_etf_d" : "historical_d";
+            String targetTable = etf ? "indicator_etf_52w" : "indicator_52w";
+            return InsertIntoIndicator_52w.run(url, sourceTable, targetTable);
         }
         int day = Integer.parseInt(request.getOrDefault("day", String.valueOf(0)).toString());
         if (day > 0) {
+            String sourceTable = etf ? "historical_etf_d" : "historical_d";
             if ("AV".equals(type)) {
-                return InsertIntoIndicator.run(url, "vol", "AV", day, "indicator_AV");
+                String targetTable = etf ? "indicator_etf_AV" : "indicator_AV";
+                return InsertIntoIndicator.run(url, "vol", "AV", day, sourceTable, targetTable);
             } else if ("MA".equals(type)) {
-                return InsertIntoIndicator.run(url, "close", "MA", day, "indicator_MA");
+                String targetTable = etf ? "indicator_etf_MA" : "indicator_MA";
+                return InsertIntoIndicator.run(url, "close", "MA", day, sourceTable, targetTable);
             }
         }
         return Map.of("error", "invalid parameter");
