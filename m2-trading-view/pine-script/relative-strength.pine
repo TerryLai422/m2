@@ -1,0 +1,46 @@
+//@version=6
+indicator("RS", overlay=false)
+
+// === User Inputs ===
+benchmarkTicker = input.symbol("SP:SPX", "Benchmark Index")
+maLength = input.int(20, "RS Moving Average Length")
+showRSRating = input.bool(true, "Show RS Rating")
+showCloud = input.bool(true, "Show RS Cloud")
+showCrossover = input.bool(true, "Show Crossover Triangle")
+cloudTransparency = input.int(85, "Cloud Transparency", minval=0, maxval=100)
+
+// === Data Retrieval ===
+stockClose = close
+benchmarkClose = request.security(benchmarkTicker, timeframe.period, close)
+rs = stockClose / benchmarkClose
+rsMA = ta.ema(rs, maLength)
+
+// === RS Line Coloring ===
+rsColor = rs > rs[1] ? color.blue : color.fuchsia
+plotRS = plot(rs, color=rsColor, title="RS Line", linewidth=2)
+plotMA = plot(rsMA, color=color.gray, title="RS Moving Average", linewidth=1)
+
+// === Conditional Cloud Coloring ===
+cloudColor = rs > rsMA ? color.new(color.blue, cloudTransparency) : color.new(color.fuchsia, cloudTransparency)
+fill(plotRS, plotMA, color=showCloud ? cloudColor : na, title="RS Cloud")
+
+// === New High Dot ===
+isNewHigh = rs > ta.highest(rs, maLength)[1]
+plot(isNewHigh ? rs : na, title="RS New High Dot", style=plot.style_circles, color=color.new(color.fuchsia, 75), linewidth=10)
+
+// === RS Rating Calculation ===
+rsRating = 100 * (rs - ta.lowest(rs, 252)) / (ta.highest(rs, 252) - ta.lowest(rs, 252))
+plot(showRSRating ? rsRating : na, title="RS Rating", color=color.orange, linewidth=1)
+
+// === RS Crossover Indicator (At Bottom of RS Chart) ===
+crossoverUp = ta.crossover(rs, rsMA)
+plotshape(showCrossover and crossoverUp, title="RS Crossover Up", style=shape.triangleup, location=location.bottom, color=color.green, size=size.tiny)
+
+// === Display Latest RS rating in Label ===
+var label rsLabel = na  // Persistent label variable
+rsRatingFormatted = "RS " + str.tostring(math.round(rsRating))
+
+// Always update on the last bar
+if (bar_index == bar_index[1] + 1)
+    label.delete(rsLabel)
+    rsLabel := label.new(x=bar_index , y=rs, text=rsRatingFormatted, xloc=xloc.bar_index, yloc=yloc.price, style=label.style_label_left, color=color.blue, textcolor=color.white)

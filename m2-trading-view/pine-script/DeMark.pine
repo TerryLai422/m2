@@ -1,0 +1,157 @@
+//@version=6
+indicator("DeMark", overlay=true)
+
+// === Helper Functions ===
+isBuySetup = close < close[4]
+isSellSetup = close > close[4]
+
+// Determine a bullish or bearish price flip
+isBearishFlip = isBuySetup and close[1] > close[5]
+isBullishFlip = isSellSetup and close[1] < close[5]
+
+// === Buy Setup ===
+var int buySetupCounter = 0
+var bool isBuySetupActive = false
+
+if isBearishFlip
+    buySetupCounter := 1
+    isBuySetupActive := true
+else if isBuySetupActive and isBuySetup
+    buySetupCounter += 1
+    isBuySetupActive := buySetupCounter <= 9
+else if close >= close[4]
+    buySetupCounter := 0
+    isBuySetupActive := false
+
+isBuySetupComplete = buySetupCounter == 9
+
+// === Sell Setup ===
+var int sellSetupCounter = 0
+var bool isSellSetupActive= false
+
+if isBullishFlip
+    sellSetupCounter := 1
+    isSellSetupActive:= true
+else if isSellSetupActive and isSellSetup
+    sellSetupCounter += 1
+    isSellSetupActive:= sellSetupCounter <= 9
+else if close <= close[4]
+    sellSetupCounter := 0
+    isSellSetupActive:= false
+
+isSellSetupComplete = sellSetupCounter == 9
+
+// === Buy Setup Perfection ===
+isPerfectBuySetup = math.min(low, low[1]) <= math.min(low[2], low[3])
+// === Sell Setup Perfection ===
+isPerfectSellSetup = math.max(high, high[1]) >= math.max(high[2], high[3])
+
+isBuyCounterDown = close < low[2]
+isSellCounterDown = close > high[2]
+
+// === Buy Countdown ===
+var int buyCountdownCounter = 0
+var bool isBuyCountdownActive = false
+var bool isBuyOnhold = false
+
+if isBuySetupComplete and not isBuyCountdownActive
+    if isBuyCounterDown
+        buyCountdownCounter := 1
+    else
+        buyCountdownCounter := 0
+    isBuyCountdownActive := true
+    isBuyOnhold := false
+// Countdown qualifier: close must be < low[2]
+else if isBuyCountdownActive
+    if isBuyCounterDown
+        buyCountdownCounter += 1
+        isBuyOnhold := false
+    else 
+        isBuyOnhold := true
+
+
+// === Sell Countdown ===
+var int sellCountdownCounter= 0
+var bool isSellCountdownActive = false
+var bool isSellOnhold = false
+
+if isSellSetupComplete and not isSellCountdownActive
+    if isSellCounterDown
+        sellCountdownCounter:= 1
+    else
+        sellCountdownCounter:= 0
+    isSellCountdownActive := true
+    isSellOnhold := false
+// Countdown qualifier: close must be > high[2]
+else if isSellCountdownActive
+    if isSellCounterDown
+        sellCountdownCounter+= 1
+        isSellOnhold := false
+    else
+        isSellOnhold := true
+
+// === Plot Setup Count using plotshape() ===
+plotshape(isBuySetupActive and buySetupCounter==1 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==2 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==3 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==4 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==5 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==6 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==7 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==8 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isBuySetupActive and buySetupCounter==9 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="9", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+
+
+plotshape(isSellSetupActive and sellSetupCounter==1 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==2 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==3 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==4 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==5 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==6 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==7 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==8 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter==9 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="9", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+
+
+// === Plot Countdown using plotshape() ===
+
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==1 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==2 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==3 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==4 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==5 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==6 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==7 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==8 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==9 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="9", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==10 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="10", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==11 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter==12 ? low - 2: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+
+
+// === Plot Countdown using plotshape() ===
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==1 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==2 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==3 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==4 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==5 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==6 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==7 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==8 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==9 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="9", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==10 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="10", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==11 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter==12 ? high + 2: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+
+
+// === Final Countdown 13 using plotshape() ===
+plotshape(buyCountdownCounter == 13 ? low : na, title="Buy Countdown 13", location=location.belowbar, style=shape.labelup, text="13", color=color.red, textcolor=color.white, size=size.normal)
+plotshape(sellCountdownCounter== 13 ? high : na, title="Sell Countdown 13", location=location.abovebar, style=shape.labeldown, text="13", color=color.red, textcolor=color.white, size=size.normal)
+
+// Reset countdown after 13
+if buyCountdownCounter == 13
+    buyCountdownCounter := 0
+    isBuyCountdownActive := false
+if sellCountdownCounter== 13
+    sellCountdownCounter:= 0
+    isSellCountdownActive := false
