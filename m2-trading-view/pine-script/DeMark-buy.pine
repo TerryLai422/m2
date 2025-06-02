@@ -89,8 +89,6 @@ plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 10
 plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 11 ? low * 1.01: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 12 ? low * 1.01: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 
-
-
 // == Buy Countdown 13 Deferral and Buy Countdown 13 Final using plotshape() ===
 plotshape(isBuyCountdownActive and isBuyDeferral and buyCountdownCounter == 13 ? low: na, title="Buy Countdown Deferral", location=location.belowbar, style=shape.labelup, text="+", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 plotshape(isBuyCountdownActive and not isBuyDeferral and buyCountdownCounter == 13 ? low: na, title="Buy Countdown Final", location=location.belowbar, style=shape.labelup, text="13", color=color.red, textcolor=color.white, size=size.tiny)
