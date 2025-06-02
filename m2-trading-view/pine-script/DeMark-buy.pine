@@ -66,13 +66,13 @@ else
 
 // === Plot Buy Setup Count using plotshape() ===
 plotshape(isBuySetupActive and buySetupCounter == 1 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 2 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 3 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 4 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 5 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 6 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 7 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 8 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 2 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 3 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 4 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 5 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 6 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 7 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isBuySetupActive and buySetupCounter == 8 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
 plotshape(isBuySetupActive and buySetupCounter == 9 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="9", color=color.green, textcolor=color.white, size=size.tiny)
 
 // === Plot Buy Countdown using plotshape() ===

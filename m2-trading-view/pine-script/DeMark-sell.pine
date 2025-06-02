@@ -65,14 +65,14 @@ else
 
 // === Plot Sell Setup Count using plotshape() ===
 plotshape(isSellSetupActive and sellSetupCounter == 1 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 2 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 3 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 4 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 5 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 6 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 7 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 8 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter==9 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="9", color=color.green, textcolor=color.white, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 2 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 3 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 4 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 5 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 6 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 7 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+// plotshape(isSellSetupActive and sellSetupCounter == 8 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(isSellSetupActive and sellSetupCounter ==9 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="9", color=color.green, textcolor=color.white, size=size.tiny)
 
 // === Plot Sell Countdown using plotshape() ===
 plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 1 ? high * 0.99: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
