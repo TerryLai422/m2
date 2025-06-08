@@ -1,6 +1,10 @@
 //@version=6
 indicator("DeMark", overlay=true)
 
+showBuySetupDetail = input.bool(false, "Show Buy Setup Detail")
+showSellSetupDetail = input.bool(false, "Show Sell Setup Detail")
+isAggressiveMode = input.bool(false, "Aggressive TD Sequential")
+
 // === Helper Functions ===
 isBuySetup = close < close[4]
 isSellSetup = close > close[4]
@@ -9,17 +13,23 @@ isSellSetup = close > close[4]
 isBearishFlip = isBuySetup and close[1] > close[5]
 isBullishFlip = isSellSetup and close[1] < close[5]
 
+dateStr = str.tostring(year(time)) + "-" + str.tostring(month(time), "00") + "-" + str.tostring(dayofmonth(time), "00")
+
 // === Buy Setup ===
 var int buySetupCounter = 0
 var bool isBuySetupActive = false
+var float buySetupTrueHigh = na
+var bool isBrokenAsTDST = false
+var bool isBrokenAsRecycle = false
+var bool isBrokenAsOppositeSetup = false
 
 if isBearishFlip
     buySetupCounter := 1
     isBuySetupActive := true
-else if isBuySetupActive and isBuySetup
+else if isBuySetup
     buySetupCounter += 1
     isBuySetupActive := buySetupCounter <= 9
-else if close >= close[4]
+else if not isBuySetup
     buySetupCounter := 0
     isBuySetupActive := false
 
@@ -28,80 +38,143 @@ isBuySetupComplete = buySetupCounter == 9
 // === Sell Setup ===
 var int sellSetupCounter = 0
 var bool isSellSetupActive= false
+var float sellSetupTrueLow = na
 
 if isBullishFlip
     sellSetupCounter := 1
     isSellSetupActive:= true
-else if isSellSetupActive and isSellSetup
+else if isSellSetup
     sellSetupCounter += 1
     isSellSetupActive:= sellSetupCounter <= 9
-else if close <= close[4]
+else if not isSellSetup
     sellSetupCounter := 0
     isSellSetupActive:= false
 
 isSellSetupComplete = sellSetupCounter == 9
 
-// === Buy Setup Perfection ===
-isPerfectBuySetup = math.min(low, low[1]) <= math.min(low[2], low[3])
-// === Sell Setup Perfection ===
-isPerfectSellSetup = math.max(high, high[1]) >= math.max(high[2], high[3])
-
-isBuyCounterDown = close < low[2]
-isSellCounterDown = high[2] < close
+// === Buy Setup Perfection and Sell Setup Perfection ===
+isPerfectBuySetup = isBuySetupComplete and (math.min(low, low[1]) <= math.min(low[2], low[3]))
+isPerfectSellSetup = isSellSetupComplete and (math.max(high, high[1]) >= math.max(high[2], high[3]))
 
 // === Buy Countdown variables ===
 var int buyCountdownCounter = 0
 var bool isBuyCountdownActive = false
-var bool isBuyOnhold = false
+var bool isBuyCountdownOnhold = false
 var bool isBuyDeferral = false
+var bool isBuyCountdownBroken = false
 
 // === Sell Countdown variables ===
 var int sellCountdownCounter= 0
 var bool isSellCountdownActive = false
-var bool isSellOnhold = false
+var bool isSellCountdownOnhold = false
 var bool isSellDeferral = false
+var bool isSellCountdownBroken = false
+
+trueBuyHigh = buySetupCounter >= 1 ? ta.highest(high, buySetupCounter) : na
+trueSellLow = sellSetupCounter >= 1 ? ta.lowest(low, sellSetupCounter) : na
 
 
-if isBuySetupComplete and not isBuyCountdownActive
-    if isBuyCounterDown
-        // Countdown qualifier: close must be < low[2]
-        buyCountdownCounter := 1
-    else
-        buyCountdownCounter := 0
-    isBuyCountdownActive := true
-    isBuyOnhold := false
-    isSellCountdownActive := false
-    isSellOnhold := false
-else if isBuyCountdownActive
-    if isBuyCounterDown and buyCountdownCounter < 13
-        // Countdown qualifier: close must be < low[2]
-        buyCountdownCounter += 1
-        isBuyOnhold := false
-    else if isBuyCounterDown
-        isBuyOnhold := false
+var bool isBuyCounterDown = false
+var bool isSellCounterDown = false
+if isAggressiveMode
+    isBuyCounterDown := low <= low[2]
+    isSellCounterDown := high[2] <= high
+else 
+    isBuyCounterDown := close < low[2]
+    isSellCounterDown := high[2] < close
+
+
+if isBuySetupComplete
+    // if isBuyCounterDown
+    //     // Countdown qualifier: close must be < low[2]
+    //     buyCountdownCounter := 1
+    // else
+    buyCountdownCounter := 0
+    buySetupTrueHigh := trueBuyHigh
+    isBuySetupActive := false
+    isBuyCountdownOnhold := false
+
+    if isBuyCountdownActive
+        isBuyCountdownBroken := true
+        isBrokenAsRecycle := true
+        log.info("BROKEN BuyCountDown Recycle BuySetup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
     else 
-        isBuyOnhold := true
+        isBuyCountdownActive := true
+
+    if isSellCountdownActive
+        isSellCountdownActive := false
+        isSellCountdownBroken := true
+        isBrokenAsOppositeSetup := true
+        log.info("BROKEN BuyCountdown Opposite Setup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
+
+    sellSetupTrueLow := na
+    sellCountdownCounter := 0
+    isSellCountdownOnhold := false
+    log.info("BuySetupComplete on {0}, buySetupTrueHigh:{1} trueBuyHigh:{2} {3}", dateStr, buySetupTrueHigh, trueBuyHigh, sellSetupTrueLow)
+
+if isBuyCountdownActive
+    if close > buySetupTrueHigh
+        isBuyCounterDown := false
+        buyCountdownCounter := 0
+        isBuyCountdownActive := false
+        isBuyCountdownBroken := true
+        isBrokenAsTDST := true
+        log.info("BROKEN BuyCountdown Close > Setup True High on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
+    else      
+        if isBuyCounterDown and buyCountdownCounter < 13
+            // Countdown qualifier: close must be < low[2]
+            buyCountdownCounter += 1
+            isBuyCountdownOnhold := false
+        else if isBuyCounterDown
+            isBuyCountdownOnhold := false
+        else 
+            isBuyCountdownOnhold := true
 
 
-if isSellSetupComplete and not isSellCountdownActive
-    if isSellCounterDown
-        // Countdown qualifier: close must be > high[2]
-        sellCountdownCounter:= 1
+if isSellSetupComplete
+    // if isSellCounterDown
+    //     // Countdown qualifier: close must be > high[2]
+    //     sellCountdownCounter:= 1
+    // else
+    sellCountdownCounter:= 0
+    sellSetupTrueLow := trueSellLow
+    isSellSetupActive := false
+    isSellCountdownOnhold := false
+    if isSellCountdownActive
+        isSellCountdownBroken := true
+        isBrokenAsRecycle := true
+        log.info("BROKEN SellCountDown Recycle SellSetup {0} sellSetupTrueLow:{1} close:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh)
     else
-        sellCountdownCounter:= 0
-    isSellCountdownActive := true
-    isSellOnhold := false
-    isBuyCountdownActive := false
-    isBuyOnhold := false
-else if isSellCountdownActive
-    if isSellCounterDown and sellCountdownCounter < 13 
-        // Countdown qualifier: close must be > high[2]  
-        sellCountdownCounter += 1
-        isSellOnhold := false
-    else if isSellCounterDown
-        isSellOnhold := false
-    else
-        isSellOnhold := true
+        isSellCountdownActive := true
+
+    if isBuyCountdownActive
+        isBuyCountdownActive := false
+        isBuyCountdownBroken := true
+        isBrokenAsOppositeSetup := true
+        log.info("BROKEN SellCountdown Opposite Setup {0} sellSetupTrueLow:{1} trueSellLow:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh) 
+        
+    buySetupTrueHigh := na
+    buyCountdownCounter := 0
+    isBuyCountdownOnhold := false
+    log.info("SellSetupComplete {0} sellSetupTrueLow:{1} trueSellLow:{2} {3}", dateStr, sellSetupTrueLow, trueSellLow, buySetupTrueHigh)    
+
+if isSellCountdownActive
+    if close < sellSetupTrueLow
+        isSellCounterDown := false
+        sellCountdownCounter := 0
+        isSellCountdownActive := false
+        isSellCountdownBroken := true
+        isBrokenAsTDST := true        
+        log.info("BROKEN SellCountdown Close > Setup True Low {0} sellSetupTrueLow:{1} trueSellLow:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh)          
+    else        
+        if isSellCounterDown and sellCountdownCounter < 13 
+            // Countdown qualifier: close must be > high[2]  
+            sellCountdownCounter += 1
+            isSellCountdownOnhold := false
+        else if isSellCounterDown
+            isSellCountdownOnhold := false
+        else
+            isSellCountdownOnhold := true
 
 // This is used to determine the bar index of the 8th buy countdown bar for potential countdown deferral
 var float buyCounterdown8Close = na
@@ -110,78 +183,104 @@ if buyCountdownCounter == 8
 
 if buyCountdownCounter == 13 and low <= buyCounterdown8Close
     // Check if the buy countdown deferral condition is met
-    isBuyDeferral := true
-else
     isBuyDeferral := false
+else
+    isBuyDeferral := true
 
 // This is used to determine the bar index of the 8th sell setup bar for potential countdown deferral
 var float sellCountdown8Close = na
 if sellCountdownCounter == 8
     sellCountdown8Close := close
 
-if sellCountdownCounter == 13 and high > sellCountdown8Close
+if sellCountdownCounter == 13 and high >= sellCountdown8Close
     // Check if the sell countdown deferral condition is met
-    isSellDeferral := false
-else
     isSellDeferral := true
+else
+    isSellDeferral := false
 
 // === Plot Buy Setup Count using plotshape() ===
-plotshape(isBuySetupActive and buySetupCounter == 1 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 2 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 3 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 4 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 5 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 6 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 7 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isBuySetupActive and buySetupCounter == 8 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isBuySetupActive and buySetupCounter == 9 ? low : na, title="Buy Setup", location=location.belowbar, style=shape.labelup, text="9", color=color.green, textcolor=color.white, size=size.tiny)
+plotshape(buySetupCounter == 1, title="Buy Setup 1", location=location.belowbar, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 2, title="Buy Setup 2", location=location.belowbar, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 3, title="Buy Setup 3", location=location.belowbar, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 4, title="Buy Setup 4", location=location.belowbar, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 5, title="Buy Setup 5", location=location.belowbar, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 6, title="Buy Setup 6", location=location.belowbar, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 7, title="Buy Setup 7", location=location.belowbar, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showBuySetupDetail and buySetupCounter == 8, title="Buy Setup 8", location=location.belowbar, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(buySetupCounter == 9, title="Buy Setup 9", location=location.belowbar, style=shape.labelup, text="9", color=color.green, textcolor=color.white, size=size.tiny)
+plotshape(buySetupCounter == 9 and isPerfectBuySetup, title="Buy Perfect Setup", location=location.belowbar, style=shape.triangleup, color=color.red, textcolor=color.white, size=size.tiny)
 
-// === Plot Sell Setup Count using plotshape() ===
-plotshape(isSellSetupActive and sellSetupCounter == 1 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 2 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 3 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 4 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 5 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 6 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 7 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-// plotshape(isSellSetupActive and sellSetupCounter == 8 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
-plotshape(isSellSetupActive and sellSetupCounter == 9 ? high : na, title="Sell Setup", location=location.abovebar, style=shape.labeldown, text="9", color=color.green, textcolor=color.white, size=size.tiny)
+plotshape(isBuyCountdownBroken and isBrokenAsRecycle, title="Buy Countdown Recycle Broken", location=location.belowbar, style=shape.labelup, text="\nR", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownBroken and isBrokenAsOppositeSetup, title="Buy Countdown Opposite Broken", location=location.belowbar, style=shape.labelup, text="\nO", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isBuyCountdownBroken and isBrokenAsTDST, title="Buy Countdown TDST Broken", location=location.belowbar, style=shape.labelup, text="\n\T", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 
 // === Plot Buy Countdown using plotshape() ===
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 1 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 2 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="2", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 3 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="3", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 4 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="4", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 5 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="5", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 6 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="6", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 7 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="7", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 8 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="8", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 9 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="9", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 10 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="10", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny) 
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 11 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyOnhold and buyCountdownCounter == 12 ? low * 0.99: na, title="Buy Countdown", location=location.absolute, style=shape.labelup, text="12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-
-// === Plot Sell Countdown using plotshape() ===
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 1 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 2 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 3 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 4 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 5 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 6 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 7 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 8 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 9 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="9", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 10 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="10", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 11 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellOnhold and sellCountdownCounter == 12 ? high * 1.01: na, title="Sell Countdown", location=location.absolute, style=shape.labeldown, text="12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 1 and not isBuyCountdownOnhold, title="Buy Countdown 1", location=location.belowbar, style=shape.labelup, text="\n\n1", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 2 and not isBuyCountdownOnhold, title="Buy Countdown 2", location=location.belowbar, style=shape.labelup, text="\n2", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 3 and not isBuyCountdownOnhold, title="Buy Countdown 3", location=location.belowbar, style=shape.labelup, text="\n3", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 4 and not isBuyCountdownOnhold, title="Buy Countdown 4", location=location.belowbar, style=shape.labelup, text="\n4", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 5 and not isBuyCountdownOnhold, title="Buy Countdown 5", location=location.belowbar, style=shape.labelup, text="\n5", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 6 and not isBuyCountdownOnhold, title="Buy Countdown 6", location=location.belowbar, style=shape.labelup, text="\n6", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 7 and not isBuyCountdownOnhold, title="Buy Countdown 7", location=location.belowbar, style=shape.labelup, text="\n7", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 8 and not isBuyCountdownOnhold, title="Buy Countdown 8", location=location.belowbar, style=shape.labelup, text="\n8", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 9 and not isBuyCountdownOnhold, title="Buy Countdown 9", location=location.belowbar, style=shape.labelup, text="\n9", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 10 and not isBuyCountdownOnhold, title="Buy Countdown 10", location=location.belowbar, style=shape.labelup, text="\n10", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny) 
+plotshape(buyCountdownCounter == 11 and not isBuyCountdownOnhold, title="Buy Countdown 11", location=location.belowbar, style=shape.labelup, text="\n11", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 12 and not isBuyCountdownOnhold, title="Buy Countdown 12", location=location.belowbar, style=shape.labelup, text="\n12", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 
 // == Buy Countdown 13 Deferral and Buy Countdown 13 Final using plotshape() ===
-plotshape(isBuyCountdownActive and isBuyDeferral and buyCountdownCounter == 13 ? low: na, title="Buy Countdown Deferral", location=location.belowbar, style=shape.labelup, text="+", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isBuyCountdownActive and not isBuyDeferral and buyCountdownCounter == 13 ? low: na, title="Buy Countdown Final", location=location.belowbar, style=shape.labelup, text="13", color=color.red, textcolor=color.white, size=size.tiny)
+plotshape(buyCountdownCounter == 13 and isBuyDeferral, title="Buy Countdown Deferral", location=location.belowbar, style=shape.labelup, text="\n+", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(buyCountdownCounter == 13 and not isBuyDeferral, title="Buy Countdown Final", location=location.belowbar, style=shape.labelup, text="\n13", color=color.red, textcolor=color.white, size=size.tiny)
+
+// === Plot Sell Setup Count using plotshape() ===
+plotshape(sellSetupCounter == 1, title="Sell Setup 1", location=location.abovebar, style=shape.labeldown, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 2, title="Sell Setup 2", location=location.abovebar, style=shape.labeldown, text="2", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 3, title="Sell Setup 3", location=location.abovebar, style=shape.labeldown, text="3", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 4, title="Sell Setup 4", location=location.abovebar, style=shape.labeldown, text="4", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 5, title="Sell Setup 5", location=location.abovebar, style=shape.labeldown, text="5", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 6, title="Sell Setup 6", location=location.abovebar, style=shape.labeldown, text="6", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 7, title="Sell Setup 7", location=location.abovebar, style=shape.labeldown, text="7", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(showSellSetupDetail and sellSetupCounter == 8, title="Sell Setup 8", location=location.abovebar, style=shape.labeldown, text="8", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
+plotshape(sellSetupCounter == 9, title="Sell Setup 9", location=location.abovebar, style=shape.labeldown, text="9", color=color.green, textcolor=color.white, size=size.tiny)
+plotshape(sellSetupCounter == 9 and isPerfectSellSetup, title="Sell Perfect Setup", location=location.abovebar, style=shape.triangledown, color=color.red, textcolor=color.white, size=size.tiny)
+
+plotshape(isSellCountdownBroken and isBrokenAsRecycle, title="Sell Countdown Recycle Broken", location=location.abovebar, style=shape.labeldown, text="R\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownBroken and isBrokenAsOppositeSetup, title="Sell Countdown Opposite Broken", location=location.abovebar, style=shape.labeldown, text="O\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(isSellCountdownBroken and isBrokenAsTDST, title="Sell Countdown TDST Broken", location=location.abovebar, style=shape.labeldown, text="T\n\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+
+// === Plot Sell Countdown using plotshape() ===
+plotshape(sellCountdownCounter == 1 and not isSellCountdownOnhold, title="Sell Countdown 1", location=location.abovebar, style=shape.labeldown, text="1\n\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 2 and not isSellCountdownOnhold, title="Sell Countdown 2", location=location.abovebar, style=shape.labeldown, text="2\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 3 and not isSellCountdownOnhold, title="Sell Countdown 3", location=location.abovebar, style=shape.labeldown, text="3\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 4 and not isSellCountdownOnhold, title="Sell Countdown 4", location=location.abovebar, style=shape.labeldown, text="4\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 5 and not isSellCountdownOnhold, title="Sell Countdown 5", location=location.abovebar, style=shape.labeldown, text="5\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 6 and not isSellCountdownOnhold, title="Sell Countdown 6", location=location.abovebar, style=shape.labeldown, text="6\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 7 and not isSellCountdownOnhold, title="Sell Countdown 7", location=location.abovebar, style=shape.labeldown, text="7\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 8 and not isSellCountdownOnhold, title="Sell Countdown 8", location=location.abovebar, style=shape.labeldown, text="8\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 9 and not isSellCountdownOnhold, title="Sell Countdown 9", location=location.abovebar, style=shape.labeldown, text="9\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 10 and not isSellCountdownOnhold, title="Sell Countdown 10", location=location.abovebar, style=shape.labeldown, text="10\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 11 and not isSellCountdownOnhold, title="Sell Countdown 11", location=location.abovebar, style=shape.labeldown, text="11\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 12 and not isSellCountdownOnhold, title="Sell Countdown 12", location=location.abovebar, style=shape.labeldown, text="12\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
 
 // === Sell Countdown 13 Deferral and Sell Countdown 13 Final using plotshape() ===
-plotshape(isSellCountdownActive and isSellDeferral and sellCountdownCounter == 13 ? high : na, title="Sell Countdown Deferral", location=location.abovebar, style=shape.labeldown, text="+", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
-plotshape(isSellCountdownActive and not isSellDeferral and sellCountdownCounter == 13 ? high : na, title="Sell Countdown Final", location=location.abovebar, style=shape.labeldown, text="13", color=color.red, textcolor=color.white, size=size.tiny)
+plotshape(sellCountdownCounter == 13 and isSellDeferral, title="Sell Countdown Deferral", location=location.abovebar, style=shape.labeldown, text="+\n", color=color.new(color.black, 100), textcolor=color.red, size=size.tiny)
+plotshape(sellCountdownCounter == 13 and not isSellDeferral, title="Sell Countdown Final", location=location.abovebar, style=shape.labeldown, text="13\n", color=color.red, textcolor=color.white, size=size.tiny)
+
+// // Plot continuous levels on the chart
+plot(buySetupTrueHigh, title="Buy Setup Highest High", color=color.new(color.green, 0), linewidth=2, style=plot.style_steplinebr)
+plot(sellSetupTrueLow, title="Sell Setup Lowest Low", color=color.new(color.red, 0), linewidth=2, style=plot.style_steplinebr)
+
+if isBuyCountdownBroken
+    isBuyCountdownBroken := false
+    isBrokenAsRecycle := false
+    isBrokenAsOppositeSetup := false
+    isBrokenAsTDST := false
+
+if isSellCountdownBroken
+    isSellCountdownBroken := false
+    isBrokenAsRecycle := false
+    isBrokenAsOppositeSetup := false
+    isBrokenAsTDST := false 
 
 // Reset countdown after 13
 if buyCountdownCounter == 13 and not isBuyDeferral
@@ -190,9 +289,14 @@ if buyCountdownCounter == 13 and not isBuyDeferral
     isBuyCountdownActive := false
     isBuyDeferral := false
     buyCounterdown8Close := na
+    buySetupTrueHigh := na
+    log.info("RESET BuySetupComplete on {0}, buySetupTrueHigh:{1} trueBuyHigh:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, trueBuyHigh, sellSetupTrueLow)
+
 if sellCountdownCounter== 13 and not isSellDeferral
     // Reset sell countdown if it reaches 13 and is not deferred
     sellCountdownCounter:= 0
     isSellCountdownActive := false
     isSellDeferral := false
     sellCountdown8Close := na
+    sellSetupTrueLow := na
+    log.info("RESET SellSetupComplete {0} sellSetupTrueLow:{1} trueSellLow:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, trueSellLow, buySetupTrueHigh)  
