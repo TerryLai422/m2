@@ -4,6 +4,10 @@ indicator("DeMark", overlay=true)
 showBuySetupDetail = input.bool(false, "Show Buy Setup Detail")
 showSellSetupDetail = input.bool(false, "Show Sell Setup Detail")
 isAggressiveMode = input.bool(false, "Aggressive TD Sequential")
+setupFlip = input.bool(true, "Setup Flip")
+countdownCancellationTSDT = input.bool(false, "Countdown Cancellation TSDT")
+countdownCancellationRecycle = input.bool(false, "Countdown Cancellation Recycle")
+
 
 // === Helper Functions ===
 isBuySetup = close < close[4]
@@ -23,7 +27,7 @@ var bool isBrokenAsTDST = false
 var bool isBrokenAsRecycle = false
 var bool isBrokenAsOppositeSetup = false
 
-if isBearishFlip
+if isBearishFlip and setupFlip
     buySetupCounter := 1
     isBuySetupActive := true
 else if isBuySetup
@@ -40,7 +44,7 @@ var int sellSetupCounter = 0
 var bool isSellSetupActive= false
 var float sellSetupTrueLow = na
 
-if isBullishFlip
+if isBullishFlip and setupFlip
     sellSetupCounter := 1
     isSellSetupActive:= true
 else if isSellSetup
@@ -85,16 +89,12 @@ else
 
 
 if isBuySetupComplete
-    // if isBuyCounterDown
-    //     // Countdown qualifier: close must be < low[2]
-    //     buyCountdownCounter := 1
-    // else
     buyCountdownCounter := 0
     buySetupTrueHigh := trueBuyHigh
     isBuySetupActive := false
     isBuyCountdownOnhold := false
 
-    if isBuyCountdownActive
+    if isBuyCountdownActive and countdownCancellationRecycle
         isBuyCountdownBroken := true
         isBrokenAsRecycle := true
         log.info("BROKEN BuyCountDown Recycle BuySetup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
@@ -113,7 +113,7 @@ if isBuySetupComplete
     log.info("BuySetupComplete on {0}, buySetupTrueHigh:{1} trueBuyHigh:{2} {3}", dateStr, buySetupTrueHigh, trueBuyHigh, sellSetupTrueLow)
 
 if isBuyCountdownActive
-    if close > buySetupTrueHigh
+    if close > buySetupTrueHigh and countdownCancellationTSDT
         isBuyCounterDown := false
         buyCountdownCounter := 0
         isBuyCountdownActive := false
@@ -132,15 +132,11 @@ if isBuyCountdownActive
 
 
 if isSellSetupComplete
-    // if isSellCounterDown
-    //     // Countdown qualifier: close must be > high[2]
-    //     sellCountdownCounter:= 1
-    // else
     sellCountdownCounter:= 0
     sellSetupTrueLow := trueSellLow
     isSellSetupActive := false
     isSellCountdownOnhold := false
-    if isSellCountdownActive
+    if isSellCountdownActive and countdownCancellationRecycle
         isSellCountdownBroken := true
         isBrokenAsRecycle := true
         log.info("BROKEN SellCountDown Recycle SellSetup {0} sellSetupTrueLow:{1} close:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh)
@@ -159,7 +155,7 @@ if isSellSetupComplete
     log.info("SellSetupComplete {0} sellSetupTrueLow:{1} trueSellLow:{2} {3}", dateStr, sellSetupTrueLow, trueSellLow, buySetupTrueHigh)    
 
 if isSellCountdownActive
-    if close < sellSetupTrueLow
+    if close < sellSetupTrueLow and countdownCancellationTSDT
         isSellCounterDown := false
         sellCountdownCounter := 0
         isSellCountdownActive := false
@@ -183,9 +179,11 @@ if buyCountdownCounter == 8
 
 if buyCountdownCounter == 13 and low <= buyCounterdown8Close
     // Check if the buy countdown deferral condition is met
-    isBuyDeferral := false
-else
     isBuyDeferral := true
+    log.info("Buy Countdown buyCounterdown8Close:{0}  low:{1}  isBuyDeferral:{2}", buyCounterdown8Close, low, isBuyDeferral)      
+else
+    isBuyDeferral := false
+    log.info("Buy Countdown buyCounterdown8Close:{0}  low:{1}  isBuyDeferral:{2}", buyCounterdown8Close, low, isBuyDeferral)     
 
 // This is used to determine the bar index of the 8th sell setup bar for potential countdown deferral
 var float sellCountdown8Close = na
@@ -194,9 +192,11 @@ if sellCountdownCounter == 8
 
 if sellCountdownCounter == 13 and high >= sellCountdown8Close
     // Check if the sell countdown deferral condition is met
-    isSellDeferral := true
-else
     isSellDeferral := false
+    log.info("Sell Countdown sellCountdown8Close:{0}  high:{1}  isSellDeferral:{2}", sellCountdown8Close, high, isSellDeferral)        
+else
+    isSellDeferral := true
+    log.info("Sell Countdown sellCountdown8Close:{0}  high:{1}  isSellDeferral:{2}", sellCountdown8Close, high, isSellDeferral)     
 
 // === Plot Buy Setup Count using plotshape() ===
 plotshape(buySetupCounter == 1, title="Buy Setup 1", location=location.belowbar, style=shape.labelup, text="1", color=color.new(color.black, 100), textcolor=color.green, size=size.tiny)
