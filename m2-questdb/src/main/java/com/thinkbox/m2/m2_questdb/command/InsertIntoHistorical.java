@@ -3,7 +3,7 @@ package com.thinkbox.m2.m2_questdb.command;
 import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
-public class InsertIntoHistorial implements Constants {
+public class InsertIntoHistorical implements Constants {
     public static Object run(String url, String type, String date) {
         String query = "INSERT INTO historical_" + type + "\n" +
                 "SELECT \n" +

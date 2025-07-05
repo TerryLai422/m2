@@ -6,7 +6,7 @@ import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 import java.util.HashMap;
 import java.util.Map;
 
-public class InsertIntoHistorial_5m implements Constants {
+public class InsertIntoHistorical_5m implements Constants {
     public static Object run(String url, String type, String date) {
         String query;
         Long totalDuration = 0L;
