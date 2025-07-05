@@ -5,8 +5,8 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN %d PRECEDING AND CURRENT ROW) 
     AS 'value2',    
-FROM indicators_MA i1
-    JOIN indicators_MA i2 ON i1.date = i2.date AND i1.ticker = i2.ticker 
+FROM indicator_MA i1
+    JOIN indicator_MA i2 ON i1.date = i2.date AND i1.ticker = i2.ticker 
 ),
 second_stage AS
 (SELECT     

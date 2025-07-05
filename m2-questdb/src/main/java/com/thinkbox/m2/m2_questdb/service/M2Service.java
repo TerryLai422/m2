@@ -46,7 +46,12 @@ public class M2Service implements Constants {
         }
         return map;
     }
-
+    public Object insertIntoHistorical_5m(Map<String, Object> request) {
+        String type = request.getOrDefault("type", "d").toString();
+        String date = request.getOrDefault("date", "").toString();
+        String url = String.format(execUrlTemplate, hostName);
+        return InsertIntoHistorial_5m.run(url, type, date);
+    }
     public Object insertIntoHistorical(Map<String, Object> request) {
         String type = request.getOrDefault("type", "d").toString();
         String date = request.getOrDefault("date", "").toString();

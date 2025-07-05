@@ -8,9 +8,9 @@ low,
 close,
 vol,
 (high + low + close) / 3 AS 'tp'
-FROM historical_5m
+FROM historical_5m_M
 WHERE
-ticker = 'BRK-B')
+ticker = 'MNSO')
 SELECT     
 ticker,
 date_trunc('day', date) AS date,

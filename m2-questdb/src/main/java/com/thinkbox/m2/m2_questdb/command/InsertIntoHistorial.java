@@ -24,6 +24,7 @@ public class InsertIntoHistorial implements Constants {
         } else {
             query += "date > '" + date + "' \n";
         }
+//        query += "date = '20250306' ";
         query += "ORDER BY date, time ASC;";
         System.out.println("Query:" + query);
         return ExecuteQuery.run(url, query);

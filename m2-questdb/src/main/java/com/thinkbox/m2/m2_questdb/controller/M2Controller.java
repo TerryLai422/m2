@@ -27,6 +27,10 @@ public class M2Controller {
         } else if ("select_from_historical".equals(action)) {
             return ResponseEntity.ok().body(m2Service.selectFromHistorical(request));
         } else if ("insert_into_historical".equals(action)) {
+            String type = request.getOrDefault("type", "").toString();
+            if ("etf_5m".equals(type) || "5m".equals(type)) {
+                return ResponseEntity.ok().body(m2Service.insertIntoHistorical_5m(request));
+            }
             return ResponseEntity.ok().body(m2Service.insertIntoHistorical(request));
         } else if ("clean_up_historical_raw".equals(action)) {
             return ResponseEntity.ok().body(m2Service.cleanUp(request, "historical_raw_"));
