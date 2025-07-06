@@ -50,19 +50,19 @@ public class M2Service implements Constants {
         String type = request.getOrDefault("type", "d").toString();
         String date = request.getOrDefault("date", "").toString();
         String url = String.format(execUrlTemplate, hostName);
-        return InsertIntoHistorial_5m.run(url, type, date);
+        return InsertIntoHistorical_5m.run(url, type, date);
     }
     public Object insertIntoHistorical(Map<String, Object> request) {
         String type = request.getOrDefault("type", "d").toString();
         String date = request.getOrDefault("date", "").toString();
         String url = String.format(execUrlTemplate, hostName);
-        return InsertIntoHistorial.run(url, type, date);
+        return InsertIntoHistorical.run(url, type, date);
     }
 
     public Object selectFromHistorical(Map<String, Object> request) {
         String type = request.getOrDefault("type", "d").toString();
         String url = String.format(execUrlTemplate, hostName);
-        return SelectFromHistorial.run(url, type);
+        return SelectFromHistorical.run(url, type);
     }
 
     public Object selectFromHistoricalForTicker(Map<String, Object> request) {
