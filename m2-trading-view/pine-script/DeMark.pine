@@ -89,26 +89,29 @@ else
 
 
 if isBuySetupComplete
-    buyCountdownCounter := 0
     buySetupTrueHigh := trueBuyHigh
     isBuySetupActive := false
     isBuyCountdownOnhold := false
 
-    if isBuyCountdownActive and countdownCancellationRecycle
-        isBuyCountdownBroken := true
-        isBrokenAsRecycle := true
-        log.info("BROKEN BuyCountDown Recycle BuySetup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
+    if isBuyCountdownActive 
+        if countdownCancellationRecycle
+            isBuyCountdownBroken := true
+            isBrokenAsRecycle := true
+            buyCountdownCounter := 0
+            log.info("BROKEN BuyCountDown Recycle BuySetup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
     else 
+        buyCountdownCounter := 0
         isBuyCountdownActive := true
 
     if isSellCountdownActive
         isSellCountdownActive := false
         isSellCountdownBroken := true
         isBrokenAsOppositeSetup := true
+        sellCountdownCounter := 0
         log.info("BROKEN BuyCountdown Opposite Setup on {0}, buySetupTrueHigh:{1} close:{2} sellSetupTrueLow{3}", dateStr, buySetupTrueHigh, close, sellSetupTrueLow)
 
     sellSetupTrueLow := na
-    sellCountdownCounter := 0
+    // sellCountdownCounter := 0
     isSellCountdownOnhold := false
     log.info("BuySetupComplete on {0}, buySetupTrueHigh:{1} trueBuyHigh:{2} {3}", dateStr, buySetupTrueHigh, trueBuyHigh, sellSetupTrueLow)
 
@@ -132,25 +135,27 @@ if isBuyCountdownActive
 
 
 if isSellSetupComplete
-    sellCountdownCounter:= 0
     sellSetupTrueLow := trueSellLow
     isSellSetupActive := false
     isSellCountdownOnhold := false
-    if isSellCountdownActive and countdownCancellationRecycle
-        isSellCountdownBroken := true
-        isBrokenAsRecycle := true
-        log.info("BROKEN SellCountDown Recycle SellSetup {0} sellSetupTrueLow:{1} close:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh)
+    if isSellCountdownActive 
+        if countdownCancellationRecycle
+            isSellCountdownBroken := true
+            isBrokenAsRecycle := true
+            sellCountdownCounter:= 0
+            log.info("BROKEN SellCountDown Recycle SellSetup {0} sellSetupTrueLow:{1} close:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh)
     else
+        sellCountdownCounter:= 0
         isSellCountdownActive := true
 
     if isBuyCountdownActive
         isBuyCountdownActive := false
         isBuyCountdownBroken := true
         isBrokenAsOppositeSetup := true
+        buyCountdownCounter := 0
         log.info("BROKEN SellCountdown Opposite Setup {0} sellSetupTrueLow:{1} trueSellLow:{2} buySetupTrueHigh{3}", dateStr, sellSetupTrueLow, close, buySetupTrueHigh) 
         
     buySetupTrueHigh := na
-    buyCountdownCounter := 0
     isBuyCountdownOnhold := false
     log.info("SellSetupComplete {0} sellSetupTrueLow:{1} trueSellLow:{2} {3}", dateStr, sellSetupTrueLow, trueSellLow, buySetupTrueHigh)    
 

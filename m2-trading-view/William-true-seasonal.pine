@@ -1,0 +1,28 @@
+//@version=5
+indicator("Williams True Seasonal (Simplified)", overlay=false)
+
+// Parameters
+yearsBack = input.int(10, "Years of History")
+showCumulative = input.bool(true, "Show Cumulative Seasonal Line")
+
+// Compute day-of-year and year
+doy = dayofyear(time)
+currentYear = year(time)
+
+// Initialize seasonal array
+var float[] seasonal = array.new_float(366, 0)
+
+// Collect % daily change per DOY per year
+if bar_index > 0
+    for i = 1 to yearsBack
+        pastTime = timestamp(currentYear - i, month(time), dayofmonth(time), 0, 0)
+        pastIdx = request.security(syminfo.tickerid, "D", close, lookahead=barmerge.lookahead_on, ignore_invalid_symbol=true, when=time == pastTime)
+        if not na(pastIdx)
+            change = (close - pastIdx) / pastIdx
+            index = doy - 1
+            val = array.get(seasonal, index)
+            array.set(seasonal, index, val + change)
+
+// Display seasonal average
+seasonalToday = array.get(seasonal, doy - 1) / yearsBack
+plot(showCumulative ? nz(seasonalToday) : nz(seasonalToday) * 100, title="Seasonal Index", color=color.blue, linewidth=2)
