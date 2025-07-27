@@ -4,7 +4,7 @@ import com.thinkbox.m2.m2_questdb.constants.Constants;
 import com.thinkbox.m2.m2_questdb.service.ExecuteQuery;
 
 public class InsertIntoIndicator_52w implements Constants {
-    public static String query = """
+    public static String template = """
             WITH first_stage AS
             (SELECT
               'GENERAL' AS type,
@@ -52,6 +52,9 @@ public class InsertIntoIndicator_52w implements Constants {
             FROM first_stage;""";
 
     public static Object run(String url, String sourceTable, String targetTable) {
-        return ExecuteQuery.run(url, String.format(query, sourceTable, targetTable));
+        String query = String.format(template, sourceTable, targetTable);
+        System.out.println("Query: " + query);
+        return null;
+//        return ExecuteQuery.run(url, query);
     }
 }

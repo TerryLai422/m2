@@ -99,12 +99,13 @@ public class M2Service implements Constants {
         int day = Integer.parseInt(request.getOrDefault("day", String.valueOf(0)).toString());
         if (day > 0) {
             String sourceTable = etf ? "historical_etf_d" : "historical_d";
+            String date = request.getOrDefault("date", "").toString();
             if ("AV".equals(type)) {
                 String targetTable = etf ? "indicator_etf_AV" : "indicator_AV";
-                return InsertIntoIndicator.run(url, "vol", "AV", day, sourceTable, targetTable);
+                return InsertIntoIndicator.run(url, "vol", "AV", day, sourceTable, targetTable, date);
             } else if ("MA".equals(type)) {
                 String targetTable = etf ? "indicator_etf_MA" : "indicator_MA";
-                return InsertIntoIndicator.run(url, "close", "MA", day, sourceTable, targetTable);
+                return InsertIntoIndicator.run(url, "close", "MA", day, sourceTable, targetTable, date);
             }
         }
         return Map.of("error", "invalid parameter");
