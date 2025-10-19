@@ -1,9 +1,9 @@
-CREATE TABLE indicator_AV (
+CREATE TABLE indicator_d_MA (
   type SYMBOL CAPACITY 32 CACHE,
   date TIMESTAMP,
   ticker SYMBOL,
-  vol DOUBLE,
-  average_vol DOUBLE,
+  value1 DOUBLE,
+  value2 DOUBLE,
   total SHORT,
   difference DOUBLE,
   previous_difference DOUBLE,

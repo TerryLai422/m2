@@ -54,7 +54,7 @@ public class InsertIntoIndicator_52w implements Constants {
     public static Object run(String url, String sourceTable, String targetTable) {
         String query = String.format(template, sourceTable, targetTable);
         System.out.println("Query: " + query);
-        return null;
-//        return ExecuteQuery.run(url, query);
+//        return null;
+        return ExecuteQuery.run(url, query);
     }
 }
