@@ -4,7 +4,7 @@ CREATE TABLE indicator_d_MA (
   ticker SYMBOL,
   value1 DOUBLE,
   value2 DOUBLE,
-  total SHORT,
+  total INT,
   difference DOUBLE,
   previous_difference DOUBLE,
   percentage DOUBLE,

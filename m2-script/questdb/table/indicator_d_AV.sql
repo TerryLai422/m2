@@ -4,7 +4,7 @@ CREATE TABLE indicator_d_AV (
   ticker SYMBOL,
   vol DOUBLE,
   average_vol DOUBLE,
-  total SHORT,
+  total INT,
   difference DOUBLE,
   previous_difference DOUBLE,
   percentage DOUBLE,
