@@ -1,4 +1,4 @@
-CREATE TABLE indicator_d_52w (
+CREATE TABLE indicator_%_d_52w (
   type SYMBOL,
   date TIMESTAMP,
   ticker SYMBOL,
