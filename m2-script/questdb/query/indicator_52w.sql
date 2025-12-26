@@ -37,9 +37,25 @@ WITH first_stage AS
         ORDER BY date
         RANGE BETWEEN '365' DAY PRECEDING AND CURRENT ROW EXCLUDE CURRENT ROW
     ) AS 'previous_low52w' 
-FROM historical_d)
-INSERT INTO indicator_52w
+FROM 
+  historical_stock_d)
+INSERT INTO 
+  indicator_stock_52w
 SELECT
-    type, date, ticker, high, low, close, previous_close, vol, previous_vol,
-    high52w, previous_high52w, (close - high52w)/high52w, low52w, previous_low52w, (close - low52w)/low52w
-FROM first_stage;
+    type, 
+    date, 
+    ticker, 
+    high, 
+    low, 
+    close, 
+    previous_close, 
+    vol, 
+    previous_vol,
+    high52w, 
+    previous_high52w, 
+    (close - high52w)/high52w, 
+    low52w, 
+    previous_low52w, 
+    (close - low52w)/low52w
+FROM 
+  first_stage;

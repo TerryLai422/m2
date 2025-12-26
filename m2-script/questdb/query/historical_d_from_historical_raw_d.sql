@@ -12,6 +12,9 @@ SELECT
     low, 
     close, 
     vol
-FROM historical_raw_d
-WHERE date >= '19700101' 
-ORDER BY date ASC;
+FROM 
+  historical_raw_d
+WHERE 
+  date >= '19700101' 
+ORDER BY
+  date ASC

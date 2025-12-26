@@ -10,7 +10,7 @@ WITH first_stage AS
         (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND 200 PRECEDING) 
     AS 'total'
-FROM historical_d),
+FROM historical_stock_d),
 second_stage AS
 (SELECT     
     date, ticker, value1, value2, total,
@@ -21,7 +21,7 @@ second_stage AS
         ROWS 1 PRECEDING EXCLUDE CURRENT ROW) 
     AS 'previous_difference'
 FROM first_stage 
-WHERE TOTAL > 0), 
+WHERE total > 0), 
 third_stage AS
 (SELECT
     date, ticker, value1, value2, total,
@@ -43,9 +43,9 @@ fourth_stage AS
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
     AS 'minimum_trend'
 FROM third_stage)
-INSERT INTO indicator_MA
+INSERT INTO indicator_stock_d_MA
 SELECT
-    'MA_200' AS type, date, ticker, value1, value2, total,
+    'MA_200' AS type, date, ticker, value1, round(value2, 4), total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage

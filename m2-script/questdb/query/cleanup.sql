@@ -1,4 +1,5 @@
-truncate table indicators_AV;
-truncate table indicators_MA;
-truncate table historial_d;
-truncate table historial_raw_d;
+truncate table indicator_stock_52w;
+truncate table indicator_stock_AV;
+truncate table indicator_stock_MA;
+truncate table historial_stock_d;
+truncate table raw_stock_d;

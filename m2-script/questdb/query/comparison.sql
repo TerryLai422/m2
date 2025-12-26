@@ -11,12 +11,12 @@ SELECT
         ELSE 'B'
     END AS 'cross'
 FROM 
-    indicators_MA i1, 
-    indicators_MA i2
+    indicators_stock_d_MA i1, 
+    indicators_stock_d_MA i2
 WHERE 
     i1.ticker = i2.ticker 
-    AND i1.date = i2.date
-    AND i1.type = 'MA_50' 
-    AND i2.type = 'MA_200'
-    AND i1.total > 0
-    AND i2.total > 0
+AND i1.date = i2.date
+AND i1.type = 'MA_50' 
+AND i2.type = 'MA_200'
+AND i1.total > 0
+AND i2.total > 0

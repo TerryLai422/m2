@@ -1,4 +1,5 @@
-INSERT INTO analysis_market 
+INSERT INTO
+    analysis_%_d 
 SELECT
     type,
     date,
@@ -6,9 +7,7 @@ SELECT
     SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) AS 'count',
     (SUM(CASE WHEN difference > 0 THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS 'percentage'
 FROM
-  indicator_MA
+    indicator_%_d_MA
 WHERE 
-type LIKE 'MA_%' 
+    type LIKE 'MA_%' 
 AND total > 0
-GROUP BY type, date
-ORDER BY type, date desc

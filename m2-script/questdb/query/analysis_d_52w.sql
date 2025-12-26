@@ -1,4 +1,5 @@
--- INSERT INTO analysis_market 
+INSERT INTO 
+    analysis_%_d 
 SELECT
     'high52w' as 'type', 
     date, 
@@ -8,7 +9,7 @@ SELECT
     SUM(CASE WHEN low52w < previous_low52w THEN 1 ELSE 0 END) AS 'low_count',
     (SUM(CASE WHEN low52w < previous_low52w THEN 1 ELSE 0 END) * 1.0 / COUNT(ticker)) * 100 AS 'low_percentage'
 
-FROM indicator_52w
+FROM indicator_%_d_52w
 WHERE 
 previous_close <> null
 ORDER BY type, date DESC
