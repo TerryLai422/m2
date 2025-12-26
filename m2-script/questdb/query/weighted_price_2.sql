@@ -7,7 +7,7 @@ high,
 low,
 close,
 vol,
-(high + low + close) / 3 AS 'tp'
+(open + high + low + close) / 4 AS 'weighted_price'
 FROM historical_5m
 WHERE
 ticker = 'MNSO')
