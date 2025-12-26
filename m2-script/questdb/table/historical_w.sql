@@ -1,4 +1,4 @@
-CREATE TABLE historical_w (
+CREATE TABLE historical_%_w (
   ticker SYMBOL,
   date TIMESTAMP,
   open DOUBLE,
