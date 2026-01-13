@@ -7,6 +7,7 @@ WITH first_stage AS
   low,
   close,
   vol,
+  (close - ((open + high + low + close) / 4))/(high - low) AS 'rate',
   (open + high + low + close) / 4 AS 'weighted_price' ,
 FROM 
   historical_stock_5m_M
