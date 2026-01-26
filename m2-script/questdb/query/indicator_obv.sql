@@ -1,33 +1,82 @@
 WITH first_stage AS
-(SELECT 
+(
+SELECT
   ticker,
   date,
-  open, 
-  high,
-  low,
+  previous_close,
   close,
   vol,
-  (close - ((open + high + low + close) / 4))/(high - low) AS 'rate',
-  (open + high + low + close) / 4 AS 'weighted_price' ,
-FROM 
-  historical_stock_5m_M
-WHERE
-  ticker = 'MNSO')
-SELECT     
+  CASE
+  WHEN previous_close >=0 and close > previous_close THEN vol
+  ELSE
+      CASE
+          WHEN previous_close >= 0 and close < previous_close THEN -1 * vol
+          ELSE 0
+      END
+  END AS 'daily_value'
+FROM indicator_stock_d_52w 
+  WHERE ticker = 'VZ'
+),
+second_stage AS 
+(
+SELECT 
+  date,
   ticker,
-  date_trunc('day', date) AS 'date',
-  count(*) AS counter,
-  sum(vol) AS total_vol,
-  sum(
-    case 
-      when close > weighted_price then vol 
-      else 
-        case 
-          when close < weighted_price then -1 * vol 
-          else 0 
-        end
-    end) AS 'obv'
-FROM 
-  first_stage 
-ORDER BY
-  date desc
+  daily_value,
+  sum(daily_value) OVER (
+    PARTITION BY ticker ORDER BY date        
+  ) AS 'obv',
+  close AS 'price',
+  count() OVER (
+    PARTITION BY ticker ORDER BY date        
+  ) AS 'total',
+  first_value(daily_value) OVER (
+    PARTITION BY ticker ORDER BY date
+    ROWS 1 PRECEDING EXCLUDE CURRENT ROW
+  ) AS 'previous_difference'
+FROM first_stage
+), third_stage AS 
+(
+SELECT 
+  date,
+  ticker,
+  price AS 'value1',
+  obv AS 'value2',
+  total,
+  daily_value AS 'difference',
+  previous_difference,
+  (daily_value/obv) AS 'percentage',
+  CASE
+      WHEN daily_value >=0 and previous_difference >= 0 THEN total
+      ELSE
+          CASE
+              WHEN daily_value < 0 and previous_difference < 0 THEN total
+              ELSE (1 - total)
+          END
+  END AS 'trend'
+FROM second_stage
+), fourth_stage AS 
+(
+SELECT
+    date, ticker, value1, value2, total,
+    difference, previous_difference, percentage, trend,
+    min(trend) OVER (PARTITION BY ticker ORDER BY date
+        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+    AS 'minimum_trend'
+FROM third_stage
+)
+SELECT 
+  'OBV',
+  date,
+  ticker,
+  value1,
+  value2,
+  total,
+  difference,
+  previous_difference,
+  percentage,
+  trend,
+  minimum_trend,
+  (total + minimum_trend) AS 'trending'
+FROM fourth_stage
+ORDER BY date DESC
