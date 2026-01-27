@@ -22,7 +22,7 @@ second_stage AS
   sum(daily_value) OVER (
     PARTITION BY ticker ORDER BY date        
   ) AS 'obv',
-  close AS 'price',
+  close,
   count() OVER (
     PARTITION BY ticker ORDER BY date        
   ) AS 'total',
@@ -36,8 +36,8 @@ third_stage AS
 (SELECT 
   date,
   ticker,
-  price AS 'value1',
   obv AS 'value2',
+  close AS 'value3',
   total,
   daily_value AS 'difference',
   previous_difference,
@@ -61,11 +61,12 @@ fourth_stage AS
     AS 'minimum_trend'
 FROM third_stage)
 SELECT 
-  'OBV',
+  'OBV' AS 'type',
   date,
   ticker,
   value1,
   value2,
+  value3,
   total,
   difference,
   previous_difference,

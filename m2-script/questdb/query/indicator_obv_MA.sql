@@ -1,6 +1,6 @@
 WITH first_stage AS
 (SELECT
-    date, ticker, value2 AS 'value1',
+    date, ticker, value2 AS 'value1', value3,
     avg(value2) OVER
         (PARTITION BY ticker ORDER BY date
         ROWS BETWEEN %s PRECEDING AND CURRENT ROW
@@ -13,7 +13,7 @@ WITH first_stage AS
 FROM %s), 
 second_stage AS
 (SELECT     
-    date, ticker, value1, value2, total,
+    date, ticker, value1, value2, value3, total,
     value1 - value2 AS 'difference',
     ((value1 - value2) / value2) * 100 AS 'percentage',
     first_value(value1 - value2) OVER 
@@ -24,7 +24,7 @@ FROM first_stage
 WHERE total > 0),
 third_stage AS
 (SELECT
-    date, ticker, value1, value2, total,
+    date, ticker, value1, value2, value3, total,
     difference, previous_difference, percentage,
     CASE
         WHEN difference >=0 and previous_difference >= 0 THEN total
@@ -37,7 +37,7 @@ third_stage AS
 FROM second_stage),
 fourth_stage AS
 (SELECT
-    date, ticker, value1, value2, total,
+    date, ticker, value1, value2, value3, total,
     difference, previous_difference, percentage, trend,
     min(trend) OVER (PARTITION BY ticker ORDER BY date 
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
@@ -45,7 +45,7 @@ fourth_stage AS
 FROM third_stage)
 INSERT INTO %s
 SELECT
-    'OBV_%s' AS type, date, ticker, value1, round(value2, 4), total,
+    'OBV_%s' AS 'type', date, ticker, value1, round(value2, 4) AS 'value2', value3, total,
     difference, previous_difference, percentage, trend, minimum_trend,
     (total + minimum_trend) AS 'trending'
 FROM fourth_stage
