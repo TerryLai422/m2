@@ -1,6 +1,5 @@
 WITH first_stage AS
-(
-SELECT
+(SELECT
   ticker,
   date,
   previous_close,
@@ -14,12 +13,9 @@ SELECT
           ELSE 0
       END
   END AS 'daily_value'
-FROM indicator_stock_d_52w 
-  WHERE ticker = 'VZ'
-),
+FROM indicator_stock_d_52w),
 second_stage AS 
-(
-SELECT 
+(SELECT 
   date,
   ticker,
   daily_value,
@@ -35,9 +31,9 @@ SELECT
     ROWS 1 PRECEDING EXCLUDE CURRENT ROW
   ) AS 'previous_difference'
 FROM first_stage
-), third_stage AS 
-(
-SELECT 
+), 
+third_stage AS 
+(SELECT 
   date,
   ticker,
   price AS 'value1',
@@ -55,16 +51,15 @@ SELECT
           END
   END AS 'trend'
 FROM second_stage
-), fourth_stage AS 
-(
-SELECT
+), 
+fourth_stage AS 
+(SELECT
     date, ticker, value1, value2, total,
     difference, previous_difference, percentage, trend,
     min(trend) OVER (PARTITION BY ticker ORDER BY date
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
     AS 'minimum_trend'
-FROM third_stage
-)
+FROM third_stage)
 SELECT 
   'OBV',
   date,
