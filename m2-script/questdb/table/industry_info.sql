@@ -1,4 +1,5 @@
-CREATE TABLE 'industry_info' ( 
+CREATE TABLE 'industry_info' (
+	id INT,
 	sector SYMBOL CAPACITY 32 CACHE,
 	industry SYMBOL CAPACITY 256 CACHE
 )

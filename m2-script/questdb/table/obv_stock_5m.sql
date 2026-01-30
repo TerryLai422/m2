@@ -6,9 +6,9 @@ CREATE TABLE 'obv_stock_5m_M' (
 	low DOUBLE,
 	close DOUBLE,
 	vol DOUBLE,
-	weighted_obv DOUBLE,
-	rate DOUBLE,
 	weighted_price DOUBLE,
+	rate DOUBLE,
+  weighted_obv DOUBLE,
 	classic_obv DOUBLE
 ) timestamp(date) PARTITION BY YEAR WAL
 WITH maxUncommittedRows=500000, o3MaxLag=600000000us;

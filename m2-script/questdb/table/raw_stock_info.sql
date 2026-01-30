@@ -1,4 +1,4 @@
-CREATE TABLE 'raw_basic_info' ( 
+CREATE TABLE 'raw_stock_info' ( 
 	ticker SYMBOL CAPACITY 4096 CACHE INDEX CAPACITY 16384,
 	name VARCHAR,
 	market_cap DOUBLE,
