@@ -1,17 +1,31 @@
-WITH first_stage AS
+WITH stage_one AS
 (
 SELECT
-    type,
-    date,
-    info.sector,
-    info.industry,
-    value2 AS 'obv',
-    difference AS 'daily_obv',
-    value3 AS 'price'
+  ri.ticker,
+  ii.id,
+  ii.sector,
+  ii.industry
+FROM
+  raw_stock_info ri
+JOIN
+  industry_info ii
+ON
+  ri.sector = ii.sector AND ri.industry = ii.industry
+), stage_two AS
+(
+SELECT
+  type,
+  date,
+  id,
+  sector,
+  industry,
+  value2 AS 'obv',
+  difference AS 'daily_obv',
+  value3 AS 'price'
 FROM
     indicator_stock_d_OBV
 JOIN
-    raw_stock_info info
+    stage_one
 ON
   ticker
 WHERE
@@ -21,12 +35,13 @@ INSERT INTO industry_OBV
 SELECT
   type,
   date,
+  id,
   sector,
   industry,
   sum(obv * price) AS 'obv_cap',
-  sum(daily_obv * price) AS 'flow',
+  sum(daily_obv * price) AS 'change',
   sum(daily_obv * price) / sum(obv * price) AS 'percent',
   count(*) AS 'total'
-FROM first_stage
+FROM stage_two
 WHERE
   industry IS NOT null AND sector IS NOT null
