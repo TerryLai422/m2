@@ -1,0 +1,4 @@
+CREATE TABLE 'country' (
+	id INT,
+	country SYMBOL CAPACITY 80 CACHE
+)

@@ -1,18 +1,18 @@
 WITH stage_one AS
 (
-SELECT DISTINCT 
+SELECT DISTINCT
   sector,
   industry
 FROM
   raw_stock_info
 WHERE
   sector IS NOT NULL AND industry IS NOT NULL
-ORDER BY 
+ORDER BY
   sector,
   industry
 )
 INSERT INTO industry_info
-SELECT     
+SELECT
   row_number() OVER () AS 'id',
   sector,
   industry

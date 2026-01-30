@@ -43,5 +43,3 @@ SELECT
   sum(daily_obv * price) / sum(obv * price) AS 'percent',
   count(*) AS 'total'
 FROM stage_two
-WHERE
-  industry IS NOT null AND sector IS NOT null

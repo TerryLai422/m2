@@ -1,9 +1,8 @@
-CREATE TABLE 'industry_OBV' ( 
+CREATE TABLE 'country_OBV' ( 
 	type SYMBOL,
 	date TIMESTAMP,
 	id INT,
-	sector SYMBOL,
-	industry SYMBOL,
+	country SYMBOL,
 	obv_cap DOUBLE,
 	change DOUBLE,
 	percent DOUBLE,
