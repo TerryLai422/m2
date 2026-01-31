@@ -18,6 +18,7 @@ second_stage AS
 (SELECT 
   date,
   ticker,
+  vol,
   daily_value,
   sum(daily_value) OVER (
     PARTITION BY ticker ORDER BY date        
@@ -36,6 +37,7 @@ third_stage AS
 (SELECT 
   date,
   ticker,
+  vol,
   obv AS 'value2',
   close AS 'value3',
   total,
@@ -54,7 +56,7 @@ FROM second_stage
 ), 
 fourth_stage AS 
 (SELECT
-    date, ticker, value1, value2, total,
+    date, ticker, vol, value2, total,
     difference, previous_difference, percentage, trend,
     min(trend) OVER (PARTITION BY ticker ORDER BY date
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
@@ -64,7 +66,7 @@ SELECT
   'OBV' AS 'type',
   date,
   ticker,
-  value1,
+  vol AS 'value1',
   value2,
   value3,
   total,
