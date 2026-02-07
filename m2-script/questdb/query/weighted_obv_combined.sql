@@ -34,19 +34,46 @@ SELECT
   end) AS 'classic_obv',
 FROM
   historical_stock_5m_M
+), second_stage AS
+(
+SELECT
+  ticker,
+  date_trunc('day', date) AS 'date',
+  count() AS 'count',
+  first(open) AS 'open',
+  max(high) AS 'high',
+  min(low) AS 'low',
+  last(close) AS 'close',
+  sum(vol) AS 'total_vol',
+  sum(weighted_obv) AS 'weighted_obv',
+  sum(classic_obv) AS 'classic_obv',
+  round(sum(weighted_price  * vol) / sum(vol), 4) AS 'vwap'
+FROM
+    first_stage
 )
 INSERT INTO obv_stock
 SELECT
-    ticker,
-    date_trunc('day', date) AS 'date',
-    count() AS 'count',
-    first(open) AS 'open',
-    max(high) AS 'high',
-    min(low) AS 'low',
-    last(close) AS 'close',
-    sum(vol) AS 'total_vol',
-    sum(weighted_obv) AS 'weighted_obv',
-    sum(classic_obv) AS 'classic_obv',
-    round(sum(weighted_price  * vol) / sum(vol), 4) AS 'vwap'
+  'OBV'
+  ticker,
+  date,
+  count,
+  open,
+  high,
+  low,
+  close,
+  total_vol,
+  weighted_obv,
+  classic_obv,
+  vwap,
+  lag(weighted_obv) OVER
+        (PARTITION BY ticker ORDER BY date) AS 'previous_weighted_obv',
+  lag(classic_obv) OVER
+        (PARTITION BY ticker ORDER BY date) AS 'previous_classic_obv',                
+  lag(close) OVER
+        (PARTITION BY ticker ORDER BY date) AS 'previous_close',
+  lag(total_vol) OVER
+        (PARTITION BY ticker ORDER BY date) AS 'previous_total_vol',
+  lag(vwap) OVER
+        (PARTITION BY ticker ORDER BY date) AS 'previous_vwap'
 FROM
-    first_stage
+  second_stage
